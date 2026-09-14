@@ -10,7 +10,7 @@ flowchart LR
     TEXT --> PARSE[Generic structure parser]
     CAND --> PARSE
     PARSE --> VAL[Deterministic consistency validation]
-    VAL --> CONF[User confirmation where needed]
+    VAL --> CONF[User confirmation when needed]
     TEXT --> CONF
     CONF --> GRAPH[Provenance / Evidence Graph]
     GRAPH --> DB[Encrypted structured DB]
@@ -21,7 +21,7 @@ flowchart LR
     DB --> PLAUS
     ENG --> COV[Coverage model]
     PLAUS --> COV
-    COV --> FIND[Findings: proven/conditional/warning/not checkable]
+    COV --> FIND[Findings: proven / conditional / warning / not checkable]
     FIND --> REPORT[Report + calculations + source trace]
     REPORT --> LETTER[Deterministic letter]
     REPORT --> DOSSIER[Inspection dossier]
