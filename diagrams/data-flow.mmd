@@ -1,0 +1,40 @@
+flowchart LR
+  subgraph DEVICE[Device trust boundary / local-first]
+    CAM[Camera] --> ID[SHA-256 identity]
+    PDF[PDF / images / supporting evidence] --> ID
+    ID --> ORIG[Encrypted immutable original storage]
+    ORIG --> TEXT[PDF text-first path]
+    ORIG --> PRE[Image preprocessing]
+    PRE --> OCR[On-device offline OCR]
+    OCR --> CAND[Candidates + confidence]
+    TEXT --> PARSE[Generic structure parser]
+    CAND --> PARSE
+    PARSE --> VAL[Deterministic consistency validation]
+    VAL --> CONF[User confirmation where needed]
+    TEXT --> CONF
+    CONF --> GRAPH[Provenance / Evidence Graph]
+    GRAPH --> DB[Encrypted structured DB]
+    RULE[Immutable versioned Rule Pack] --> ENG[Pure-Kotlin deterministic rule engine]
+    MAP[Versioned Mapping Pack] --> ENG
+    REF[Versioned Reference Pack] --> PLAUS[Plausibility engine]
+    DB --> ENG
+    DB --> PLAUS
+    ENG --> COV[Coverage model]
+    PLAUS --> COV
+    COV --> FIND[Findings: proven/conditional/warning/not checkable]
+    FIND --> REPORT[Report + calculations + source trace]
+    REPORT --> LETTER[Deterministic letter]
+    REPORT --> DOSSIER[Inspection dossier]
+    REPORT --> PACK[Evidence Package]
+    PACK --> ENC[Password encryption]
+    ENC --> MAN[SHA-256 integrity manifest]
+  end
+  subgraph EXTERNAL[External / user-controlled boundary]
+    BILL[Google Play Billing]
+    SIGN[Optional Google sign-in]
+    TEL[Opt-in Firebase Analytics / Crashlytics]
+    SHARE[Android Share Sheet / user-selected destination]
+  end
+  ENG -. no entitlement dependency .- BILL
+  DB -. no case content .- TEL
+  REPORT --> SHARE

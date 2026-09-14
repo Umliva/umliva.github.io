@@ -1,0 +1,38 @@
+flowchart TD
+  FL[First launch] --> OB[Onboarding]
+  OB --> PL[Privacy / local-first]
+  PL --> AL{Optional app lock?}
+  AL -->|Biometric/PIN| HOME[Home]
+  AL -->|Skip| HOME
+  HOME --> PM[Property management]
+  HOME --> CH[Case/revision history]
+  PM --> NC[New-case creation]
+  NC --> ENT{Free case / Full-version entitlement}
+  ENT -->|Allowed| INTAKE[Camera capture or PDF/image import]
+  ENT -->|Purchase outside case| BILL[One-time Play Billing]
+  BILL --> INTAKE
+  INTAKE --> DQ[Document quality]
+  DQ --> EX[OCR / text extraction]
+  EX --> RV[Extracted-data review]
+  RV --> AMB{Ambiguity?}
+  AMB -->|Yes| CONF[Highlight original + targeted confirmation]
+  AMB -->|No| MI[Missing-input questions]
+  CONF --> MI
+  MI --> ANA[Deterministic analysis]
+  ANA --> RO[Result overview]
+  RO --> FI[Findings]
+  FI --> FD[Finding detail]
+  FD --> ST[Calculation/source trace]
+  RO --> COV[Coverage]
+  RO --> ER[Evidence request]
+  ER --> WF[Requested/received/checked]
+  RO --> LETTER[Deterministic letter]
+  LETTER --> EDIT[Editable recipient/date/user text]
+  RO --> REPORT[Report/inspection dossier]
+  REPORT --> EXPORT[PDF/text export + Android Share Sheet]
+  REPORT --> EP[Encrypted Evidence Package + password]
+  CH --> REV[New case revision/recheck]
+  REV --> RV
+  OB --> CONS[Telemetry consent]
+  CONS --> SIGN[Optional Google sign-in]
+  HOME --> FEEDBACK[Feedback with exact payload preview]
