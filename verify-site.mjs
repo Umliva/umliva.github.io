@@ -3,12 +3,13 @@ import { join, relative } from 'node:path';
 
 const root = new URL('.', import.meta.url).pathname;
 const required = [
-  'index.html', 'ratgeber/index.html', 'ratgeber/nebenkostenabrechnung-pruefen.html',
-  'ratgeber/betriebskostenabrechnung-pruefen.html', 'ratgeber/heizkostenabrechnung-pruefen.html',
-  'ratgeber/nebenkostenabrechnung-zu-hoch.html', 'ratgeber/co2-kosten-mieter-vermieter.html',
-  'ratgeber/abrechnungsfrist-nebenkosten.html', 'ratgeber/umlageschluessel-pruefen.html',
-  'ratgeber/umlagefaehige-nebenkosten.html', 'ratgeber/fehler-nebenkostenabrechnung.html',
-  'ratgeber/nebenkosten-widerspruch.html', 'robots.txt', 'sitemap.xml'
+  'index.html', 'golden-case.html', 'partner.html', 'ratgeber/index.html',
+  'ratgeber/nebenkostenabrechnung-pruefen.html', 'ratgeber/betriebskostenabrechnung-pruefen.html',
+  'ratgeber/heizkostenabrechnung-pruefen.html', 'ratgeber/nebenkostenabrechnung-zu-hoch.html',
+  'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/abrechnungsfrist-nebenkosten.html',
+  'ratgeber/umlageschluessel-pruefen.html', 'ratgeber/umlagefaehige-nebenkosten.html',
+  'ratgeber/fehler-nebenkostenabrechnung.html', 'ratgeber/nebenkosten-widerspruch.html',
+  'robots.txt', 'sitemap.xml'
 ];
 const files = new Set();
 async function walk(dir) {
@@ -35,7 +36,7 @@ for (const path of htmlFiles) {
   if (path.startsWith('ratgeber/') && (!html.includes('PLANNED') || !html.includes('keine individuelle Rechtsberatung'))) throw new Error(`${path}: missing bounded status/disclaimer`);
   for (const href of html.matchAll(/href="([^"]+)"/g)) {
     const target = href[1];
-    if (target.startsWith('http') || target.startsWith('#')) continue;
+    if (target.startsWith('http') || target.startsWith('#') || target === '/') continue;
     localTargets.add(join(root, path.replace(/[^/]+$/, ''), target.split('#')[0]));
   }
 }
@@ -50,5 +51,11 @@ for (const path of required.filter((p) => p.endsWith('.html'))) {
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 if (!robots.includes('Allow: /') || !robots.includes('Sitemap: https://umliva.github.io/sitemap.xml')) throw new Error('robots policy incomplete');
 const home = await readFile(join(root, 'index.html'), 'utf8');
-if (!home.includes('href="ratgeber/"') || !home.includes('data-diagram-src="diagrams/screen-flow.mmd"') || !home.includes('data-diagram-src="diagrams/data-flow.mmd"')) throw new Error('homepage discovery or Mermaid regression');
+for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-diagram-src="diagrams/screen-flow.mmd"', 'data-diagram-src="diagrams/data-flow.mmd"']) {
+  if (!home.includes(marker)) throw new Error(`homepage regression: ${marker}`);
+}
+const golden = await readFile(join(root, 'golden-case.html'), 'utf8');
+if (!golden.includes('REAL CASE · SANITIZED') || !golden.includes('NO LEGAL OUTCOME CLAIM') || !golden.includes('F-001') || !golden.includes('F-004')) throw new Error('golden case safety/evidence markers missing');
+const partner = await readFile(join(root, 'partner.html'), 'utf8');
+if (!partner.includes('Human-in-the-loop') || !partner.includes('anwaltliche Verantwortung')) throw new Error('partner boundary markers missing');
 console.log(`PASS site-static-check html=${htmlFiles.length} required=${required.length}`);
