@@ -55,7 +55,7 @@ for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-di
   if (!home.includes(marker)) throw new Error(`homepage regression: ${marker}`);
 }
 const golden = await readFile(join(root, 'golden-case.html'), 'utf8');
-if (!golden.includes('REAL CASE · SANITIZED') || !golden.includes('NO LEGAL OUTCOME CLAIM') || !golden.includes('F-001') || !golden.includes('F-004')) throw new Error('golden case safety/evidence markers missing');
+if (!golden.includes('SYNTHETIC STRUCTURE') || !golden.includes('NO ORIGINAL CASE DATA') || !golden.includes('NO LEGAL OUTCOME CLAIM') || !golden.includes('F-001') || !golden.includes('F-004')) throw new Error('golden case safety/evidence markers missing');
 const partner = await readFile(join(root, 'partner.html'), 'utf8');
 if (!partner.includes('Human-in-the-loop') || !partner.includes('anwaltliche Verantwortung')) throw new Error('partner boundary markers missing');
 console.log(`PASS site-static-check html=${htmlFiles.length} required=${required.length}`);
