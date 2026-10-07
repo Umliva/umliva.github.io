@@ -1,0 +1,15 @@
+{
+  "id": "fail-configuration-shadowing-nested-identity",
+  "description": "A nested instruction file that redeclares the project identity is rejected",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "mkdir", "path": "sub" },
+        { "op": "write", "path": "sub/AGENTS.md", "content": "# Nested instructions\n\nprojectId: umliva.github.io\ncanonicalRemote: github.com/Umliva/umliva.github.io\n" }
+      ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_CONFIGURATION_SHADOWING", "exitCode": 1 } } ]
+}

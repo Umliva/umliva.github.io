@@ -1,0 +1,6 @@
+{
+  "id": "fail-remote-mismatch",
+  "description": "An undeclared remote identity is rejected",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Other/other-site" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_REMOTE_MISMATCH", "exitCode": 1 } } ]
+}

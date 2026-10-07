@@ -1,0 +1,55 @@
+# Content hashes — website issue #3 (agent project contract)
+
+SHA-256 of every file this change set adds or changes, so the recorded validator results bind
+to exact content while the change set stays uncommitted in the working tree.
+Base commit of the working tree: 3bd6f536b1e1f70059d45910cdde1c3407e490fb
+This file is excluded from its own listing.
+
+$ find config docs tools -type f -not -name content-hashes.txt | sort | xargs sha256sum
+$ sha256sum AGENTS.md
+6e1dcf740e6157f7caac17d7799c9dc7d1e20b6dd57a159d69a171e2bfe986c7  config/agent-project-contract.json
+f9a16e607e36e9b5b4eb09f861a60f679b6cfec622598ea3241a597956635ef2  docs/AGENT_PROJECT_CONTRACT_SCHEMA.md
+59c20cf62448cd8f96e707268dab8126f8f7d02241afe274ad11552630018c9f  docs/evidence/U3/enforcement-classification.md
+6b3533734ba5124040307978a71caeafa9100cb2f5adb5825c3131fa1899607d  docs/evidence/U3/fixture-runs.txt
+c064d9e4bd5edc58a686605f75898d6c00bee47d3fe30e511437763ce0dee4bf  docs/evidence/U3/host-audit.txt
+415c35f5061776a7b1387b190b9657537cb9b136f10805ded7e3fa10d8c31e1c  docs/evidence/U3/idempotency.txt
+f81e12f418f1c96f6333bdab3e771512cf5d55d68f34cbe2a9fc96a1e97a51e5  docs/evidence/U3/README.md
+f29e8ff59470dadea4e8a3b5b7a8643d17c74173587d944e425bd2891fac4428  docs/evidence/U3/verifier-runs.txt
+793d54e0be7cb651fea82f3f6c06d2fcfe202cef194a63c8a46e6ff0b4ba808e  tools/audit-agent-project-contract-host.sh
+b3b80f102a607c2ca300ba58963a407ba0e4ead49ab794e2f32947c62a676298  tools/fixtures/agent-project-contract/base-tree/AGENTS.md
+6a8d6a4a5f3060e7c9a128ea7619dd473060435b659dccbe2a0a044203d1fd48  tools/fixtures/agent-project-contract/base-tree/config/agent-project-contract.json
+82a979b3ba4c75b690b9d465e763f68b1fe3d2fc220a399d20da230b6a61989b  tools/fixtures/agent-project-contract/base-tree/fixture-contract-marker.txt
+66088bfa64747ed130027aabdb1bb8b9df6b8a0f5bf398d6df2bc79d6ee1828d  tools/fixtures/agent-project-contract/base-tree/fixture-site-marker.txt
+b79746ad0767bf3f6b461b124f7af3ac03cd21df0fbb8b921d4fd9362eb4fbf9  tools/fixtures/agent-project-contract/cases/fail-configuration-shadowing-duplicate-contract.json
+7be5e4f8f5a00164e2d50602c2497cb5fe44f6743bb52e5c86e943b77d387c62  tools/fixtures/agent-project-contract/cases/fail-configuration-shadowing-nested-identity.json
+415096b8c8513910bc24549aac8dd4f974db7406e79279fd492ce98d401a4e05  tools/fixtures/agent-project-contract/cases/fail-configuration-shadowing-override.json
+a318a07bdf6e3fc9492c01e5265fb8ed8886a04bb90bd6a75fa4279042faed39  tools/fixtures/agent-project-contract/cases/fail-contract-schema-enum.json
+d67c92c6b4f472efa5f556a297de34c9d6fb4b46953ab9673e61a5cedd13fa6e  tools/fixtures/agent-project-contract/cases/fail-contract-schema-missing-field.json
+ffe287a71912d442ff782cb272ef431cc70831035d2218cede5ce61b0cd8a029  tools/fixtures/agent-project-contract/cases/fail-cross-project-skill-leakage.json
+ce49d11fec31776c3ae54097f3c2b808e4d973eb5853b0212a0a692bba624899  tools/fixtures/agent-project-contract/cases/fail-layout-not-allowed.json
+8970926f0b3d16f096fef8631ebc888bbed5541dab712a0588b3460348710be9  tools/fixtures/agent-project-contract/cases/fail-missing-contract.json
+915405a4e40bcd9d26230469e7de5a0cc3cd062aef9cbad17b9ff837741b86c3  tools/fixtures/agent-project-contract/cases/fail-nested-root-undeclared.json
+fbfff0409380395c5d2e4913b19d2c12101c71a6c12e6482c87cb199dab21707  tools/fixtures/agent-project-contract/cases/fail-nested-same-project-declared.json
+80b7be7e33143b5909219695a3d574c1963bc426d2ffe8f0703720a779bade6f  tools/fixtures/agent-project-contract/cases/fail-project-id-mismatch.json
+7c1d3b4c1ae7b6ae52e214b53512676ed3e6ec18d9e1e60890de32d116221d0a  tools/fixtures/agent-project-contract/cases/fail-remote-mismatch.json
+fa2d8cccbc466950ecd664c9266e6670329eeac668fc9555ba47ece216aab7d2  tools/fixtures/agent-project-contract/cases/fail-remote-unresolved.json
+fd81fca92e0e6f199ad4429021324c09e2a0be9d3658fa263c37949bf0b61b08  tools/fixtures/agent-project-contract/cases/fail-submodule-declared-but-clone.json
+958fc25205c7f4355121e184f86aabd91178f743536f0d6ff376f3c1fdfc3d41  tools/fixtures/agent-project-contract/cases/fail-symlink-escape.json
+83adabc11f0fe5cb5ab208a333259c5232a5236d8197d651e57392d6476efbfb  tools/fixtures/agent-project-contract/cases/fail-write-target-denied.json
+84f752093a8f273bd2e89dda2ed41dc8b0bd133ce8cb2f4861db445ca67a15cb  tools/fixtures/agent-project-contract/cases/fail-wrong-root.json
+483baabf672dc2218e11f24e9afd9e08fb1b82c8980f2828eb61f7912477c260  tools/fixtures/agent-project-contract/cases/ok-baseline.json
+81f8c321e933114a71285277a191250b584fa84f4cdbcabdc180819ff8532b49  tools/fixtures/agent-project-contract/cases/ok-declared-module-same-name.json
+2c2d9f67aa3614036a1c17a08d615b9317a2fbf0b35680c8d187833e050daa7d  tools/fixtures/agent-project-contract/cases/ok-declared-submodule.json
+c5364f6258347dda39f5efff31f1c93a01afecb3ee2081bbbd1e8197ea368c0d  tools/fixtures/agent-project-contract/cases/ok-linked-worktree.json
+02c9bd346ae5bf0ac597c221fce03993a02ff50cc968171300eb8560121bc476  tools/fixtures/agent-project-contract/cases/ok-remote-approved-fork.json
+c3a3c9381120c84ffdf2f18de254e8fe315c83007607108adcd2a3b460de92fb  tools/fixtures/agent-project-contract/cases/ok-remote-https-git-suffix.json
+17aaa3385eabae188b924a3e9306421c565dfa874220768683d7c60d2731e6ea  tools/fixtures/agent-project-contract/cases/ok-remote-ssh-scm.json
+33cfe0fdcc58064d59fec62ab7066473d0a7ef330ca5f0524b361adcac7c1913  tools/fixtures/agent-project-contract/cases/ok-remote-ssh-url.json
+3437cfbb006a90f3f638f4c8386fd6b8bbff921ef3dd2b8b4e30db83236f5885  tools/fixtures/agent-project-contract/cases/ok-remote-trailing-slash.json
+10c5124e70a617a76a92857494435720a862e68e38ec2e7e5e6e6d18db5af199  tools/fixtures/agent-project-contract/cases/ok-remote-uppercase-host.json
+f6e708b3d0ef995c90b5973bb06712e30bce58ea4c107049aaaf7d7970f84094  tools/fixtures/agent-project-contract/cases/ok-write-target-inside-root.json
+f1da5d681382ead8f39749223fd28259a5fa2d9800d935d223bd5b1d17032703  tools/fixtures/agent-project-contract/cases/rebind-required.json
+82d2730c9a45e268b8b0692b96d3fef7666d6dec6b3ec2f193e26583fc761009  tools/fixtures/agent-project-contract/README.md
+f6017266347276aa0d4cd39e28d0537bd4400346410f0bc9cc5c51a3fea4360a  tools/run-agent-project-contract-fixtures.mjs
+0bdd596df5df6523b65050f4a89907f061947a9d6041272a58fb587078afdfa0  tools/verify-agent-project-contract.mjs
+ab6688802651b610e4b210fcf35fab584d372cf650484c61d4098053e6ce1b5a  AGENTS.md

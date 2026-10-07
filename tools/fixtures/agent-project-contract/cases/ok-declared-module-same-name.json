@@ -1,0 +1,19 @@
+{
+  "id": "ok-declared-module-same-name",
+  "description": "A declared module that carries the project name and a foreign contract is accepted",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "patchJson", "path": "config/agent-project-contract.json", "set": { "declaredBoundaries": { "modulesAllowlist": ["umliva.github.io"] } } },
+        { "op": "mkdir", "path": "umliva.github.io/config" },
+        { "op": "write", "path": "umliva.github.io/module-manifest.json", "content": "{ \"name\": \"example-module\", \"private\": true }\n" },
+        { "op": "write", "path": "umliva.github.io/AGENTS.md", "content": "# Module instructions\n\nModule-scoped notes only. No project identity, no remote identity.\n" },
+        { "op": "copy", "from": "config/agent-project-contract.json", "path": "umliva.github.io/config/agent-project-contract.json" },
+        { "op": "patchJson", "path": "umliva.github.io/config/agent-project-contract.json", "set": { "projectId": "example-module" } }
+      ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

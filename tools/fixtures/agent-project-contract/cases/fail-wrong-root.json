@@ -1,0 +1,12 @@
+{
+  "id": "fail-wrong-root",
+  "description": "A required root marker is missing",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [ { "op": "remove", "path": "fixture-site-marker.txt" } ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_WRONG_ROOT", "exitCode": 1 } } ]
+}

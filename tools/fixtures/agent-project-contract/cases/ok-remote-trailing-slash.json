@@ -1,0 +1,6 @@
+{
+  "id": "ok-remote-trailing-slash",
+  "description": "Trailing slash is normalized away",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io/" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

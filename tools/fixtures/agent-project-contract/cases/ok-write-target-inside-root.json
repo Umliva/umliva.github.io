@@ -1,0 +1,9 @@
+{
+  "id": "ok-write-target-inside-root",
+  "description": "Write targets inside the root, including not-yet-existing parents, are accepted",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" } } },
+  "steps": [
+    { "argv": ["--root", "{ROOT}", "--target", "docs/evidence/new-note.txt"], "expect": { "reasonCode": "OK", "exitCode": 0 } },
+    { "argv": ["--root", "{ROOT}", "--target", "./fixture-site-marker.txt"], "expect": { "reasonCode": "OK", "exitCode": 0 } }
+  ]
+}

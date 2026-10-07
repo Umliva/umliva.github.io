@@ -1,0 +1,6 @@
+{
+  "id": "ok-linked-worktree",
+  "description": "A declared linked worktree layout with the canonical remote is accepted",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "linked-worktree", "url": "https://github.com/Umliva/umliva.github.io" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

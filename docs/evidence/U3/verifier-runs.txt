@@ -1,0 +1,23 @@
+# Verifier runs — website issue #3 (agent project contract)
+
+Host: local workstation. Branch: docs/agent-contract-issue-3-main. Paths are repo-relative;
+the validator hides absolute paths by default, so no host path is recorded here.
+
+$ git rev-parse HEAD
+3bd6f536b1e1f70059d45910cdde1c3407e490fb
+
+$ node verify-site.mjs
+PASS site-static-check html=12 required=14
+exit=0
+
+$ node tools/verify-agent-project-contract.mjs
+PASS agent-project-contract reasonCode=OK checks=14 contractVersion=1.0.0 projectId=umliva.github.io layout=linked-worktree identity=canonical binding=not-checked
+exit=0
+
+$ node tools/verify-agent-project-contract.mjs --root /tmp
+FAIL agent-project-contract reasonCode=FAIL_MISSING_CONTRACT check=contract-presence
+detail=contract config/agent-project-contract.json is missing at the resolved root
+exit=1
+
+A synthetic root without the contract must fail; the path above is a scratch directory outside the project.
+

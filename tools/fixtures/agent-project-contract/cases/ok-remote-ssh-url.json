@@ -1,0 +1,6 @@
+{
+  "id": "ok-remote-ssh-url",
+  "description": "ssh:// remote is the same identity",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "ssh://git@github.com/Umliva/umliva.github.io.git" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

@@ -1,0 +1,14 @@
+{
+  "id": "fail-layout-not-allowed",
+  "description": "A checkout layout that the contract does not declare is rejected",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "linked-worktree", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "patchJson", "path": "config/agent-project-contract.json", "set": { "declaredBoundaries": { "worktrees": { "allowedLayouts": ["primary"] } } } }
+      ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_WRONG_ROOT", "exitCode": 1 } } ]
+}

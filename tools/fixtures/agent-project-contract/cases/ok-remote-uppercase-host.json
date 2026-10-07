@@ -1,0 +1,6 @@
+{
+  "id": "ok-remote-uppercase-host",
+  "description": "Host comparison is case-insensitive",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://GitHub.COM/Umliva/umliva.github.io.git" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

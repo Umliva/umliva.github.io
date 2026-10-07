@@ -1,0 +1,15 @@
+{
+  "id": "fail-cross-project-skill-leakage",
+  "description": "Instruction content that carries foreign project identity markers is rejected",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "mkdir", "path": "sub" },
+        { "op": "write", "path": "sub/AGENTS.md", "content": "# Leaked instructions\n\nBuild the application package de.muellersystemslab.umliva before publishing.\n" }
+      ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_CROSS_PROJECT_SKILL_LEAKAGE", "exitCode": 1 } } ]
+}

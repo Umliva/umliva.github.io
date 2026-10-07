@@ -1,0 +1,50 @@
+# Idempotency proof — website issue #3 (agent project contract)
+
+Two consecutive full gate runs, captured byte for byte and compared. Neither run may change
+repository state or leave temporary fixture state behind.
+
+$ git status --porcelain | sort | sha256sum   # before run 1
+cde82677ae9c1f3c61186eb3485eab4f5549a122e8d2eb6996ee29f4d6c63349
+
+$ find "$TMPDIR" -maxdepth 1 -name 'umliva-website-contract-fixture-*' | wc -l   # before run 1
+0
+
+$ node tools/verify-agent-project-contract.mjs            # run 1
+$ node tools/run-agent-project-contract-fixtures.mjs      # run 1
+$ bash tools/audit-agent-project-contract-host.sh         # run 1
+$ node verify-site.mjs                                    # run 1
+   run 1: PASS agent-project-contract reasonCode=OK checks=14 contractVersion=1.0.0 projectId=umliva.github.io layout=linked-worktree identity=canonical binding=not-checked | exit=0
+   run 1: exit=0 | exit=0 | PASS site-static-check html=12 required=14
+
+$ node tools/verify-agent-project-contract.mjs            # run 2
+$ node tools/run-agent-project-contract-fixtures.mjs      # run 2
+$ bash tools/audit-agent-project-contract-host.sh         # run 2
+$ node verify-site.mjs                                    # run 2
+   run 2: PASS agent-project-contract reasonCode=OK checks=14 contractVersion=1.0.0 projectId=umliva.github.io layout=linked-worktree identity=canonical binding=not-checked | exit=0
+   run 2: exit=0 | exit=0 | PASS site-static-check html=12 required=14
+
+$ diff -r run1 run2
+(no output: run 1 and run 2 are byte-identical)
+
+$ sha256sum run1/*.txt run2/*.txt
+cceee3b1d90a0ff86c2659f422f81c52ef6bd761cf3d47d1b5827bc0588a73c0  run1/audit.txt
+d6a7d48d3484ff6533539dad6741302463264efe08c1774e1cbcbe3d02fd0505  run1/contract.txt
+5b6c43b88b94536a10ce25465b57c47e2f73ce2d20032060f6704f626d29e5cb  run1/fixtures.txt
+b64bc85bf41005e665bebf89911111c3d7de375b63a4025b11db164ff9d2958d  run1/site.txt
+cceee3b1d90a0ff86c2659f422f81c52ef6bd761cf3d47d1b5827bc0588a73c0  run2/audit.txt
+d6a7d48d3484ff6533539dad6741302463264efe08c1774e1cbcbe3d02fd0505  run2/contract.txt
+5b6c43b88b94536a10ce25465b57c47e2f73ce2d20032060f6704f626d29e5cb  run2/fixtures.txt
+b64bc85bf41005e665bebf89911111c3d7de375b63a4025b11db164ff9d2958d  run2/site.txt
+
+$ git status --porcelain | sort | sha256sum   # after run 2
+cde82677ae9c1f3c61186eb3485eab4f5549a122e8d2eb6996ee29f4d6c63349
+repository state unchanged: yes
+
+$ find "$TMPDIR" -maxdepth 1 -name 'umliva-website-contract-fixture-*' | wc -l   # after run 2
+0
+temporary fixture state removed: yes
+
+Re-running the rebind fixture a second time rebinds byte-identically (asserted inside the
+fixture run: bindingIdempotency=byte-identical), creates no second configuration and repeats no
+destructive cleanup. No gate writes inside the repository, so the worktree state before and
+after the runs is the same set of changes.
