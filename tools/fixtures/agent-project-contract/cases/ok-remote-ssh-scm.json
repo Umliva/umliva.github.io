@@ -1,0 +1,6 @@
+{
+  "id": "ok-remote-ssh-scm",
+  "description": "scp-style SSH remote is the same identity",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "git@github.com:Umliva/umliva.github.io.git" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "OK", "exitCode": 0 } } ]
+}

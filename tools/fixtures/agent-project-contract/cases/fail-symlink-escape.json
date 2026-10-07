@@ -1,0 +1,20 @@
+{
+  "id": "fail-symlink-escape",
+  "description": "Write targets that resolve outside the real root fail, including not-yet-existing parents; the symlink is created at test time",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "mkdir", "at": "workspace", "path": "outside" },
+        { "op": "write", "at": "workspace", "path": "outside/landing.txt", "content": "synthetic target outside the project root\n" },
+        { "op": "symlink", "path": "escape-link", "target": "../outside" }
+      ]
+    }
+  },
+  "steps": [
+    { "argv": ["--root", "{ROOT}", "--target", "escape-link/deeper/note.txt"], "expect": { "reasonCode": "FAIL_SYMLINK_ESCAPE", "exitCode": 1 } },
+    { "argv": ["--root", "{ROOT}", "--target", "escape-link/../outside/note.txt"], "expect": { "reasonCode": "FAIL_SYMLINK_ESCAPE", "exitCode": 1 } },
+    { "argv": ["--root", "{ROOT}", "--target", "../outside/note.txt"], "expect": { "reasonCode": "FAIL_SYMLINK_ESCAPE", "exitCode": 1 } }
+  ]
+}

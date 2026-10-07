@@ -1,0 +1,69 @@
+# Fixture runs — website issue #3 (agent project contract)
+
+Every case is materialized into a temporary directory created at run time (git metadata, symlinks,
+binding state) and removed before exit, so no broken symlink, no .git directory and no absolute
+host path is committed or printed.
+
+$ node tools/run-agent-project-contract-fixtures.mjs
+PASS case=fail-configuration-shadowing-duplicate-contract step=1 expect=FAIL_CONFIGURATION_SHADOWING observed=FAIL_CONFIGURATION_SHADOWING exit=1
+PASS case=fail-configuration-shadowing-nested-identity step=1 expect=FAIL_CONFIGURATION_SHADOWING observed=FAIL_CONFIGURATION_SHADOWING exit=1
+PASS case=fail-configuration-shadowing-override step=1 expect=FAIL_CONFIGURATION_SHADOWING observed=FAIL_CONFIGURATION_SHADOWING exit=1
+PASS case=fail-contract-schema-enum step=1 expect=FAIL_CONTRACT_SCHEMA observed=FAIL_CONTRACT_SCHEMA exit=1
+PASS case=fail-contract-schema-missing-field step=1 expect=FAIL_CONTRACT_SCHEMA observed=FAIL_CONTRACT_SCHEMA exit=1
+PASS case=fail-cross-project-skill-leakage step=1 expect=FAIL_CROSS_PROJECT_SKILL_LEAKAGE observed=FAIL_CROSS_PROJECT_SKILL_LEAKAGE exit=1
+PASS case=fail-layout-not-allowed step=1 expect=FAIL_WRONG_ROOT observed=FAIL_WRONG_ROOT exit=1
+PASS case=fail-missing-contract step=1 expect=FAIL_MISSING_CONTRACT observed=FAIL_MISSING_CONTRACT exit=1
+PASS case=fail-nested-root-undeclared step=1 expect=FAIL_NESTED_PROJECT_ROOT observed=FAIL_NESTED_PROJECT_ROOT exit=1
+PASS case=fail-nested-same-project-declared step=1 expect=FAIL_NESTED_PROJECT_ROOT observed=FAIL_NESTED_PROJECT_ROOT exit=1
+PASS case=fail-project-id-mismatch step=1 expect=FAIL_PROJECT_ID_MISMATCH observed=FAIL_PROJECT_ID_MISMATCH exit=1
+PASS case=fail-remote-mismatch step=1 expect=FAIL_REMOTE_MISMATCH observed=FAIL_REMOTE_MISMATCH exit=1
+PASS case=fail-remote-unresolved step=1 expect=FAIL_REMOTE_UNRESOLVED observed=FAIL_REMOTE_UNRESOLVED exit=1
+PASS case=fail-submodule-declared-but-clone step=1 expect=FAIL_NESTED_PROJECT_ROOT observed=FAIL_NESTED_PROJECT_ROOT exit=1
+PASS case=fail-symlink-escape step=1 expect=FAIL_SYMLINK_ESCAPE observed=FAIL_SYMLINK_ESCAPE exit=1
+PASS case=fail-symlink-escape step=2 expect=FAIL_SYMLINK_ESCAPE observed=FAIL_SYMLINK_ESCAPE exit=1
+PASS case=fail-symlink-escape step=3 expect=FAIL_SYMLINK_ESCAPE observed=FAIL_SYMLINK_ESCAPE exit=1
+PASS case=fail-write-target-denied step=1 expect=FAIL_WRITE_TARGET_DENIED observed=FAIL_WRITE_TARGET_DENIED exit=1
+PASS case=fail-wrong-root step=1 expect=FAIL_WRONG_ROOT observed=FAIL_WRONG_ROOT exit=1
+PASS case=ok-baseline step=1 expect=OK observed=OK exit=0
+PASS case=ok-declared-module-same-name step=1 expect=OK observed=OK exit=0
+PASS case=ok-declared-submodule step=1 expect=OK observed=OK exit=0
+PASS case=ok-linked-worktree step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-approved-fork step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-https-git-suffix step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-ssh-scm step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-ssh-url step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-trailing-slash step=1 expect=OK observed=OK exit=0
+PASS case=ok-remote-uppercase-host step=1 expect=OK observed=OK exit=0
+PASS case=ok-write-target-inside-root step=1 expect=OK observed=OK exit=0
+PASS case=ok-write-target-inside-root step=2 expect=OK observed=OK exit=0
+PASS case=rebind-required step=1 expect=OK observed=OK exit=0
+PASS case=rebind-required step=2 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=3 expect=OK observed=OK exit=0
+PASS case=rebind-required step=4 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=5 expect=OK observed=OK exit=0
+PASS case=rebind-required step=5 bindingIdempotency=byte-identical
+PASS case=rebind-required step=6 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=7 expect=OK observed=OK exit=0
+PASS agent-project-contract-fixtures reasonCode=OK cases=29 steps=38 mismatches=0 bindingIdempotencyChecks=1
+exit=0
+
+$ node tools/run-agent-project-contract-fixtures.mjs --case rebind-required
+PASS case=rebind-required step=1 expect=OK observed=OK exit=0
+PASS case=rebind-required step=2 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=3 expect=OK observed=OK exit=0
+PASS case=rebind-required step=4 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=5 expect=OK observed=OK exit=0
+PASS case=rebind-required step=5 bindingIdempotency=byte-identical
+PASS case=rebind-required step=6 expect=FAIL_REBIND_REQUIRED observed=FAIL_REBIND_REQUIRED exit=1
+PASS case=rebind-required step=7 expect=OK observed=OK exit=0
+PASS agent-project-contract-fixtures reasonCode=OK cases=1 steps=7 mismatches=0 bindingIdempotencyChecks=1
+exit=0
+
+Negative control of the runner itself: a temporary synthetic fixtures root whose single case
+expects OK for a root that has no git metadata. The runner must exit non-zero with
+FAIL_FIXTURE_MISMATCH (temporary root built with mktemp; removed afterwards).
+
+$ node tools/run-agent-project-contract-fixtures.mjs --fixtures-root "$control"
+FAIL agent-project-contract-fixtures reasonCode=FAIL_FIXTURE_MISMATCH case=negative-control
+detail=case=negative-control step=1 expect=OK/exit0 observed=FAIL_REMOTE_UNRESOLVED/exit1 detail=no git metadata at the resolved root; canonical remote identity is unverifiable
+exit=1

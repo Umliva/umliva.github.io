@@ -1,0 +1,157 @@
+{
+  "contractVersion": "1.0.0",
+  "contractId": "umliva-website-agent-project-contract",
+  "projectId": "umliva.github.io",
+  "projectName": "Umliva public website",
+  "canonicalRemote": {
+    "url": "https://github.com/Umliva/umliva.github.io.git",
+    "normalizedIdentity": "github.com/Umliva/umliva.github.io",
+    "acceptedForms": [
+      "https://github.com/Umliva/umliva.github.io.git",
+      "https://github.com/Umliva/umliva.github.io",
+      "git@github.com:Umliva/umliva.github.io.git",
+      "ssh://git@github.com/Umliva/umliva.github.io.git"
+    ],
+    "approvedForkIdentities": [],
+    "normalization": {
+      "dropScheme": true,
+      "dropUserInfo": true,
+      "lowercaseHost": true,
+      "stripGitSuffix": true,
+      "stripTrailingSlash": true,
+      "preservePathCase": true
+    },
+    "repositoryRole": "canonical"
+  },
+  "defaultBranch": "main",
+  "hostLocalScope": {
+    "location": "host-local",
+    "committedPaths": [],
+    "note": "Absolute checkout locations, linked-worktree registrations and host audit observations stay host-local and are never committed to this public repository.",
+    "auditResultScope": "host-local"
+  },
+  "rootMarkers": [
+    { "path": "index.html", "kind": "file", "required": true },
+    { "path": ".nojekyll", "kind": "file", "required": true },
+    { "path": "sitemap.xml", "kind": "file", "required": true },
+    { "path": "robots.txt", "kind": "file", "required": true },
+    { "path": "AGENTS.md", "kind": "file", "required": true },
+    { "path": "config/agent-project-contract.json", "kind": "file", "required": true }
+  ],
+  "pathMap": [
+    { "role": "siteRoot", "path": ".", "kind": "dir", "required": true },
+    { "role": "contract", "path": "config/agent-project-contract.json", "kind": "file", "required": true },
+    { "role": "schemaDoc", "path": "docs/AGENT_PROJECT_CONTRACT_SCHEMA.md", "kind": "file", "required": true },
+    { "role": "validator", "path": "tools/verify-agent-project-contract.mjs", "kind": "file", "required": true },
+    { "role": "fixtureRunner", "path": "tools/run-agent-project-contract-fixtures.mjs", "kind": "file", "required": true },
+    { "role": "fixtures", "path": "tools/fixtures/agent-project-contract", "kind": "dir", "required": true },
+    { "role": "hostAudit", "path": "tools/audit-agent-project-contract-host.sh", "kind": "file", "required": true },
+    { "role": "evidenceDir", "path": "docs/evidence/U3", "kind": "dir", "required": true },
+    { "role": "publishedPage", "path": "index.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/index.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/abrechnungsfrist-nebenkosten.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/betriebskostenabrechnung-pruefen.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/co2-kosten-mieter-vermieter.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/fehler-nebenkostenabrechnung.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/heizkostenabrechnung-pruefen.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/nebenkosten-widerspruch.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/nebenkostenabrechnung-pruefen.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/nebenkostenabrechnung-zu-hoch.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/umlagefaehige-nebenkosten.html", "kind": "file", "required": true },
+    { "role": "publishedPage", "path": "ratgeber/umlageschluessel-pruefen.html", "kind": "file", "required": true },
+    { "role": "publishedPageOptional", "path": "golden-case.html", "kind": "file", "required": false, "note": "Delivered by a separate change set; validated only when present." },
+    { "role": "publishedPageOptional", "path": "partner.html", "kind": "file", "required": false, "note": "Delivered by a separate change set; validated only when present." },
+    { "role": "verifierScript", "path": "verify-site.mjs", "kind": "file", "required": true },
+    { "role": "verifierScriptOptional", "path": "verify-sanitization.mjs", "kind": "file", "required": false, "note": "Delivered by a separate change set; validated only when present." },
+    { "role": "contentDir", "path": "ratgeber", "kind": "dir", "required": true },
+    { "role": "contentDir", "path": "diagrams", "kind": "dir", "required": true }
+  ],
+  "mutationBoundaries": {
+    "rootIsWriteBoundary": true,
+    "outsideRootPolicy": "DENY",
+    "symlinkTraversalPolicy": "DENY",
+    "unresolvedParentPolicy": "RESOLVE_THEN_CHECK",
+    "deniedPrefixes": [".git"],
+    "donorProjects": "READ_ONLY",
+    "navigationGrantsWrite": false,
+    "publishedSurfaces": ["index.html", "ratgeber", "sitemap.xml", "robots.txt"],
+    "publishedSurfaceReview": "headed visual verification before merge (see AGENTS.md)"
+  },
+  "instructionAuthority": {
+    "projectInstructionFile": "AGENTS.md",
+    "shadowingFileNames": ["AGENTS.override.md"],
+    "nestedInstructionPolicy": "identity-redeclaration-forbidden",
+    "claimsToOverrideHigherPriorityInstructions": false
+  },
+  "skillIsolation": {
+    "policy": "NO_CROSS_PROJECT_SKILL_LEAKAGE",
+    "repoSkillRoots": [],
+    "instructionFileNames": ["AGENTS.md", "AGENTS.override.md", "SKILL.md"],
+    "globalScope": {
+      "location": "host-local",
+      "committedPaths": []
+    },
+    "foreignProjectMarkers": [
+      "de.muellersystemslab.umliva",
+      "Umliva/Umliva",
+      "Morphelis_API_36"
+    ],
+    "activationVerification": "TOOL_GAP"
+  },
+  "declaredBoundaries": {
+    "modulesAllowlist": [],
+    "vendoredExamples": [],
+    "submodules": [],
+    "worktrees": {
+      "allowedLayouts": ["primary", "linked-worktree", "gitfile"],
+      "nestedInsideRoot": "FORBIDDEN",
+      "registration": "host-local-only"
+    },
+    "forkPolicy": "An undeclared fork identity fails remote identity validation; approved forks are listed in canonicalRemote.approvedForkIdentities."
+  },
+  "discovery": {
+    "exclusions": [
+      { "path": ".git", "reason": "git metadata is resolved by the git resolution path, not by directory scanning" },
+      { "path": "tools/fixtures", "reason": "declared fixture trees contain synthetic duplicate contracts and synthetic project roots" }
+    ]
+  },
+  "enforcement": {
+    "classification": {
+      "contractPresence": "VALIDATOR_AVAILABLE",
+      "rootIdentity": "VALIDATOR_AVAILABLE",
+      "remoteIdentityNormalization": "VALIDATOR_AVAILABLE",
+      "projectIdConsistency": "VALIDATOR_AVAILABLE",
+      "pathMapAvailability": "VALIDATOR_AVAILABLE",
+      "nestedProjectRoot": "VALIDATOR_AVAILABLE",
+      "configurationShadowing": "VALIDATOR_AVAILABLE",
+      "writeTargetResolution": "VALIDATOR_AVAILABLE",
+      "repositoryRebind": "VALIDATOR_AVAILABLE",
+      "skillIsolationInRepo": "VALIDATOR_AVAILABLE",
+      "hostGlobalConfigDiagnosis": "VALIDATOR_AVAILABLE",
+      "writeInterception": "TOOL_GAP",
+      "hookEnforcement": "TOOL_GAP",
+      "brokerEnforcement": "TOOL_GAP",
+      "skillActivation": "TOOL_GAP",
+      "hostGlobalConfigRepair": "DOCUMENT_ONLY",
+      "policyProse": "DOCUMENT_ONLY"
+    },
+    "toolGaps": [
+      {
+        "gap": "write interception (hooks/brokers)",
+        "classification": "TOOL_GAP",
+        "note": "No hook or broker intercepts writes for this repository. The validator is deterministic and can be run before a write, but it cannot block a write by itself."
+      },
+      {
+        "gap": "skill activation state",
+        "classification": "TOOL_GAP",
+        "note": "Advertised skill metadata is readable offline; actual harness skill activation is not observable, so the host audit reports advertised scope only."
+      }
+    ],
+    "hostAuditSemantics": {
+      "values": ["PASS", "FAIL", "NOT_VERIFIED"],
+      "unavailableHost": "NOT_VERIFIED",
+      "ciHostInspection": "NOT_POSSIBLE",
+      "note": "The host audit runs on the local workstation only. No CI job in this repository inspects a user's host, and no host audit result may be reported as PASS without an observation on that host."
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "fail-remote-unresolved",
+  "description": "A root without git metadata cannot prove its remote identity",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "none" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_REMOTE_UNRESOLVED", "exitCode": 1 } } ]
+}

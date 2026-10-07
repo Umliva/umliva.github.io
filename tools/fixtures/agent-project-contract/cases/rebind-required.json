@@ -1,0 +1,24 @@
+{
+  "id": "rebind-required",
+  "description": "Repository switch invalidates old write authority; rebinding is explicit and idempotent",
+  "trees": {
+    "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" } },
+    "B": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" } },
+    "C": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "git@github.com:umliva-fork-owner/umliva.github.io.git" },
+      "setup": [
+        { "op": "patchJson", "path": "config/agent-project-contract.json", "set": { "canonicalRemote": { "approvedForkIdentities": ["github.com/umliva-fork-owner/umliva.github.io"] } } }
+      ]
+    }
+  },
+  "steps": [
+    { "argv": ["--root", "{ROOT}", "--binding", "{STATE}/binding.json", "--bind"], "expect": { "reasonCode": "OK", "exitCode": 0 }, "snapshotBinding": true },
+    { "argv": ["--root", "{B}", "--binding", "{STATE}/binding.json"], "expect": { "reasonCode": "FAIL_REBIND_REQUIRED", "exitCode": 1 } },
+    { "argv": ["--root", "{B}", "--binding", "{STATE}/binding.json", "--bind"], "expect": { "reasonCode": "OK", "exitCode": 0 }, "snapshotBinding": true },
+    { "argv": ["--root", "{ROOT}", "--binding", "{STATE}/binding.json"], "expect": { "reasonCode": "FAIL_REBIND_REQUIRED", "exitCode": 1 } },
+    { "argv": ["--root", "{B}", "--binding", "{STATE}/binding.json", "--bind"], "expect": { "reasonCode": "OK", "exitCode": 0 }, "assertBindingUnchanged": true },
+    { "argv": ["--root", "{C}", "--binding", "{STATE}/binding.json"], "expect": { "reasonCode": "FAIL_REBIND_REQUIRED", "exitCode": 1 } },
+    { "argv": ["--root", "{C}", "--binding", "{STATE}/binding.json", "--bind"], "expect": { "reasonCode": "OK", "exitCode": 0 } }
+  ]
+}

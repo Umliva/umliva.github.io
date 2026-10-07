@@ -1,0 +1,101 @@
+{
+  "contractVersion": "1.0.0",
+  "contractId": "fixture-agent-project-contract",
+  "projectId": "umliva.github.io",
+  "projectName": "Synthetic contract fixture",
+  "canonicalRemote": {
+    "url": "https://github.com/Umliva/umliva.github.io.git",
+    "normalizedIdentity": "github.com/Umliva/umliva.github.io",
+    "acceptedForms": [
+      "https://github.com/Umliva/umliva.github.io.git",
+      "https://github.com/Umliva/umliva.github.io",
+      "git@github.com:Umliva/umliva.github.io.git",
+      "ssh://git@github.com/Umliva/umliva.github.io.git"
+    ],
+    "approvedForkIdentities": [],
+    "normalization": {
+      "dropScheme": true,
+      "dropUserInfo": true,
+      "lowercaseHost": true,
+      "stripGitSuffix": true,
+      "stripTrailingSlash": true,
+      "preservePathCase": true
+    },
+    "repositoryRole": "canonical"
+  },
+  "defaultBranch": "main",
+  "hostLocalScope": {
+    "location": "host-local",
+    "committedPaths": [],
+    "note": "Fixture contract: host data stays outside the fixture tree."
+  },
+  "rootMarkers": [
+    { "path": "fixture-site-marker.txt", "kind": "file", "required": true },
+    { "path": "fixture-contract-marker.txt", "kind": "file", "required": true },
+    { "path": "AGENTS.md", "kind": "file", "required": true },
+    { "path": "config/agent-project-contract.json", "kind": "file", "required": true }
+  ],
+  "pathMap": [
+    { "role": "siteRoot", "path": ".", "kind": "dir", "required": true },
+    { "role": "contract", "path": "config/agent-project-contract.json", "kind": "file", "required": true },
+    { "role": "schemaDoc", "path": "docs/AGENT_PROJECT_CONTRACT_SCHEMA.md", "kind": "file", "required": false, "note": "Absent in fixtures on purpose: exercises optional entries." },
+    { "role": "verifierScriptOptional", "path": "verify-fixture.mjs", "kind": "file", "required": false, "note": "Absent in fixtures on purpose." }
+  ],
+  "mutationBoundaries": {
+    "rootIsWriteBoundary": true,
+    "outsideRootPolicy": "DENY",
+    "symlinkTraversalPolicy": "DENY",
+    "unresolvedParentPolicy": "RESOLVE_THEN_CHECK",
+    "deniedPrefixes": [".git"],
+    "donorProjects": "READ_ONLY",
+    "navigationGrantsWrite": false
+  },
+  "instructionAuthority": {
+    "projectInstructionFile": "AGENTS.md",
+    "shadowingFileNames": ["AGENTS.override.md"],
+    "nestedInstructionPolicy": "identity-redeclaration-forbidden",
+    "claimsToOverrideHigherPriorityInstructions": false
+  },
+  "skillIsolation": {
+    "policy": "NO_CROSS_PROJECT_SKILL_LEAKAGE",
+    "repoSkillRoots": [],
+    "instructionFileNames": ["AGENTS.md", "AGENTS.override.md", "SKILL.md"],
+    "globalScope": {
+      "location": "host-local",
+      "committedPaths": []
+    },
+    "foreignProjectMarkers": [
+      "de.muellersystemslab.umliva",
+      "Umliva/Umliva",
+      "Morphelis_API_36"
+    ],
+    "activationVerification": "TOOL_GAP"
+  },
+  "declaredBoundaries": {
+    "modulesAllowlist": [],
+    "vendoredExamples": [],
+    "submodules": [],
+    "worktrees": {
+      "allowedLayouts": ["primary", "linked-worktree", "gitfile"],
+      "nestedInsideRoot": "FORBIDDEN",
+      "registration": "host-local-only"
+    },
+    "forkPolicy": "Approved forks are listed in canonicalRemote.approvedForkIdentities."
+  },
+  "discovery": {
+    "exclusions": []
+  },
+  "enforcement": {
+    "classification": {
+      "contractPresence": "VALIDATOR_AVAILABLE",
+      "rootIdentity": "VALIDATOR_AVAILABLE",
+      "writeInterception": "TOOL_GAP"
+    },
+    "toolGaps": [],
+    "hostAuditSemantics": {
+      "values": ["PASS", "FAIL", "NOT_VERIFIED"],
+      "unavailableHost": "NOT_VERIFIED",
+      "ciHostInspection": "NOT_POSSIBLE"
+    }
+  }
+}

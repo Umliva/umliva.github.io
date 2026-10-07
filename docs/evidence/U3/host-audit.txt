@@ -1,0 +1,36 @@
+# Host audit — website issue #3 (agent project contract)
+
+Runs on the workstation that invokes it. Prints PASS, FAIL or NOT_VERIFIED per item with
+counts and labels only: no home path, no secret, no global configuration content.
+Repository CI cannot inspect a user host, so no CI job may claim a host audit result.
+
+$ bash tools/audit-agent-project-contract-host.sh
+item=contract-validator status=PASS detail=reasonCode=OK
+item=deterministic-output status=PASS detail=runs=2 identical=yes
+item=fixture-suite status=PASS detail=cases=29 steps=38 mismatches=0
+item=negative-control status=PASS detail=probe=FAIL_MISSING_CONTRACT synthetic-root=yes
+item=git-remote-identity status=PASS detail=identityKind=canonical
+item=global-instruction-audit status=PASS detail=instruction-files=1 project-specific=0 foreign-project-specific=0 unreadable=0
+item=global-skill-scope-audit status=PASS detail=skill-roots=3 advertised-skills=7 project-specific=0 foreign-project-specific=0 unreadable=0
+item=global-config-coverage status=NOT_VERIFIED detail=audited-candidate-paths=documented unknown-harness-locations=not-enumerable
+item=skill-activation-verification status=NOT_VERIFIED detail=TOOL_GAP advertised-metadata-only
+item=write-enforcement status=NOT_VERIFIED detail=TOOL_GAP hook-config=absent validator-is-not-a-write-interceptor
+item=host-coverage status=NOT_VERIFIED detail=workstations=1 other-hosts=NOT_VERIFIED
+summary PASS=7 FAIL=0 NOT_VERIFIED=4
+ci-host-inspection=NOT_POSSIBLE host-audit-scope=this-workstation-only
+PASS agent-project-contract-host-audit reasonCode=OK
+exit=0
+
+Item semantics: contract-validator and fixture-suite are repository checks; negative-control
+proves the audit can report FAIL; git-remote-identity reports the identity kind the validator
+resolved on this checkout; global-instruction-audit and global-skill-scope-audit cover a
+documented candidate set of global instruction and skill locations; global-config-coverage,
+skill-activation-verification, write-enforcement and host-coverage stay NOT_VERIFIED because
+unknown harness locations, skill activation, write interception and other workstations are not
+observable with the available tooling (TOOL_GAP), and an unavailable host is never PASS.
+
+Measured items on this workstation, 2026-10-07:
+- 1 global instruction file present (empty), 0 project-specific entries.
+- 3 global skill roots present, 7 advertised SKILL.md files, 0 project-specific entries.
+- no repository hook or broker configuration present (hook-config=absent).
+- 1 workstation audited; other hosts remain NOT_VERIFIED follow-up work.

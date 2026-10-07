@@ -1,0 +1,6 @@
+{
+  "id": "fail-write-target-denied",
+  "description": "A write target under a denied prefix is rejected",
+  "trees": { "ROOT": { "from": "base", "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" } } },
+  "steps": [ { "argv": ["--root", "{ROOT}", "--target", ".git/config"], "expect": { "reasonCode": "FAIL_WRITE_TARGET_DENIED", "exitCode": 1 } } ]
+}

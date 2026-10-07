@@ -1,0 +1,15 @@
+{
+  "id": "fail-configuration-shadowing-duplicate-contract",
+  "description": "A second contract configuration at a non-canonical path is rejected",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [
+        { "op": "mkdir", "path": "tools" },
+        { "op": "copy", "from": "config/agent-project-contract.json", "path": "tools/agent-project-contract.json" }
+      ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_CONFIGURATION_SHADOWING", "exitCode": 1 } } ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "fail-missing-contract",
+  "description": "The contract file is missing at the resolved root",
+  "trees": {
+    "ROOT": {
+      "from": "base",
+      "git": { "layout": "primary", "url": "https://github.com/Umliva/umliva.github.io" },
+      "setup": [ { "op": "remove", "path": "config/agent-project-contract.json" } ]
+    }
+  },
+  "steps": [ { "argv": ["--root", "{ROOT}"], "expect": { "reasonCode": "FAIL_MISSING_CONTRACT", "exitCode": 1 } } ]
+}
