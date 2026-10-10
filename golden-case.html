@@ -39,7 +39,7 @@
     .case-conclusion a{color:#FFD7B5}
     @media(max-width:800px){.case-hero{padding:64px 20px 48px}.case-grid{grid-template-columns:1fr}.matrix{font-size:13px}.matrix th,.matrix td{padding:10px}}
   </style>
-  <style>.matrix{table-layout:fixed;max-width:100%;overflow-wrap:anywhere}</style>
+  <style>.matrix-wrap{overflow-x:auto}.matrix{table-layout:fixed;min-width:640px}.matrix th,.matrix td{overflow-wrap:break-word}@media(max-width:800px){.matrix-wrap{margin-top:28px}.matrix{margin-top:0}}</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
@@ -87,7 +87,7 @@
       </aside>
     </div>
 
-    <table class="matrix">
+    <div class="matrix-wrap" role="region" aria-label="Einwendungen im Überblick" tabindex="0"><table class="matrix">
       <thead><tr><th scope="col">ID</th><th scope="col">Einwendung</th><th scope="col">Antwort erhalten?</th><th scope="col">Status</th></tr></thead>
       <tbody>
         <tr><td>F-001</td><td>Wie wurde die zusätzliche Zahlung P-01 berücksichtigt?</td><td>Nein</td><td class="status-open">OFFEN</td></tr>
@@ -96,7 +96,7 @@
         <tr><td>F-004</td><td>Wie erklärt sich die zusätzliche Differenz D-01?</td><td>Nein</td><td class="status-open">OFFEN</td></tr>
         <tr><td>C-001</td><td>War zuvor eine monatliche Rate R-01 vereinbart?</td><td>Ja</td><td class="status-clear">GEKLÄRT, ABER NICHT STREITPUNKT</td></tr>
       </tbody>
-    </table>
+    </table></div>
   </section>
 
   <section class="section case-conclusion">

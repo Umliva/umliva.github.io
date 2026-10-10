@@ -21,10 +21,23 @@
   </script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',themeVariables:{primaryColor:'#F5FAFB',primaryTextColor:'#003B46',primaryBorderColor:'#2D6B74',lineColor:'#2D6B74',secondaryColor:'#FAF7F1',tertiaryColor:'#EEF1F0',fontFamily:'Inter, system-ui, sans-serif'}});
+    mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',flowchart:{useMaxWidth:false,nodeSpacing:34,rankSpacing:44},themeVariables:{primaryColor:'#F5FAFB',primaryTextColor:'#003B46',primaryBorderColor:'#2D6B74',lineColor:'#2D6B74',secondaryColor:'#FAF7F1',tertiaryColor:'#EEF1F0',fontFamily:'Inter, system-ui, sans-serif'}});
     const sources=document.querySelectorAll('[data-diagram-src]');
     await Promise.all([...sources].map(async(node)=>{const response=await fetch(node.dataset.diagramSrc);if(!response.ok)throw new Error(`Diagram source unavailable: ${response.status}`);node.textContent=await response.text()}));
     await mermaid.run({nodes:document.querySelectorAll('.mermaid')});
+    for(const pre of document.querySelectorAll('.mermaid')){
+      const pr=pre.getBoundingClientRect();
+      let minY=Infinity,left=Infinity;
+      for(const n of pre.querySelectorAll('svg g.node')){
+        const r=n.getBoundingClientRect();
+        const y=r.top-pr.top+pre.scrollTop;
+        if(y<minY-1){minY=y;left=Infinity;}
+        if(y<minY+1)left=Math.min(left,r.left-pr.left+pre.scrollLeft);
+      }
+      if(left===Infinity)continue;
+      pre.scrollLeft=Math.max(0,left-20);
+      pre.scrollTop=Math.max(0,minY-20);
+    }
   </script>
 </head>
 <body>
