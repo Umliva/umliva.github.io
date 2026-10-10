@@ -85,7 +85,7 @@
   },
   "skillIsolation": {
     "policy": "NO_CROSS_PROJECT_SKILL_LEAKAGE",
-    "repoSkillRoots": [],
+    "repoSkillRoots": [".agents/skills/website-bauen"],
     "instructionFileNames": ["AGENTS.md", "AGENTS.override.md", "SKILL.md"],
     "globalScope": {
       "location": "host-local",

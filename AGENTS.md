@@ -14,7 +14,12 @@ Static site, no build step, no backend:
 - Root: `index.html`, `golden-case.html`, `partner.html`, `sitemap.xml`, `robots.txt`, `favicon.svg`, `styles.css`, `guide.css`, `.nojekyll`
 - `ratgeber/`: bounded German-language guide pages (`index.html` + topic pages)
 - `diagrams/`: Mermaid sources (`screen-flow.mmd`, `data-flow.mmd`), rendered client-side on `index.html`
-- Verification scripts: `verify-site.mjs`, `verify-sanitization.mjs`
+- `docs/design/`: brand and design documentation (`UMLIVA_MARKENBILD.md` is the durable brand record)
+- `.agents/skills/website-bauen/`: project-local skill (generic website process, source
+  `github.com/Julian-Ivanov/website-bauen`, installed at commit `ee7c4cb`). Declared in
+  `config/agent-project-contract.json` under `skillIsolation.repoSkillRoots`; project-local only,
+  never global.
+- Verification scripts: `verify-site.mjs`, `verify-sanitization.mjs`, `tools/verify-german.mjs`
 
 ## Public / private boundary
 

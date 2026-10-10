@@ -15,6 +15,7 @@ const files = new Set();
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (entry.name === '.git') continue;
+    if (entry.name === '.agents') continue; // project-local skills: working files, not published surfaces
     const path = join(dir, entry.name);
     if (entry.isDirectory()) await walk(path);
     else files.add(relative(root, path));
