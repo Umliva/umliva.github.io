@@ -1,2 +1,203 @@
-:root{--ink:#16312e;--muted:#5d7772;--paper:#fbfaf7;--mint:#dff4ee;--coral:#e67c62;--line:#dfe6e0;--shadow:0 24px 70px rgba(22,49,46,.09)}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;line-height:1.55}a{color:inherit}.site-header{height:76px;display:flex;align-items:center;justify-content:space-between;max-width:1240px;margin:auto;padding:0 32px}.brand{font-weight:800;font-size:22px;display:flex;gap:10px;align-items:center;text-decoration:none}.mark{display:grid;place-items:center;background:var(--ink);color:var(--mint);width:30px;height:30px;border-radius:9px;font-size:18px}.site-header nav{display:flex;align-items:center;gap:27px;font-size:14px;color:var(--muted)}.site-header nav a{text-decoration:none}.button{display:inline-flex;background:var(--ink);color:white;text-decoration:none;padding:13px 20px;border-radius:9px;font-weight:700;box-shadow:0 8px 20px rgba(22,49,46,.15)}.button.small{padding:8px 14px;font-size:13px}.guide-main{max-width:960px;margin:auto;padding:70px 32px 100px}.breadcrumbs{font-size:13px;color:var(--muted);margin-bottom:32px}.breadcrumbs a{text-decoration:none;border-bottom:1px solid currentColor}.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:800;color:var(--coral);margin-bottom:22px}.guide-main h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.06em;margin:0 0 24px;max-width:800px;overflow-wrap:anywhere}.guide-intro{font-size:20px;color:var(--muted);max-width:720px;margin:0 0 45px}.answer{background:var(--mint);border-left:4px solid #2d776a;border-radius:0 12px 12px 0;padding:24px 28px;margin:30px 0 48px}.answer strong{display:block;margin-bottom:8px}.guide-main h2{font-size:30px;letter-spacing:-.03em;margin:48px 0 14px}.guide-main p,.guide-main li{font-size:17px;max-width:760px}.guide-main ul{padding-left:24px}.guide-main li{margin:9px 0}.guide-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:22px 0}.guide-card h3{margin:0 0 8px;font-size:19px}.guide-card p{margin:0;font-size:16px;color:var(--muted)}.status{display:inline-block;border-radius:999px;background:#eef1f7;color:var(--ink);font-size:12px;font-weight:800;letter-spacing:.04em;padding:6px 10px}.status.planned{background:#f5eadb}.related{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:24px}.related a{border:1px solid var(--line);border-radius:9px;padding:14px 16px;text-decoration:none;font-weight:700}.related a span{display:block;color:var(--muted);font-size:13px;font-weight:400;margin-top:3px}.guide-footer{max-width:960px;margin:auto;padding:25px 32px 35px;border-top:1px solid var(--line)}.guide-note{font-size:14px!important;color:var(--muted)}@media(max-width:800px){.site-header{padding:0 20px}.site-header nav a:not(.button){display:none}.guide-main{padding:48px 20px 75px}.guide-main h1{font-size:48px}.guide-intro{font-size:18px}.related{grid-template-columns:1fr}.guide-footer{padding-left:20px;padding-right:20px}}
-.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:var(--ink);color:#fff;padding:12px 18px;border-radius:0 0 9px 0;font-weight:700;text-decoration:none}.skip-link:focus{left:0}:focus-visible{outline:3px solid var(--coral);outline-offset:2px}
+/* Umliva Ratgeber — ein Markenbild für Seite und App (docs/design/UMLIVA_MARKENBILD.md) */
+:root {
+  --petrol: #003B46;
+  --petrol-blue: #005B6B;
+  --petrol-mid: #2D6B74;
+  --accent: #8A3B1F;
+  --surface: #FAF7F1;
+  --card: #FFFFFF;
+  --ink: #14201E;
+  --muted: #3D5450;
+  --line: #D8E0DC;
+  --error: #8A1616;
+  --error-bg: #FBEDEA;
+  --warning: #6B4A00;
+  --warning-bg: #FFF6DB;
+  --open: #3D5450;
+  --open-bg: #EEF1F0;
+  --shadow: 0 8px 24px rgba(0, 59, 70, .08);
+  --focus: #8A3B1F;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: var(--petrol);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 0 0 10px 0;
+  font-weight: 700;
+  text-decoration: none;
+}
+.skip-link:focus { left: 0; }
+
+.site-header {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1240px;
+  margin: auto;
+  padding: 0 32px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 22px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  text-decoration: none;
+  color: var(--ink);
+}
+.mark {
+  display: grid;
+  place-items: center;
+  background: var(--petrol);
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  font-size: 18px;
+}
+.site-header nav { display: flex; align-items: center; gap: 26px; font-size: 15px; }
+.site-header nav a { text-decoration: none; color: var(--muted); }
+.site-header nav a:hover { color: var(--ink); }
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  background: var(--petrol-blue);
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: var(--shadow);
+}
+
+.guide-main { max-width: 920px; margin: auto; padding: 70px 32px 96px; }
+
+.breadcrumbs { font-size: 14px; color: var(--muted); margin-bottom: 30px; }
+.breadcrumbs a { text-decoration: none; border-bottom: 1px solid currentColor; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: .14em;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.guide-main h1 {
+  font-size: clamp(32px, 5vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  max-width: 22ch;
+  overflow-wrap: anywhere;
+}
+
+.guide-intro { font-size: 19px; color: var(--muted); max-width: 60ch; margin: 0 0 40px; }
+
+.answer {
+  background: var(--warning-bg);
+  border-left: 4px solid var(--warning);
+  border-radius: 0 10px 10px 0;
+  padding: 22px 26px;
+  margin: 28px 0 44px;
+}
+.answer strong { display: block; margin-bottom: 8px; }
+
+.guide-main h2 { font-size: 28px; letter-spacing: -0.01em; margin: 48px 0 14px; }
+.guide-main p, .guide-main li { font-size: 17px; max-width: 60ch; }
+.guide-main ul { padding-left: 22px; }
+.guide-main li { margin: 9px 0; }
+
+.guide-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 24px;
+  margin: 20px 0;
+}
+.guide-card h3 { margin: 0 0 8px; font-size: 19px; }
+.guide-card p { margin: 0; font-size: 16px; color: var(--muted); }
+
+.status-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--open-bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--open);
+}
+
+.related { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 22px; }
+.related a {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  background: var(--card);
+}
+.related a span { display: block; color: var(--muted); font-size: 14px; font-weight: 400; margin-top: 3px; }
+
+.guide-footer { max-width: 920px; margin: auto; padding: 26px 32px 36px; border-top: 1px solid var(--line); }
+.guide-note { font-size: 14px !important; color: var(--muted); }
+.guide-footer a { color: var(--ink); }
+
+@media (max-width: 800px) {
+  .site-header { padding: 0 20px; }
+  .site-header nav a:not(.button) { display: none; }
+  .guide-main { padding: 48px 20px 72px; }
+  .guide-main h1 { font-size: 32px; }
+  .guide-intro { font-size: 18px; }
+  .related { grid-template-columns: 1fr; }
+  .guide-footer { padding-left: 20px; padding-right: 20px; }
+}
+
+/* Dieselben Ueberlauf-Ursachen wie auf der Startseite: lange deutsche Komposita in
+   Ueberschriften und feste Mindestbreiten. Gemessen 14 px Ueberlauf bei 320 px. */
+h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
+@media (max-width: 520px) {
+  h1, h2 { overflow-wrap: anywhere; }
+  .guide-main, .guide-note, .guide-links, table { max-width: 100%; }
+  pre, code, .mermaid { max-width: 100%; overflow-x: auto; }
+}
+
+/* Lange Inline-Links in der Fusszeile ("Datenschutz-Grundsaetze") brachen nicht um und
+   erzeugten 14 px waagerechten Ueberlauf bei 320 px. */
+.guide-note a, .footer-legal a, footer a { overflow-wrap: anywhere; }
+/* Der ganze Absatz muss umbrechen koennen, nicht nur der Link: der laengste
+   unteilbare Lauf stand im Fliesstext und hielt die Fusszeile 35 px breiter als ihr
+   Kasten (14 px Seitenueberlauf bei 320 px). */
+.guide-note { overflow-wrap: anywhere; word-break: break-word; min-width: 0; }
+.guide-footer { max-width: 100%; overflow-wrap: anywhere; }

@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /.agents/
+Disallow: /WEBSITE-STATUS.md
 
 Sitemap: https://umliva.github.io/sitemap.xml

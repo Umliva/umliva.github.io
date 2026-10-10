@@ -1,0 +1,25 @@
+# Umliva
+
+> Umliva ist ein digitales Prüfwerkzeug für Nebenkosten- und Heizkostenabrechnungen in Deutschland. Die Prüfung läuft lokal auf dem eigenen Gerät. Die Android-App ist in Entwicklung; öffentlich verfügbar sind diese Website und der Ratgeber.
+
+Umliva liest Betriebs-, Neben- und Heizkostenabrechnungen ein und prüft sie gegen feste Regeln. Zu jedem Prüfergebnis gehören die Grundlage, die Fundstelle im Dokument und der Rechenweg. Umliva unterscheidet drei Ergebnisse: Nachgewiesener Fehler, Auffälligkeit und Nicht prüfbar. Fehlen wichtige Angaben, sagt Umliva das deutlich, statt ein Ergebnis zu raten.
+
+Dokumente und Falldaten bleiben auf dem eigenen Gerät. Die Kernprüfung funktioniert ohne Konto und ohne Cloud-Upload. Umliva trifft keine rechtliche Entscheidung und bietet keine Rechtsberatung. Die rechtliche Würdigung bleibt bei einem Menschen, zum Beispiel bei einer Rechtsanwältin oder einem Rechtsanwalt.
+
+Stand: Oktober 2026. Umliva ist noch nicht im Google Play Store verfügbar.
+
+## Bereiche
+
+- Startseite: was Umliva tut, wie die Prüfung abläuft und welche Ergebnisstufen es gibt.
+- Referenzfall: anonymisierte Strukturrekonstruktion eines echten Mietstreits mit vier offenen Einwendungen.
+- Fachpartner: Modell für die Übergabe vorbereiteter Unterlagen an Rechtsanwältinnen und Rechtsanwälte.
+- Ratgeber: kurze Leitfäden zu Nebenkosten-, Betriebs- und Heizkostenabrechnungen.
+
+## Links
+
+- [Startseite](https://umliva.github.io/)
+- [Referenzfall](https://umliva.github.io/golden-case.html)
+- [Fachpartner](https://umliva.github.io/partner.html)
+- [Ratgeber](https://umliva.github.io/ratgeber/)
+- [Datenschutz-Grundsätze](https://umliva.github.io/PRIVACY.md)
+- [Quelltext auf GitHub](https://github.com/Umliva/umliva.github.io)

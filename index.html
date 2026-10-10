@@ -1,23 +1,247 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Umliva – Nebenkosten prüfen: privacy-first, local-first, reproduzierbar und mit nachvollziehbarer Evidence Chain.">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><title>Umliva – Nebenkosten prüfen</title><link rel="stylesheet" href="styles.css"><link rel="canonical" href="https://umliva.github.io/">
-  <style>.discovery{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:start}.discovery .button{margin-top:20px}.discovery-links{border-top:1px solid var(--line)}.discovery-links a{display:grid;grid-template-columns:1fr auto;gap:3px 18px;padding:20px 0;border-bottom:1px solid var(--line);text-decoration:none}.discovery-links strong{font-size:17px}.discovery-links span{color:var(--muted);font-size:14px}.discovery-links b{grid-column:2;grid-row:1 / span 2;align-self:center;color:var(--coral);font-size:22px}.case-strip{background:#fff6f2;border-top:1px solid #f0d8cf;border-bottom:1px solid #f0d8cf}.case-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}.case-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.case-stats div{background:white;border:1px solid var(--line);border-radius:13px;padding:20px}.case-stats b{display:block;font-size:28px}.case-stats span{font-size:13px;color:var(--muted)}@media(max-width:800px){.discovery,.case-grid{grid-template-columns:1fr;gap:30px}}</style>
-  <script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',themeVariables:{primaryColor:'#dff4ee',primaryTextColor:'#16312e',primaryBorderColor:'#2d776a',lineColor:'#5d7772',secondaryColor:'#f5eadb',tertiaryColor:'#eef1f7',fontFamily:'Inter, system-ui, sans-serif'}});const sources=document.querySelectorAll('[data-diagram-src]');await Promise.all([...sources].map(async(node)=>{const response=await fetch(node.dataset.diagramSrc);if(!response.ok)throw new Error(`Diagram source unavailable: ${response.status}`);node.textContent=await response.text()}));await mermaid.run({nodes:document.querySelectorAll('.mermaid')});</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <title>Umliva – Nebenkosten- und Heizkostenabrechnung prüfen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://umliva.github.io/">
+  <meta property="og:site_name" content="Umliva">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Umliva – Nebenkosten- und Heizkostenabrechnung prüfen">
+  <meta property="og:description" content="Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.">
+  <meta property="og:url" content="https://umliva.github.io/">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:image" content="https://umliva.github.io/assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://umliva.github.io/#website", "url": "https://umliva.github.io/", "name": "Umliva", "description": "Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.", "inLanguage": "de", "publisher": {"@id": "https://umliva.github.io/#organization"}}, {"@type": "Organization", "@id": "https://umliva.github.io/#organization", "name": "Umliva", "url": "https://umliva.github.io/", "logo": "https://umliva.github.io/favicon.svg", "sameAs": ["https://github.com/Umliva"]}]}
+  </script>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({startOnLoad:false,securityLevel:'strict',theme:'base',flowchart:{useMaxWidth:false,nodeSpacing:34,rankSpacing:44},themeVariables:{primaryColor:'#F5FAFB',primaryTextColor:'#003B46',primaryBorderColor:'#2D6B74',lineColor:'#2D6B74',secondaryColor:'#FAF7F1',tertiaryColor:'#EEF1F0',fontFamily:'Inter, system-ui, sans-serif'}});
+    const sources=document.querySelectorAll('[data-diagram-src]');
+    await Promise.all([...sources].map(async(node)=>{const response=await fetch(node.dataset.diagramSrc);if(!response.ok)throw new Error(`Diagram source unavailable: ${response.status}`);node.textContent=await response.text()}));
+    await mermaid.run({nodes:document.querySelectorAll('.mermaid')});
+    for(const pre of document.querySelectorAll('.mermaid')){
+      const pr=pre.getBoundingClientRect();
+      let minY=Infinity,left=Infinity;
+      for(const n of pre.querySelectorAll('svg g.node')){
+        const r=n.getBoundingClientRect();
+        const y=r.top-pr.top+pre.scrollTop;
+        if(y<minY-1){minY=y;left=Infinity;}
+        if(y<minY+1)left=Math.min(left,r.left-pr.left+pre.scrollLeft);
+      }
+      if(left===Infinity)continue;
+      pre.scrollLeft=Math.max(0,left-20);
+      pre.scrollTop=Math.max(0,minY-20);
+    }
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-<header class="site-header"><a class="brand" href="#main-content"><span class="mark">U</span><span>Umliva</span></a><nav><a href="#principles">Prinzipien</a><a href="golden-case.html">Golden Case</a><a href="partner.html">Fachpartner</a><a href="ratgeber/">Ratgeber</a><a href="#architecture">Architektur</a><a class="button small" href="https://github.com/Umliva/umliva.github.io/wiki">Wiki</a></nav></header>
+<header class="site-header">
+  <a class="brand" href="/"><span class="mark">U</span><span>Umliva</span></a>
+  <nav aria-label="Hauptnavigation">
+    <a href="#funktioniert">So funktioniert es</a>
+    <a href="golden-case.html">Referenzfall</a>
+    <a href="partner.html">Fachpartner</a>
+    <a href="ratgeber/">Ratgeber</a>
+    <a href="#technik">Technik</a>
+  </nav>
+</header>
+
 <main id="main-content">
-<section class="hero"><div class="status-note">Status: Öffentlich verfügbar sind heute diese Website und der Ratgeber. Die Android-App ist in Entwicklung und noch nicht im Google Play Store veröffentlicht.</div><div class="eyebrow">Umliva – Nebenkosten prüfen</div><h1>Abrechnungen verstehen.<br><em>Nachvollziehbar</em> prüfen.</h1><p class="lead">Umliva ist eine native Android-App für die lokale, deterministische Prüfung deutscher Betriebs-, Neben- und Heizkostenabrechnungen – mit nachvollziehbarer Provenienz vom Originaldokument bis zum Finding.</p><div class="actions"><a class="button" href="golden-case.html">Realen Golden Case ansehen</a><a class="text-link" href="partner.html">Für juristische Fachpartner →</a></div><div class="promise"><div><strong>local-first</strong><span>Dokumente bleiben auf dem Gerät</span></div><div><strong>deterministisch</strong><span>Regeln und Rechenwege sind reproduzierbar</span></div><div><strong>fail-closed</strong><span>Unklarheiten werden sichtbar gemacht</span></div></div></section>
-<section id="principles" class="section"><div class="section-intro"><div class="eyebrow">Wofür Umliva steht</div><h2>Vertrauen entsteht<br>durch Klarheit.</h2></div><div class="cards"><article><span class="icon" aria-hidden="true">◌</span><h3>Privat auf dem Gerät</h3><p>Die Kernprüfung funktioniert offline – ohne Konto, Backend oder Cloud-Upload. Dokumente, OCR-Text und Falldaten bleiben lokal.</p></article><article><span class="icon" aria-hidden="true">⌁</span><h3>Beweis statt Bauchgefühl</h3><p>Harte Regeln können nachweisbare Fehler markieren. Plausibilitätswarnungen und offene Fragen bleiben davon getrennt.</p></article><article><span class="icon" aria-hidden="true">⊙</span><h3>Jeder Wert hat eine Herkunft</h3><p>Vom Original über Extraktion und Bestätigung bis zum Bericht bleibt die Provenienz sichtbar und auditierbar.</p></article></div></section>
-<section class="section case-strip"><div class="case-grid"><div><div class="eyebrow">Golden Case · anonymisierte Strukturrekonstruktion</div><h2>Vier konkrete Einwendungen.<br>Keine davon beantwortet.</h2><p>Die anonymisierte Strukturrekonstruktion eines realen Mietstreits zeigte die Grenze eines reinen Prüf- und Briefgenerators: Die Beweiskette war vollständig, die Antwort ging dennoch am eigentlichen Streitpunkt vorbei. Daraus entsteht jetzt Umlivas Response-Matching- und Legal-Handoff-Modell.</p><div class="actions"><a class="button" href="golden-case.html">Fall ansehen</a><a class="text-link" href="partner.html">Kooperationsmodell →</a></div></div><div class="case-stats"><div><b>4</b><span>konkrete offene Einwendungen</span></div><div><b>0/4</b><span>inhaltlich beantwortet</span></div><div><b>1</b><span>bestätigter Punkt, aber nicht Streitgegenstand</span></div><div><b>→</b><span>strukturierter Legal Handoff als nächste Stufe</span></div></div></div></section>
-<section class="section discovery"><div class="section-intro"><div class="eyebrow">Wenn die Abrechnung vor dir liegt</div><h2>Erste Antworten<br>im Ratgeber.</h2><p>Ob Frist, Umlageschlüssel oder Heizkosten: Die kurzen Leitfäden erklären, was du prüfen kannst, welche Nachweise fehlen können und wo Umliva derzeit steht.</p><a class="button" href="ratgeber/">Ratgeber öffnen</a></div><div class="discovery-links"><a href="ratgeber/nebenkostenabrechnung-pruefen.html"><strong>Nebenkostenabrechnung prüfen</strong><span>Eine nachvollziehbare Prüfreihenfolge</span><b>→</b></a><a href="ratgeber/heizkostenabrechnung-pruefen.html"><strong>Heizkostenabrechnung prüfen</strong><span>Verbrauch, Verteilung und Nachweise</span><b>→</b></a><a href="ratgeber/nebenkosten-widerspruch.html"><strong>Nebenkosten widersprechen</strong><span>Streitpunkte konkret und nachvollziehbar formulieren</span><b>→</b></a></div></section>
-<section id="architecture" class="section architecture"><div class="section-intro"><div class="eyebrow">Living architecture</div><h2>Vom Dokument<br>zum Ergebnis.</h2><p>Die Diagramme sind öffentliche, gepflegte Quellen. Änderungen an Navigation, Datenflüssen oder Vertrauensgrenzen werden gemeinsam mit dem Code aktualisiert.</p></div><div class="diagram-panel"><div class="diagram-title"><span>Screen Flow</span><code>screen-flow.mmd</code></div><pre class="mermaid" data-diagram-src="diagrams/screen-flow.mmd"></pre></div><div class="diagram-panel"><div class="diagram-title"><span>Data Flow</span><code>data-flow.mmd</code></div><pre class="mermaid" data-diagram-src="diagrams/data-flow.mmd"></pre></div></section>
-<section id="verification" class="section split"><div><div class="eyebrow">Verification philosophy</div><h2>Ein grünes Build<br>ist kein Beweis.</h2></div><div class="proof-list"><div><b>01</b><span><strong>Deterministischer Beweis</strong>Tests, statische Checks, Regel- und Lizenzgates.</span></div><div><b>02</b><span><strong>Verhaltensbeweis</strong>Reale Nutzerwege im API-36-Emulator.</span></div><div><b>03</b><span><strong>Realitätsbeweis</strong>Externe Prüfung von PDFs, Exporten, Paketen und Hashes.</span></div><div><b>04</b><span><strong>User Truth</strong>Echte, anonymisierbare Fälle werden als Regression Cases zurückgeführt.</span></div></div></section>
-<section id="roadmap" class="section roadmap"><div class="section-intro"><div class="eyebrow">Roadmap</div><h2>Schritt für Schritt<br>zu V1.</h2></div><div class="milestones"><span><b>M0</b>Foundation & Governance</span><span><b>M1</b>Secure Local Data</span><span><b>M2</b>Document Intake & OCR</span><span><b>M3</b>Deterministic Engine</span><span><b>M4</b>UX & Evidence</span><span><b>M5</b>Monetization</span><span><b>M6</b>Verification</span><span><b>M7</b>Play Release</span><span><b>M8</b>Website, Wiki & Docs</span><span><b>M9</b>Dispute Engine & Legal Handoff</span></div></section>
-<section class="section closing"><div class="eyebrow">Offen und verantwortungsvoll</div><h2>Umliva prüft Abrechnungen –<br>es ersetzt keine Rechtsberatung.</h2><p>Umliva ist als deterministischer Abrechnungsprüfer positioniert. Ergebnisse zeigen Belege, Berechnungen, Abdeckung und offene Nachweise. Individuelle rechtliche Würdigung und anwaltliche Vertretung bleiben ausdrücklich beim Menschen.</p><a class="text-link" href="partner.html">Human-in-the-loop-Modell ansehen →</a></section>
-</main><footer><span>© Umliva · Public site revision 0.2</span><span><a href="golden-case.html">Golden Case</a> · <a href="partner.html">Fachpartner</a> · <a href="https://github.com/Umliva/umliva.github.io">GitHub</a> · <a href="https://github.com/Umliva/umliva.github.io/wiki">Wiki</a></span><nav class="footer-legal" aria-label="Datenschutz & Privatsphäre">Datenschutz & Privatsphäre (veröffentlichte Datenschutzinformationen): <a href="PRIVACY.md">Privacy-Grundsätze</a> · <a href="https://github.com/Umliva/umliva.github.io/wiki/Privacy-Model">Privacy-Modell</a></nav></footer>
-</body></html>
+
+  <!-- 1–3: Hauptaussage, eine Hauptschaltfläche, drei Vertrauenssätze -->
+  <section class="hero">
+    <p class="status-note">Stand: Umliva ist noch nicht im Google Play Store. Du kannst dir heute die Beispielprüfung ansehen und den Ratgeber nutzen.</p>
+    <p class="eyebrow">Umliva – digitales Prüfwerkzeug für Nebenkosten</p>
+    <h1>Nebenkostenabrechnung prüfen. Verstehen, was stimmt und was offen ist.</h1>
+    <p class="lead">Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Es hilft dir, Fehler, Auffälligkeiten und fehlende Angaben zu erkennen. Deine Dokumente bleiben auf deinem eigenen Gerät.</p>
+    <div class="actions">
+      <a class="button" href="golden-case.html">Beispielprüfung ansehen</a>
+      <a class="text-link" href="#funktioniert">So funktioniert Umliva</a>
+    </div>
+    <div class="trust">
+      <div><strong>Deine Dokumente bleiben auf deinem Gerät.</strong><span>Keine Pflicht zur Cloud, kein Konto.</span></div>
+      <div><strong>Zu jedem Prüfergebnis siehst du die Grundlage.</strong><span>Regel, Fundstelle und Rechnung.</span></div>
+      <div><strong>Wenn Angaben fehlen, sagt Umliva das deutlich.</strong><span>Kein geratenes Ergebnis.</span></div>
+    </div>
+  </section>
+
+  <!-- 4: So funktioniert Umliva -->
+  <section id="funktioniert" class="section">
+    <div class="section-intro">
+      <p class="eyebrow">So funktioniert Umliva</p>
+      <h2>Vier Schritte vom Dokument zum Ergebnis.</h2>
+    </div>
+    <ol class="steps">
+      <li><span class="num">1</span><h3>Abrechnung einlesen</h3><p>Du wählst die Abrechnung auf deinem eigenen Gerät aus.</p></li>
+      <li><span class="num">2</span><h3>Werte bestätigen</h3><p>Umliva zeigt, was es gelesen hat. Unklare Stellen fragst du gezielt nach.</p></li>
+      <li><span class="num">3</span><h3>Regeln anwenden</h3><p>Umliva rechnet nach und prüft gegen feste Regeln.</p></li>
+      <li><span class="num">4</span><h3>Ergebnis mit Grundlage</h3><p>Du siehst Fehler, Auffälligkeiten und fehlende Angaben, jeweils mit Regel, Fundstelle und Rechnung.</p></li>
+    </ol>
+  </section>
+
+  <!-- 5: So sieht ein Prüfergebnis aus -->
+  <section id="ergebnis" class="section">
+    <div class="section-intro">
+      <p class="eyebrow">So sieht ein Prüfergebnis aus</p>
+      <h2>Ein Ergebnis zeigt immer die Grundlage.</h2>
+      <p>Ein Beispiel, wie Umliva ein Ergebnis einordnet. Ohne Grundlage gibt es kein Ergebnis.</p>
+    </div>
+    <div class="result-demo">
+      <div class="result-card">
+        <div class="result-sign" aria-hidden="true">?</div>
+        <p class="result-status">Auffälligkeit</p>
+        <h3>Wohnfläche weicht vom Vertrag ab</h3>
+        <dl>
+          <div><dt>Grundlage</dt><dd>Der angesetzte Anteil passt nicht zur vereinbarten Fläche.</dd></div>
+          <div><dt>Fundstelle</dt><dd>Seite 2, Zeile „Ihre Wohnfläche“.</dd></div>
+          <div><dt>Berechnung</dt><dd>Fläche im Vertrag: 60 m² · Fläche in der Abrechnung: 64 m².</dd></div>
+          <div><dt>Es fehlen noch Angaben</dt><dd>Der aktuelle Beleg für die Fläche.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6: Was Umliva unterscheidet -->
+  <section id="unterscheidet" class="section">
+    <div class="section-intro">
+      <p class="eyebrow">Was Umliva unterscheidet</p>
+      <h2>Drei klare Ergebnisse. Nichts wird geraten.</h2>
+    </div>
+    <div class="states">
+      <article class="state error">
+        <div class="state-sign" aria-hidden="true">!</div>
+        <h3>Nachgewiesener Fehler</h3>
+        <p>Genug Belege. Umliva zeigt Regel, Fundstelle und Rechnung.</p>
+      </article>
+      <article class="state warning">
+        <div class="state-sign" aria-hidden="true">?</div>
+        <h3>Auffälligkeit</h3>
+        <p>Schau hier genauer hin. Es ist noch kein sicherer Fehler.</p>
+      </article>
+      <article class="state open">
+        <div class="state-sign" aria-hidden="true">○</div>
+        <h3>Nicht prüfbar</h3>
+        <p>Eine wichtige Angabe fehlt. Umliva sagt, welche Angabe und wo sie steht.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- 7: Datenschutz -->
+  <section id="datenschutz" class="section privacy">
+    <div class="section-intro">
+      <p class="eyebrow">Datenschutz</p>
+      <h2>Deine Abrechnung ist privat. Umliva behandelt sie so.</h2>
+      <p>Eine Abrechnung enthält persönliche Daten. Deshalb verarbeitet Umliva sie möglichst vollständig auf deinem eigenen Gerät.</p>
+    </div>
+    <div class="privacy-grid">
+      <article><h3>Auf deinem Gerät</h3><p>Die Prüfung läuft ohne Pflicht-Konto und ohne Pflicht-Upload in die Cloud.</p></article>
+      <article><h3>Offline im Kern</h3><p>Die Kernprüfung funktioniert ohne Verbindung. Freiwillige Zusatzdienste schaltest du selbst ein.</p></article>
+      <article><h3>Keine Garantie</h3><p>Umliva verspricht keine Sicherheitsgarantie. Was Umliva tut, ist nachvollziehbar und prüfbar.</p></article>
+    </div>
+    <p class="privacy-link"><a class="text-link" href="PRIVACY.md">Datenschutz-Grundsätze lesen</a></p>
+  </section>
+
+  <!-- 8: Referenzfall -->
+  <section id="referenzfall" class="section reference">
+    <div class="section-intro">
+      <p class="eyebrow">Referenzfall</p>
+      <h2>Ein echter Streit, anonymisiert nachgezeichnet.</h2>
+      <p>Vier Einwendungen blieben ohne inhaltliche Antwort. Der Referenzfall zeigt, was Umliva daraus lernt.</p>
+    </div>
+    <div class="reference-grid">
+      <div class="reference-stats">
+        <div><b>4</b><span>offene Einwendungen</span></div>
+        <div><b>0/4</b><span>inhaltlich beantwortet</span></div>
+        <div><b>1</b><span>bestätigter Punkt, aber nicht der Streitpunkt</span></div>
+      </div>
+      <p><a class="button" href="golden-case.html">Referenzfall ansehen</a></p>
+    </div>
+  </section>
+
+  <!-- 9: Übergabe an Fachleute -->
+  <section id="uebergabe" class="section handoff">
+    <div class="section-intro">
+      <p class="eyebrow">Übergabe an Fachleute</p>
+      <h2>Umliva entscheidet keinen Streit.</h2>
+      <p>Die rechtliche Entscheidung trifft immer ein Mensch. Umliva bereitet die Unterlagen für eine rechtliche Prüfung vor.</p>
+      <p><a class="text-link" href="partner.html">Übergabe an eine Rechtsanwältin oder einen Rechtsanwalt</a></p>
+    </div>
+  </section>
+
+  <!-- 10: Ratgeber -->
+  <section id="ratgeber" class="section">
+    <div class="section-intro">
+      <p class="eyebrow">Ratgeber</p>
+      <h2>Kurze Antworten auf deine Fragen.</h2>
+    </div>
+    <div class="ratgeber-links">
+      <a href="ratgeber/umlagefaehige-nebenkosten.html"><strong>Was darf in der Nebenkostenabrechnung stehen?</strong><span>Kostenarten sortieren</span><b>→</b></a>
+      <a href="ratgeber/nebenkostenabrechnung-pruefen.html"><strong>Was kann ich prüfen?</strong><span>Reihenfolge und Belege</span><b>→</b></a>
+      <a href="ratgeber/nebenkosten-widerspruch.html"><strong>Was mache ich, wenn etwas unklar ist?</strong><span>Nachweise und Fragen dokumentieren</span><b>→</b></a>
+    </div>
+    <p><a class="button" href="ratgeber/">Ratgeber öffnen</a></p>
+  </section>
+
+  <!-- 11: Technik und Transparenz -->
+  <section id="technik" class="section technik">
+    <div class="section-intro">
+      <p class="eyebrow">Technik und Transparenz</p>
+      <h2>So ist Umliva gebaut.</h2>
+      <p>Für alle, die nachsehen wollen: Architektur, Qualitätsprüfung und Entwicklungsplan.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="diagram-panel">
+        <div class="diagram-title"><span>Bildschirmablauf</span><code>screen-flow.mmd</code></div>
+        <pre class="mermaid" data-diagram-src="diagrams/screen-flow.mmd"></pre>
+      </div>
+      <div class="diagram-panel">
+        <div class="diagram-title"><span>Datenfluss</span><code>data-flow.mmd</code></div>
+        <pre class="mermaid" data-diagram-src="diagrams/data-flow.mmd"></pre>
+      </div>
+    </div>
+    <h3>Qualitätsprüfung</h3>
+    <div class="proof-list">
+      <div><b>01</b><span><strong>Nachweis durch Prüfungen</strong>Tests, statische Prüfungen, Regel- und Lizenzprüfungen.</span></div>
+      <div><b>02</b><span><strong>Verhalten auf echten Geräten</strong>Das Verhalten wird auf echten Geräten beobachtet. Ein Emulator ersetzt diesen Nachweis nicht.</span></div>
+      <div><b>03</b><span><strong>Prüfung von außen</strong>Externe Prüfung von PDFs, Exporten, Paketen und Prüfsummen.</span></div>
+      <div><b>04</b><span><strong>Echte Fälle</strong>Echte, anonymisierbare Fälle werden als wiederholbare Tests zurückgeführt.</span></div>
+    </div>
+    <h3>Entwicklungsplan</h3>
+    <div class="milestones">
+      <span><b>M0</b>Grundlagen und Regeln</span>
+      <span><b>M1</b>Sichere Daten auf dem Gerät</span>
+      <span><b>M2</b>Dokumente einlesen und Texterkennung</span>
+      <span><b>M3</b>Fester Prüfkern</span>
+      <span><b>M4</b>Bedienung und Nachweise</span>
+      <span><b>M5</b>Bezahlmodell</span>
+      <span><b>M6</b>Qualitätsprüfung</span>
+      <span><b>M7</b>Veröffentlichung im Play Store</span>
+      <span><b>M8</b>Website, Wiki und Dokumentation</span>
+      <span><b>M9</b>Streitprüfung und Übergabe an Fachleute</span>
+    </div>
+    <p class="tech-note"><a class="text-link" href="https://github.com/Umliva/umliva.github.io">Quelltext auf GitHub ansehen</a></p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span>© Umliva</span>
+    <span><a href="golden-case.html">Referenzfall</a> · <a href="partner.html">Fachpartner</a> · <a href="ratgeber/">Ratgeber</a> · <a href="https://github.com/Umliva/umliva.github.io">GitHub</a></span>
+  </div>
+  <nav class="footer-legal" aria-label="Datenschutz und Rechtliches">
+    Datenschutz und Rechtliches:
+    <a href="PRIVACY.md">Datenschutz-Grundsätze</a> ·
+    <a href="https://github.com/Umliva/umliva.github.io/wiki/Privacy-Model">Datenschutz-Modell</a> ·
+    Impressum: LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED
+  </nav>
+</footer>
+</body>
+</html>

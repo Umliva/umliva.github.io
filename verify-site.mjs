@@ -9,12 +9,21 @@ const required = [
   'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/abrechnungsfrist-nebenkosten.html',
   'ratgeber/umlageschluessel-pruefen.html', 'ratgeber/umlagefaehige-nebenkosten.html',
   'ratgeber/fehler-nebenkostenabrechnung.html', 'ratgeber/nebenkosten-widerspruch.html',
-  'robots.txt', 'sitemap.xml'
+  'robots.txt', 'sitemap.xml', 'llms.txt', 'assets/img/og-image.png'
+];
+const structured = [
+  'index.html', 'ratgeber/abrechnungsfrist-nebenkosten.html', 'ratgeber/betriebskostenabrechnung-pruefen.html',
+  'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/fehler-nebenkostenabrechnung.html',
+  'ratgeber/heizkostenabrechnung-pruefen.html', 'ratgeber/nebenkosten-widerspruch.html',
+  'ratgeber/nebenkostenabrechnung-pruefen.html', 'ratgeber/nebenkostenabrechnung-zu-hoch.html',
+  'ratgeber/umlagefaehige-nebenkosten.html', 'ratgeber/umlageschluessel-pruefen.html'
 ];
 const files = new Set();
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (entry.name === '.git') continue;
+    // Nur an der Wurzel: projeklokale Skills sind Arbeitsflaechen, keine published surfaces
+    if (dir === root && entry.name === '.agents') continue;
     const path = join(dir, entry.name);
     if (entry.isDirectory()) await walk(path);
     else files.add(relative(root, path));
@@ -27,12 +36,17 @@ const htmlFiles = [...files].filter((path) => path.endsWith('.html'));
 const localTargets = new Set();
 for (const path of htmlFiles) {
   const html = await readFile(join(root, path), 'utf8');
+  // Meta-Angaben muessen im <head> stehen: Tags hinter </html> gelten Browsern und
+  // Crawlern als Body-Inhalt (Social-Previews und JSON-LD wuerden sie dort nicht finden).
+  const head = /<head[^>]*>([\s\S]*?)<\/head>/i.exec(html)?.[1];
+  if (!head) throw new Error(`${path}: missing <head>`);
   for (const [name, pattern] of [
     ['title', /<title>[^<]+<\/title>/i],
     ['description', /<meta name="description" content="[^"]+">/i],
     ['canonical', /<link rel="canonical" href="https:\/\/umliva\.github\.io\/[^">]*">/i],
-    ['h1', /<h1[^>]*>/i]
-  ]) if (!pattern.test(html)) throw new Error(`${path}: missing ${name}`);
+    ['og:image', /<meta property="og:image" content="https:\/\/umliva\.github\.io\/[^"]+">/i]
+  ]) if (!pattern.test(head)) throw new Error(`${path}: missing ${name} in head`);
+  if (!/<h1[^>]*>/i.test(html)) throw new Error(`${path}: missing h1`);
   if (path.startsWith('ratgeber/') && (!html.includes('PLANNED') || !html.includes('keine individuelle Rechtsberatung'))) throw new Error(`${path}: missing bounded status/disclaimer`);
   for (const href of html.matchAll(/href="([^"]+)"/g)) {
     const target = href[1];
@@ -50,6 +64,21 @@ for (const path of required.filter((p) => p.endsWith('.html'))) {
 }
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 if (!robots.includes('Allow: /') || !robots.includes('Sitemap: https://umliva.github.io/sitemap.xml')) throw new Error('robots policy incomplete');
+const llms = await readFile(join(root, 'llms.txt'), 'utf8');
+if (!llms.startsWith('# Umliva') || !llms.includes('https://umliva.github.io/')) throw new Error('llms.txt incomplete');
+for (const path of structured) {
+  const html = await readFile(join(root, path), 'utf8');
+  const head = /<head[^>]*>([\s\S]*?)<\/head>/i.exec(html)?.[1] ?? '';
+  const blocks = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  if (blocks.length === 0) throw new Error(`${path}: missing structured data in head`);
+  for (const block of blocks) {
+    let data;
+    try { data = JSON.parse(block[1]); } catch { throw new Error(`${path}: invalid JSON-LD`); }
+    for (const node of data['@graph'] ?? [data]) {
+      if (!node || !node['@type']) throw new Error(`${path}: JSON-LD node without @type`);
+    }
+  }
+}
 const home = await readFile(join(root, 'index.html'), 'utf8');
 for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-diagram-src="diagrams/screen-flow.mmd"', 'data-diagram-src="diagrams/data-flow.mmd"']) {
   if (!home.includes(marker)) throw new Error(`homepage regression: ${marker}`);
