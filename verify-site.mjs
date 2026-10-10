@@ -9,7 +9,14 @@ const required = [
   'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/abrechnungsfrist-nebenkosten.html',
   'ratgeber/umlageschluessel-pruefen.html', 'ratgeber/umlagefaehige-nebenkosten.html',
   'ratgeber/fehler-nebenkostenabrechnung.html', 'ratgeber/nebenkosten-widerspruch.html',
-  'robots.txt', 'sitemap.xml'
+  'robots.txt', 'sitemap.xml', 'llms.txt', 'assets/img/og-image.png'
+];
+const structured = [
+  'index.html', 'ratgeber/abrechnungsfrist-nebenkosten.html', 'ratgeber/betriebskostenabrechnung-pruefen.html',
+  'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/fehler-nebenkostenabrechnung.html',
+  'ratgeber/heizkostenabrechnung-pruefen.html', 'ratgeber/nebenkosten-widerspruch.html',
+  'ratgeber/nebenkostenabrechnung-pruefen.html', 'ratgeber/nebenkostenabrechnung-zu-hoch.html',
+  'ratgeber/umlagefaehige-nebenkosten.html', 'ratgeber/umlageschluessel-pruefen.html'
 ];
 const files = new Set();
 async function walk(dir) {
@@ -32,7 +39,8 @@ for (const path of htmlFiles) {
     ['title', /<title>[^<]+<\/title>/i],
     ['description', /<meta name="description" content="[^"]+">/i],
     ['canonical', /<link rel="canonical" href="https:\/\/umliva\.github\.io\/[^">]*">/i],
-    ['h1', /<h1[^>]*>/i]
+    ['h1', /<h1[^>]*>/i],
+    ['og:image', /<meta property="og:image" content="https:\/\/umliva\.github\.io\/[^"]+">/i]
   ]) if (!pattern.test(html)) throw new Error(`${path}: missing ${name}`);
   if (path.startsWith('ratgeber/') && (!html.includes('PLANNED') || !html.includes('keine individuelle Rechtsberatung'))) throw new Error(`${path}: missing bounded status/disclaimer`);
   for (const href of html.matchAll(/href="([^"]+)"/g)) {
@@ -51,6 +59,19 @@ for (const path of required.filter((p) => p.endsWith('.html'))) {
 }
 const robots = await readFile(join(root, 'robots.txt'), 'utf8');
 if (!robots.includes('Allow: /') || !robots.includes('Sitemap: https://umliva.github.io/sitemap.xml')) throw new Error('robots policy incomplete');
+const llms = await readFile(join(root, 'llms.txt'), 'utf8');
+if (!llms.startsWith('# Umliva') || !llms.includes('https://umliva.github.io/')) throw new Error('llms.txt incomplete');
+for (const path of structured) {
+  const html = await readFile(join(root, path), 'utf8');
+  const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  if (blocks.length === 0) throw new Error(`${path}: missing structured data`);
+  for (const block of blocks) {
+    let data;
+    try { data = JSON.parse(block[1]); } catch { throw new Error(`${path}: invalid JSON-LD`); }
+    const types = (data['@graph'] ?? [data]).map((n) => n['@type']);
+    if (!types.some(Boolean)) throw new Error(`${path}: JSON-LD without @type`);
+  }
+}
 const home = await readFile(join(root, 'index.html'), 'utf8');
 for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-diagram-src="diagrams/screen-flow.mmd"', 'data-diagram-src="diagrams/data-flow.mmd"']) {
   if (!home.includes(marker)) throw new Error(`homepage regression: ${marker}`);
