@@ -44,7 +44,9 @@ const ALLOWED = [
   "DSGVO", "TMG", "DDG", "ISO", "WCAG", "ARIA", "CC BY", "Apache", "MIT",
 ];
 // Technische Dateinamen/Endungen, die im sichtbaren Text erscheinen dürfen.
-const TECH_FILE = /[\w./-]+\.(mmd|mjs|svg|css|html|json|kt|sh|md|ico|png)\b/g;
+// Ohne /g-Flag: .test() ist damit zustandslos (mit /g wandert lastIndex zwischen
+// Aufrufen und die Prüfung fällt intermittierend falsch aus).
+const TECH_FILE = /[\w./-]+\.(mmd|mjs|svg|css|html|json|kt|sh|md|ico|png)\b/;
 
 async function walk(dir, out = []) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {

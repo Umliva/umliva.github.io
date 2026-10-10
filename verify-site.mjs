@@ -22,7 +22,8 @@ const files = new Set();
 async function walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     if (entry.name === '.git') continue;
-    if (entry.name === '.agents') continue; // project-local skills: working files, not published surfaces
+    // Nur an der Wurzel: projeklokale Skills sind Arbeitsflaechen, keine published surfaces
+    if (dir === root && entry.name === '.agents') continue;
     const path = join(dir, entry.name);
     if (entry.isDirectory()) await walk(path);
     else files.add(relative(root, path));
@@ -35,13 +36,17 @@ const htmlFiles = [...files].filter((path) => path.endsWith('.html'));
 const localTargets = new Set();
 for (const path of htmlFiles) {
   const html = await readFile(join(root, path), 'utf8');
+  // Meta-Angaben muessen im <head> stehen: Tags hinter </html> gelten Browsern und
+  // Crawlern als Body-Inhalt (Social-Previews und JSON-LD wuerden sie dort nicht finden).
+  const head = /<head[^>]*>([\s\S]*?)<\/head>/i.exec(html)?.[1];
+  if (!head) throw new Error(`${path}: missing <head>`);
   for (const [name, pattern] of [
     ['title', /<title>[^<]+<\/title>/i],
     ['description', /<meta name="description" content="[^"]+">/i],
     ['canonical', /<link rel="canonical" href="https:\/\/umliva\.github\.io\/[^">]*">/i],
-    ['h1', /<h1[^>]*>/i],
     ['og:image', /<meta property="og:image" content="https:\/\/umliva\.github\.io\/[^"]+">/i]
-  ]) if (!pattern.test(html)) throw new Error(`${path}: missing ${name}`);
+  ]) if (!pattern.test(head)) throw new Error(`${path}: missing ${name} in head`);
+  if (!/<h1[^>]*>/i.test(html)) throw new Error(`${path}: missing h1`);
   if (path.startsWith('ratgeber/') && (!html.includes('PLANNED') || !html.includes('keine individuelle Rechtsberatung'))) throw new Error(`${path}: missing bounded status/disclaimer`);
   for (const href of html.matchAll(/href="([^"]+)"/g)) {
     const target = href[1];
@@ -63,13 +68,15 @@ const llms = await readFile(join(root, 'llms.txt'), 'utf8');
 if (!llms.startsWith('# Umliva') || !llms.includes('https://umliva.github.io/')) throw new Error('llms.txt incomplete');
 for (const path of structured) {
   const html = await readFile(join(root, path), 'utf8');
-  const blocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if (blocks.length === 0) throw new Error(`${path}: missing structured data`);
+  const head = /<head[^>]*>([\s\S]*?)<\/head>/i.exec(html)?.[1] ?? '';
+  const blocks = [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  if (blocks.length === 0) throw new Error(`${path}: missing structured data in head`);
   for (const block of blocks) {
     let data;
     try { data = JSON.parse(block[1]); } catch { throw new Error(`${path}: invalid JSON-LD`); }
-    const types = (data['@graph'] ?? [data]).map((n) => n['@type']);
-    if (!types.some(Boolean)) throw new Error(`${path}: JSON-LD without @type`);
+    for (const node of data['@graph'] ?? [data]) {
+      if (!node || !node['@type']) throw new Error(`${path}: JSON-LD node without @type`);
+    }
   }
 }
 const home = await readFile(join(root, 'index.html'), 'utf8');

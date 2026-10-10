@@ -11,7 +11,7 @@
 
 Static site, no build step, no backend:
 
-- Root: `index.html`, `golden-case.html`, `partner.html`, `sitemap.xml`, `robots.txt`, `favicon.svg`, `styles.css`, `guide.css`, `.nojekyll`
+- Root: `index.html`, `golden-case.html`, `partner.html`, `sitemap.xml`, `robots.txt`, `favicon.svg`, `styles.css`, `guide.css`, `llms.txt`, `assets/img/og-image.png` (Open-Graph-Vorschaubild), `.nojekyll`
 - `ratgeber/`: bounded German-language guide pages (`index.html` + topic pages)
 - `diagrams/`: Mermaid sources (`screen-flow.mmd`, `data-flow.mmd`), rendered client-side on `index.html`
 - `docs/design/`: brand and design documentation (`UMLIVA_MARKENBILD.md` is the durable brand record)
