@@ -19,6 +19,8 @@ Static site, no build step, no backend:
   `github.com/Julian-Ivanov/website-bauen`, installed at commit `ee7c4cb`). Declared in
   `config/agent-project-contract.json` under `skillIsolation.repoSkillRoots`; project-local only,
   never global.
+- `WEBSITE-STATUS.md`: work-state file of the website-bauen skill (not a published surface;
+  robots-disallowed). Update it when continuing that skill's process.
 - Verification scripts: `verify-site.mjs`, `verify-sanitization.mjs`, `tools/verify-german.mjs`
 
 ## Public / private boundary
