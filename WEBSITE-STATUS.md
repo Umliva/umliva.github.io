@@ -4,19 +4,29 @@ Diese Datei hält fest, wo das Projekt steht. Der Skill `website-bauen` liest si
 
 Status: ✅ erledigt · 🔄 läuft · ⬜ offen
 
-Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neubau). Der Skill wurde am 2026-10-10 projektlokal installiert und als Audit- und Verbesserungslauf auf die bestehende Seite angewendet. Die Phasen 0–4 gelten als durch die bestehende Marke und Inhalte abgedeckt; die Tabelle spiegelt den Stand dieses Laufs.
+Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neubau). Der Skill wurde am 2026-10-10 projektlokal installiert und als Audit- und Verbesserungslauf auf die bestehende Seite angewendet. Die Phasen 0–5 beschreiben diesen historischen Inhalts- und Gestaltungsstand; die Live- und Prüfangaben darunter wurden am 2026-10-13 erneut gelesen.
+
+## Aktueller Live-Readback — 2026-10-13
+
+- Öffentlicher Quellstand: `main` bei `3943d3cd435abb5faf84e1acd462c7dbc18b3354`.
+- GitHub-Pages-Deployment `6982852365` für diesen Stand: `success`, veröffentlicht unter `https://umliva.github.io/`.
+- HTTP-Readback: Startseite, `golden-case.html` und `partner.html` antworten mit `200`.
+- Aktuelle sichtbare Desktop-/Mobilprüfung: `NOT_RUN`; in dieser Umgebung war keine steuerbare Browseroberfläche verfügbar. Frühere Sichtprüfungen vom 2026-10-10 bleiben historische Belege.
+- `impressum.html` und `datenschutz.html` antworten mit `404`. Die Fußzeilen nennen den Impressumsplatzhalter `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED`; Anbieter- und Verantwortlichendaten fehlen weiterhin. Die vorhandenen Datenschutz-Grundsätze und das Datenschutz-Modell sind davon getrennte Inhalte.
+- Die veröffentlichten Seiten kennzeichnen Umliva weiterhin als in Entwicklung. Es gibt keinen Release- oder Produktionsverfügbarkeitsanspruch.
+- Am Quellstand `3943d3cd435abb5faf84e1acd462c7dbc18b3354` bestanden `node verify-site.mjs`, `node verify-sanitization.mjs`, `node tools/verify-german.mjs`, `node tools/verify-agent-project-contract.mjs`, die Contract-Fixtures und der Host-Audit. Der Host-Audit endete mit `PASS=7`, `FAIL=0`, `NOT_VERIFIED=4`.
 
 | Phase | Name | Status | Datum |
 |---|---|---|---|
 | 0 | Einrichten | ✅ (Skill projektlokal installiert) | 2026-10-10 |
 | 1 | Fundament | ✅ (bestehend; Marke dokumentiert in `docs/design/UMLIVA_MARKENBILD.md`) | 2026-10-10 |
-| 2 | Recherche | ⬜ (DataForSEO nicht eingerichtet; Keyword-Tiefe fehlt) | |
+| 2 | Recherche | ⬜ (optionale Suchworttiefe nicht erhoben; kein kostenpflichtiger DataForSEO-Dienst eingerichtet) | 2026-10-13 |
 | 3 | Texte | ✅ (Audit gegen `.agents/skills/website-bauen/schreibregeln.md`: Gedankenstriche, Duzen-Ausreißer, Zählfehler behoben) | 2026-10-10 |
 | 4 | Design-Richtung | ✅ (bestehendes Markensystem, gemessen mit `werkzeuge/marke_auslesen.py`, kein Drift) | 2026-10-10 |
 | 5 | Bauen | ✅ (OG-Vorschaubild + Tags, JSON-LD, llms.txt, Diagramm-Präsentation) | 2026-10-10 |
-| 6 | Prüfen und Feinschliff | ✅ (4 visuelle Prüfdurchgänge, alle Befunde behoben, Endstand pass) | 2026-10-10 |
-| 7 | Livegang | ⬜ (Merge auf `main` und Veröffentlichung liegen beim Menschen) | |
-| 8 | Danach | ⬜ (Search Console/Profile nach dem Merge) | |
+| 6 | Prüfen und Feinschliff | ✅ (historische visuelle Prüfdurchgänge vom 2026-10-10; kein aktueller Sichtnachweis) | 2026-10-10 |
+| 7 | Livegang | ✅ (GitHub-Pages-Deployment erfolgreich; HTTP-Readback für die drei geprüften Seiten am 2026-10-13) | 2026-10-13 |
+| 8 | Danach | ⬜ (optionale Suchprofile nicht eingerichtet; aktuelle Sichtprüfung und Betreiberangaben stehen aus) | 2026-10-13 |
 
 ## Ausgangslage
 
@@ -41,15 +51,16 @@ Gemessen (Startseite, `werkzeuge/marke_auslesen.py`, 2026-10-10) — deckungsgle
 
 ## Entscheidungen
 
-- 2026-10-10: Arbeitsbasis des Laufs ist der Branch `design/umliva-pruefwerkzeug-20261007` (direkter Nachfolger von `main`, fast-forward-fähig), damit die bestehende Gestaltungsarbeit konvergiert; dieser Lauf liegt auf `skill/website-bauen-anwendung-20261010`.
+- 2026-10-10: Die damalige Arbeitsbasis war der Branch `design/umliva-pruefwerkzeug-20261007`; PR #8 wurde am 2026-10-10 in `main` integriert. Diese Angabe beschreibt den damaligen Lauf, nicht eine noch ausstehende Veröffentlichung.
 - 2026-10-10: Skill nur projektlokal (`.agents/skills/website-bauen`), im Vertrag unter `skillIsolation.repoSkillRoots` deklariert; `/.agents/` ist keine veröffentlichte Fläche (verify-site-Ausschluss, robots-Disallow).
 - 2026-10-10: Strukturierte Daten nur mit belegbaren Angaben (keine Autorinnen, Daten, Bewertungen); Impressum bleibt der ehrliche Platzhalter `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED`.
+- 2026-10-13: Öffentlichen Quellstand, Pages-Deployment und HTTP-Antworten erneut gelesen. Das belegt Erreichbarkeit, aber keine aktuelle visuelle Prüfung.
 
 ## Offene Fragen an die Person
 
-- Impressum: Trägerdaten fehlen und dürfen nicht erfunden werden (`LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED` in den Fußzeilen). Wer ist der Anbieter im Sinne von § 5 DDG?
-- DataForSEO-Konto für Phase 2 (Suchvolumen/Wettbewerber) einrichten? Aktuell ca. 1 $ Projektbudget nötig.
-- Branch `skill/website-bauen-anwendung-20261010` per PR nach `main` bringen (Merge und Veröffentlichung waren in diesem Lauf ausdrücklich ausgeschlossen).
+- Verifizierte Anbieter- und Verantwortlichendaten für Impressum und Datenschutz sowie die erforderliche rechtliche Prüfung bereitstellen. Der Fußzeilenplatzhalter `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED` bleibt bestehen, bis diese Angaben vorliegen.
+- Eine aktuelle Desktop- und Mobilansicht mit einer steuerbaren Browseroberfläche prüfen und den Sichtnachweis dokumentieren.
+- Suchwortanalyse und Suchprofile sind optional und bleiben ohne kostenpflichtige Dienste aufgeschoben.
 
 ## Update-Ablauf nach dem Livegang
 
