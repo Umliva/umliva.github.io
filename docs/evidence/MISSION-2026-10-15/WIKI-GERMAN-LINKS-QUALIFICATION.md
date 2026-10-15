@@ -1,7 +1,7 @@
 # German Wiki navigation qualification — 2026-10-15
 
 Public repository: `Umliva/umliva.github.io`  
-PR #10 source/evidence head when checked: `fb8b43b7380128d2e7dfed92f5139812b4ae9075`
+PR #10 source/evidence head when checked: `4c6d75db44d8018011524331e0f207887920d185`
 
 Wiki source head: `Umliva/umliva.github.io.wiki` master `4e4fac4a5e8c344106eb0363c317eddc0479ecf6`
 
