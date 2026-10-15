@@ -3,7 +3,9 @@
 Repository: `Umliva/umliva.github.io`  
 Branch: `codex/site-german-copy-20261015`
 Code commit checked: `2aa44fe48e8470873154fb5775ff34a4fcfccf08`
+Evidence/check commit: `8a1d93d95ab78718989c51dcab9e19eeb5050833`
 Node: `v22.22.0`
+Browser: Playwright-controlled visible Chrome `153.0.8010.36`
 
 ## Local checks
 
