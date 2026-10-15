@@ -58,3 +58,9 @@ https://umliva.github.io/ratgeber/umlageschluessel-pruefen.html
 The site does not link to `impressum.html` or `datenschutz.html` as completed legal pages. Direct GET requests to `https://umliva.github.io/impressum.html` and `https://umliva.github.io/datenschutz.html` returned `404`; the footer continues to show `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED`. The linked `PRIVACY.md` (200) contains privacy principles, not completed provider/privacy disclosures. The linked Wiki destinations return 200, but the deployed Wiki is still English; PR #10's German patch is not published.
 
 The PR #10 source tree has no broken internal or external link destinations. This destination audit does not claim that its unmerged German/layout changes are deployed; public main remains at the SHA above.
+
+## Linked Wiki destination audit
+
+The public Wiki was read directly from `Umliva/umliva.github.io.wiki` on 2026-10-15. `git ls-remote origin HEAD refs/heads/master` returned `4e4fac4a5e8c344106eb0363c317eddc0479ecf6` for both refs. The PR #10 translation patch modifies all eight tracked Wiki pages (`Architecture.md`, `FAQ.md`, `Home.md`, `Privacy-Model.md`, `Product-Principles.md`, `Release-Philosophy.md`, `Roadmap.md`, and `Verification-Model.md`), with 42 insertions and 42 deletions; the patch remains unpublished.
+
+Extracting Markdown links from all eight current Wiki pages and the local translated versions found one unique destination: `https://umliva.github.io/`. It returned HTTP 200 on 2026-10-15. The deployed Wiki page and root destination returned HTTP 200. This verifies destination availability only; it does not treat the currently deployed English Wiki as localized or publish the pending translation.
