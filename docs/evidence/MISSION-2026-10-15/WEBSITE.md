@@ -25,3 +25,5 @@ All commands exited 0 on the code commit above:
 HTTP readback on 2026-10-15 returned 200 for the homepage, golden-case page, partner page, guide index and linked Wiki pages. The legal URLs `/impressum.html` and `/datenschutz.html` return 404. The footer retains its owner-data placeholder; no legal or provider information was invented.
 
 The live deployment still points to the existing main commit and therefore does not contain this branch's German badge or layout change. A headed browser was unavailable in this session, so desktop/mobile visual inspection and screenshots are `NOT_RUN`. The requested 1366-pixel desktop view and narrow mobile widths require review in a controllable headed browser before merge.
+
+The linked Wiki pages were cloned read-only at `4e4fac4a5e8c344106eb0363c317eddc0479ecf6`. A German translation patch for all eight public Markdown pages is included beside this file as `WIKI-GERMAN-PATCH.patch`. GitHub Wiki has no normal pull-request target; the patch is prepared for independent review and an authorized Wiki edit, and has not been published.
