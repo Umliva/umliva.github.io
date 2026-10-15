@@ -17,8 +17,8 @@ for (const [page, html] of sources) {
 }
 const golden = Object.fromEntries(sources)['golden-case.html'];
 for (const marker of [
-  'SYNTHETIC STRUCTURE',
-  'NO ORIGINAL CASE DATA',
+  'Synthetischer Strukturfall',
+  'keine Originalfalldaten',
   'P-01',
   'S-A',
   'S-B',

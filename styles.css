@@ -148,7 +148,8 @@ a { color: inherit; }
   line-height: 1.08;
   letter-spacing: -0.02em;
   margin: 0 0 24px;
-  max-width: 17ch;
+  max-width: 25ch;
+  overflow-wrap: normal;
 }
 .lead { font-size: 19px; max-width: 60ch; color: var(--muted); margin: 0 0 32px; }
 .actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
