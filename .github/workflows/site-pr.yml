@@ -1,0 +1,37 @@
+name: Website PR checks
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: website-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  static-checks:
+    name: Static content and project contracts
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out pull request
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up Node.js 22
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+      - name: Check site structure and links
+        run: node verify-site.mjs
+      - name: Check sanitization
+        run: node verify-sanitization.mjs
+      - name: Check German-language rules
+        run: node tools/verify-german.mjs
+      - name: Check German-language regression fixtures
+        run: node tools/verify-german-fixtures.mjs
+      - name: Check agent project contract
+        run: node tools/verify-agent-project-contract.mjs
+      - name: Check agent project contract fixtures
+        run: node tools/run-agent-project-contract-fixtures.mjs
