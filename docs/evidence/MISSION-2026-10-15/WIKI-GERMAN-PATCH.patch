@@ -43,10 +43,10 @@ index 2dcd5cd..f1fca0c 100644
 +## Was passiert, wenn ein Wert unklar ist?
 +Umliva zeigt die Fundstelle im Original und bittet um eine gezielte Bestätigung, statt stillschweigend zu raten.
 diff --git a/Home.md b/Home.md
-index 7415deb..a61efde 100644
+index 7415deb..1a6c868 100644
 --- a/Home.md
 +++ b/Home.md
-@@ -1,8 +1,8 @@
+@@ -1,15 +1,15 @@
 -# Umliva Wiki
 +# Umliva-Wiki
  
@@ -56,11 +56,20 @@ index 7415deb..a61efde 100644
 -Start here:
 +Hier geht es weiter:
  
- - [[Product Principles]]
- - [[Architecture]]
-@@ -12,4 +12,4 @@ Start here:
- - [[FAQ]]
- - [[Release Philosophy]]
+-- [[Product Principles]]
+-- [[Architecture]]
+-- [[Verification Model]]
+-- [[Privacy Model]]
+-- [[Roadmap]]
+-- [[FAQ]]
+-- [[Release Philosophy]]
++- [Produktgrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Product-Principles)
++- [Architektur](https://github.com/Umliva/umliva.github.io/wiki/Architecture)
++- [Prüfmodell](https://github.com/Umliva/umliva.github.io/wiki/Verification-Model)
++- [Datenschutzmodell](https://github.com/Umliva/umliva.github.io/wiki/Privacy-Model)
++- [Fahrplan](https://github.com/Umliva/umliva.github.io/wiki/Roadmap)
++- [Häufige Fragen](https://github.com/Umliva/umliva.github.io/wiki/FAQ)
++- [Freigabegrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Release-Philosophy)
  
 -Umliva is a deterministic billing checker, not individualized legal advice.
 \ No newline at end of file
