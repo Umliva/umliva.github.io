@@ -1,8 +1,8 @@
 # Website copy and static checks — 2026-10-15
 
 Repository: `Umliva/umliva.github.io`  
-Branch: `codex/site-german-copy-20261015`  
-Code commit checked: `7102325e59b79808b30fd3520639a879efdf204d`  
+Branch: `codex/site-german-copy-20261015`
+Code commit checked: `2aa44fe48e8470873154fb5775ff34a4fcfccf08`
 Node: `v22.22.0`
 
 ## Local checks
@@ -24,8 +24,14 @@ All commands exited 0 on the code commit above:
 
 HTTP readback on 2026-10-15 returned 200 for the homepage, golden-case page, partner page, guide index and linked Wiki pages. The legal URLs `/impressum.html` and `/datenschutz.html` return 404. The footer retains its owner-data placeholder; no legal or provider information was invented.
 
-The live deployment still points to the existing main commit and therefore does not contain this branch's German badge or layout change. A Playwright browser opened a local static preview. Layout inspection returned no horizontal page overflow at 1366 px (`clientWidth=1351`, `scrollWidth=1351`), 390 px (`375/375`), and 320 px (`305/305`). At 1366 px the hero heading measured about 790 × 181 CSS px with normal word wrapping; at 390 px it measured 335 × 138 px; at 320 px it measured 273 × 173 px and used `overflow-wrap:anywhere`. These are browser geometry checks, not screenshots.
+The live deployment still points to the existing main commit and therefore does not contain this branch's German badge or layout change. A visible Playwright-controlled Chrome 153 browser opened the local static preview at the exact code commit above. The page was inspected at 1366×900, 390×844 and 320×844 CSS pixels. No horizontal page overflow appeared (`clientWidth=1351, scrollWidth=1351`; `375/375`; `305/305`), and the full `Nebenkostenabrechnung` word occupied one line at all three widths. The desktop and both mobile renderings were visually inspected.
 
-The CUA headed browser remained unavailable. Playwright screenshot output was also `NOT_RUN`: the browser tool only allowed writing under the protected canonical owner checkout, and no safe screenshot destination was available without mutating it. A human reviewer must still inspect desktop/mobile rendering and record screenshots before merge.
+Screenshots captured from that exact commit are committed beside this record:
+
+| Viewport | Screenshot | SHA-256 |
+| --- | --- | --- |
+| 1366×900 | `desktop-1366.jpg` | `cf07fbbc196da43fe6f1944efdf89befe400746b1ff5d9a804ef4ce063354776` |
+| 390×844 | `mobile-390.jpg` | `d3ccc598b7f5fdb8efb001ea14ea69ece2c3e3ee841f727df5a8e18ef7e67147` |
+| 320×844 | `mobile-320.jpg` | `c4a77e6d675524aa39ed7e7de4410a2aa0292f5fe8830fa57527deee2bcce878` |
 
 The linked Wiki pages were cloned read-only at `4e4fac4a5e8c344106eb0363c317eddc0479ecf6`. A German translation patch for all eight public Markdown pages is included beside this file as `WIKI-GERMAN-PATCH.patch`. GitHub Wiki has no normal pull-request target; the patch is prepared for independent review and an authorized Wiki edit, and has not been published.
