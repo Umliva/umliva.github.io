@@ -413,7 +413,7 @@ footer a { text-decoration: none; color: var(--ink); }
   .trust, .steps, .states, .privacy-grid { grid-template-columns: 1fr; }
   .reference-stats { grid-template-columns: 1fr; }
   .milestones { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 32px; }
+  .hero h1 { font-size: clamp(22px, 7vw, 32px); }
   .actions { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 320px) {
@@ -425,7 +425,7 @@ footer a { text-decoration: none; color: var(--ink); }
    kein waagerechter Ueberlauf entsteht (gemessen: 75 px auf /, 14 px auf Ratgeber).
    Deutsche Silbentrennung statt Wortbruch ohne Trennstrich; overflow-wrap als Rueffall. */
 @media (max-width: 520px) {
-  .hero h1 { overflow-wrap: anywhere; }
+  .hero h1 { overflow-wrap: normal; hyphens: auto; }
   .discovery-links a, .discovery-links a > *, .reference-grid > *, .ratgeber-links a,
   .tech-grid > *, .flow > *, .boundary > * { min-width: 0; }
   .discovery-links a > *, .ratgeber-links a > * { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
