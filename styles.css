@@ -425,6 +425,7 @@ footer a { text-decoration: none; color: var(--ink); }
    kein waagerechter Ueberlauf entsteht (gemessen: 75 px auf /, 14 px auf Ratgeber).
    Deutsche Silbentrennung statt Wortbruch ohne Trennstrich; overflow-wrap als Rueffall. */
 @media (max-width: 520px) {
+  .hero h1 { overflow-wrap: anywhere; }
   .discovery-links a, .discovery-links a > *, .reference-grid > *, .ratgeber-links a,
   .tech-grid > *, .flow > *, .boundary > * { min-width: 0; }
   .discovery-links a > *, .ratgeber-links a > * { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
@@ -443,4 +444,4 @@ h1, h2, h3 { hyphens: auto; -webkit-hyphens: auto; overflow-wrap: break-word; }
 
 /* Lange Inline-Links in der Fusszeile ("Datenschutz-Grundsaetze") brachen nicht um und
    erzeugten 14 px waagerechten Ueberlauf bei 320 px. */
-.guide-note a, .footer-legal a, footer a { overflow-wrap: anywhere; }
+.guide-note a, .footer-legal, .footer-legal a, footer a { overflow-wrap: anywhere; }
