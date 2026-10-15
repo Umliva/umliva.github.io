@@ -165,3 +165,19 @@ index 90cd5ff..e815403 100644
 -OCR release gates are stricter for money, dates, areas, meter values and allocation keys. Uncertain critical values cannot be automatically accepted.
 \ No newline at end of file
 +Für Geldbeträge, Daten, Flächen, Zählerstände und Verteilungsschlüssel gelten strengere Freigabekriterien für die Texterkennung. Unsichere kritische Werte dürfen nicht automatisch übernommen werden.
+diff --git a/_Sidebar.md b/_Sidebar.md
+new file mode 100644
+index 0000000..a0613d6
+--- /dev/null
++++ b/_Sidebar.md
+@@ -0,0 +1,10 @@
++# Umliva-Wiki
++
++- [Übersicht](https://github.com/Umliva/umliva.github.io/wiki)
++- [Produktgrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Product-Principles)
++- [Architektur](https://github.com/Umliva/umliva.github.io/wiki/Architecture)
++- [Prüfmodell](https://github.com/Umliva/umliva.github.io/wiki/Verification-Model)
++- [Datenschutzmodell](https://github.com/Umliva/umliva.github.io/wiki/Privacy-Model)
++- [Fahrplan](https://github.com/Umliva/umliva.github.io/wiki/Roadmap)
++- [Häufige Fragen](https://github.com/Umliva/umliva.github.io/wiki/FAQ)
++- [Freigabegrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Release-Philosophy)
