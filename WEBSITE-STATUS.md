@@ -80,6 +80,12 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Sichtprüfung im headed Chrome bei 1366/390/320 px: 3/3 bestanden, kein Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-privacy/`.
 - Deployment: PR #23 wurde als `23573fbf487dbf372d8c1b696d51a681fabfdea2` gemergt; Pages meldet `built`. Live `datenschutz.html` 200/9.494 Bytes mit der OCR-Abgrenzung. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-privacy/live-readback.md`.
 
+## Tastaturfokus und Skip-Link — 2026-10-17
+
+- Alle 16 veröffentlichten HTML-Seiten haben jetzt `<main id="main-content" tabindex="-1">`, damit der Skip-Link den Tastaturfokus tatsächlich auf den Inhalt setzt.
+- Sichtprüfung im headed Chrome bei 1366×900 und 390×844 über sieben Seiten: 14/14 bestanden; erster Tab fokussiert den Skip-Link, Enter setzt den Fokus auf `#main-content`. Evidence: `docs/evidence/MISSION-2026-10-17/keyboard-focus/`.
+- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
