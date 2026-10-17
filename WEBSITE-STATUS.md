@@ -72,7 +72,7 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 
 - `styles.css` und `guide.css` versteckten bei ≤800 px alle Kopfzeilen-Links. Die Navigation bricht jetzt unter der Marke um und bleibt auf 390 px und 320 px erreichbar; kein Skript, kein Overlay, unveränderte Linkziele.
 - Sichtprüfung im headed Chrome über sechs Seiten und drei Breiten: 18/18 bestanden, alle Navigationslinks sichtbar, kein waagerechter Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/mobile-nav/`.
-- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+- Deployment: PR #21 wurde als `912fd05d8ed1896798d2865336ccb9a1b1693d72` gemergt; Pages meldet `built`. Live-Check bei 390/320 px: 6/6 bestanden, alle Kopfzeilen-Links sichtbar. Evidence: `docs/evidence/MISSION-2026-10-17/mobile-nav/live-readback.md`.
 
 ## Ausgangslage
 
