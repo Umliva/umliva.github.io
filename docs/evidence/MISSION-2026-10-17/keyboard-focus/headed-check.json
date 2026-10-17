@@ -1,0 +1,215 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "path": "/",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/impressum.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/datenschutz.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/partner.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/golden-case.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/ratgeber/",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/ratgeber/nebenkosten-widerspruch.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/impressum.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/datenschutz.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/partner.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/golden-case.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/ratgeber/",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/ratgeber/nebenkosten-widerspruch.html",
+      "first": {
+        "tag": "A",
+        "cls": "skip-link",
+        "href": "#main-content",
+        "text": "Zum Inhalt springen"
+      },
+      "after_enter": {
+        "tag": "MAIN",
+        "id": "main-content"
+      },
+      "ok": true
+    }
+  ],
+  "problems": []
+}
