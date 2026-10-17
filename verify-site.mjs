@@ -9,6 +9,7 @@ const required = [
   'ratgeber/co2-kosten-mieter-vermieter.html', 'ratgeber/abrechnungsfrist-nebenkosten.html',
   'ratgeber/umlageschluessel-pruefen.html', 'ratgeber/umlagefaehige-nebenkosten.html',
   'ratgeber/fehler-nebenkostenabrechnung.html', 'ratgeber/nebenkosten-widerspruch.html',
+  'impressum.html', 'datenschutz.html',
   'robots.txt', 'sitemap.xml', 'llms.txt', 'assets/img/og-image.png'
 ];
 const structured = [

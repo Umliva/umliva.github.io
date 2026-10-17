@@ -29,6 +29,14 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 | 7 | Livegang | ✅ (PR #10 auf Pages deployed; HTTP- und headed Readback am 2026-10-17) | 2026-10-17 |
 | 8 | Danach | ⬜ (optionale Suchprofile nicht eingerichtet; Betreiberangaben und Rechtsprüfung stehen aus) | 2026-10-17 |
 
+## Legalfläche — Kandidat 2026-10-17
+
+- `impressum.html` und `datenschutz.html` sind als vollständige Seiten angelegt und aus allen Fußzeilen verlinkt. Der rohe Platzhalter `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED` ist damit aus den veröffentlichten Seiten entfernt.
+- Die Betreiber- und Verantwortlichenangaben fehlen weiterhin. Sie sind im Impressum als offene Pflichtfelder markiert und wurden nicht erfunden; die Datenschutzseite benennt die verantwortliche Stelle entsprechend allgemein. Das bleibt ein Release-Blocker für die rechtliche Veröffentlichung.
+- Die Datenschutzseite beschreibt den tatsächlichen Stand: GitHub-Pages-Hosting, jsDelivr für Mermaid, keine Analyse/Werbung/Formulare, lokale App-Verarbeitung, verschlüsselte Speicherung, deaktivierte Cloud-Sicherung, kein aktiver Telemetrie-Kanal und der bedingte Google-Play-Kaufpfad.
+- Lokale Gates und sichtbare Prüfung im headed Chrome (1366×900, 390×844, 320×844) sind bestanden. Evidence: `docs/evidence/MISSION-2026-10-17/legal-pages/`.
+- Deployment: ausstehend bis zum reviewten Merge auf `main`; danach folgt der Live-Readback.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
