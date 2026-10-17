@@ -63,6 +63,11 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - `datenschutz.html` nennt jetzt die Android-Berechtigungen `INTERNET` und `ACCESS_NETWORK_STATE`, die über Google Play Billing in das Release-Manifest gelangen. Kernprüfung, Import, lokale Speicherung und Exporte führen weiterhin keine Netzwerkanfrage aus.
 - PR #15 wurde als `8ac5b64afbc85667d9b751cc3c3ecf10a5e62430` gemergt; Pages meldet `built`. Live `200`, 9.348 Bytes, Satz vorhanden. Evidence: `docs/evidence/MISSION-2026-10-17/billing-privacy/live-readback.md`.
 
+## Live-Readback OCR-Grenze — 2026-10-17
+
+- `main` = `09975bf0ad1b6727bf4faf627fde423a3fc83d0c` (PR #19). Pages meldet `built`; `/` antwortet `200` und enthält die OCR-Grenze in `#v1-umfang`.
+- Sichtprüfung im headed Chrome bei 1366×900, 390×844 und 320×844: 3/3 bestanden, 16 Listeneinträge, kein Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-boundary/live-readback.md`.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
