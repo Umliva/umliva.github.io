@@ -68,6 +68,12 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - `main` = `09975bf0ad1b6727bf4faf627fde423a3fc83d0c` (PR #19). Pages meldet `built`; `/` antwortet `200` und enthält die OCR-Grenze in `#v1-umfang`.
 - Sichtprüfung im headed Chrome bei 1366×900, 390×844 und 320×844: 3/3 bestanden, 16 Listeneinträge, kein Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-boundary/live-readback.md`.
 
+## Mobile Navigation — 2026-10-17
+
+- `styles.css` und `guide.css` versteckten bei ≤800 px alle Kopfzeilen-Links. Die Navigation bricht jetzt unter der Marke um und bleibt auf 390 px und 320 px erreichbar; kein Skript, kein Overlay, unveränderte Linkziele.
+- Sichtprüfung im headed Chrome über sechs Seiten und drei Breiten: 18/18 bestanden, alle Navigationslinks sichtbar, kein waagerechter Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/mobile-nav/`.
+- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)

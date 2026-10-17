@@ -1,0 +1,167 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "path": "/",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/impressum.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/datenschutz.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/partner.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/golden-case.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "desktop",
+      "path": "/ratgeber/",
+      "status": 200,
+      "navLinks": 2,
+      "visible": 2,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/impressum.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/datenschutz.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/partner.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/golden-case.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "path": "/ratgeber/",
+      "status": 200,
+      "navLinks": 2,
+      "visible": 2,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/impressum.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/datenschutz.html",
+      "status": 200,
+      "navLinks": 5,
+      "visible": 5,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/partner.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/golden-case.html",
+      "status": 200,
+      "navLinks": 4,
+      "visible": 4,
+      "overflow": false,
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "path": "/ratgeber/",
+      "status": 200,
+      "navLinks": 2,
+      "visible": 2,
+      "overflow": false,
+      "ok": true
+    }
+  ],
+  "problems": []
+}
