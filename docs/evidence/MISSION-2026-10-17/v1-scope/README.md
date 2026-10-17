@@ -12,7 +12,7 @@ website.
 - Hero lead now limits the current V1 claim to confirmed positions, sums, area
   reference and shares, and names the open areas.
 - New section `#v1-umfang` (`data-v1-scope="declared"`) lists what V1 checks and
-  ten excluded families:
+  eleven excluded families:
   administration/repair/maintenance apportionability, maintenance reserve,
   insurance components, caretaker/mixed services, cable TV after 2024, other
   operating costs and contractual agreements, vacancy/commercial units, heating

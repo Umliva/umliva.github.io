@@ -47,7 +47,7 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 ## V1-Versprechensgrenze — 2026-10-17
 
 - Der kanonische App-Prüfumfang (`Umliva/Umliva` `docs/V1_COVERAGE_SCOPE.md`, `main` `0f4dca4452…`) ist auf die Website übertragen: Titel, Meta/OG/JSON-LD und Hero nennen jetzt ausdrücklich den geprüften Rechenweg und die nicht geprüften Bereiche.
-- Neue Sektion `#v1-umfang` (`data-v1-scope="declared"`) listet die geprüften Punkte und zehn ausdrücklich nicht geprüfte Familien. `llms.txt` trägt dieselbe Grenze.
+- Neue Sektion `#v1-umfang` (`data-v1-scope="declared"`) listet die geprüften Punkte und elf ausdrücklich nicht geprüfte Familien. `llms.txt` trägt dieselbe Grenze.
 - `verify-site.mjs` erzwingt die Sektion und die Nicht-Abdeckungsformulierung, damit die Zusage nicht still zurück auf vollständige Abdeckung driftet.
 - Lokale Gates und headed Chrome (1366×900, 390×844, 320×844) sind bestanden; Evidence unter `docs/evidence/MISSION-2026-10-17/v1-scope/`.
 - Deployment: PR #13 wurde als `243644ed3e43b4d8fe1d77b44d5ad5623ad5bdf6` auf `main` gemergt; Pages meldet `built` für exakt diesen Commit. Live enthält `/` die neue Sektion, den neuen Titel und die Nicht-Abdeckungsliste (`200`, 16.025 Bytes).
