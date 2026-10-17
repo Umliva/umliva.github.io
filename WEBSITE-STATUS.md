@@ -84,7 +84,7 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 
 - Alle 16 veröffentlichten HTML-Seiten haben jetzt `<main id="main-content" tabindex="-1">`, damit der Skip-Link den Tastaturfokus tatsächlich auf den Inhalt setzt.
 - Sichtprüfung im headed Chrome bei 1366×900 und 390×844 über sieben Seiten: 14/14 bestanden; erster Tab fokussiert den Skip-Link, Enter setzt den Fokus auf `#main-content`. Evidence: `docs/evidence/MISSION-2026-10-17/keyboard-focus/`.
-- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+- Deployment: PR #25 wurde als `24be49ce6acda2e2355130c67d351538a2c37d01` gemergt; Pages meldet `built`. Live-Check bei 390/320 px: 6/6 bestanden, Skip-Link setzt den Fokus auf `#main-content`. Evidence: `docs/evidence/MISSION-2026-10-17/keyboard-focus/live-readback.md`.
 
 ## Ausgangslage
 
