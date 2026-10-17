@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.">
+  <meta name="description" content="Umliva prüft den Rechenweg und die Struktur von Betriebskostenabrechnungen. Heizkosten, CO₂ und die rechtliche Umlagefähigkeit sind noch nicht geprüft. Dokumente bleiben auf dem eigenen Gerät.">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <title>Umliva – Nebenkosten- und Heizkostenabrechnung prüfen</title>
+  <title>Umliva – Betriebskostenabrechnung prüfen</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="canonical" href="https://umliva.github.io/">
   <meta property="og:site_name" content="Umliva">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Umliva – Nebenkosten- und Heizkostenabrechnung prüfen">
-  <meta property="og:description" content="Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.">
+  <meta property="og:title" content="Umliva – Betriebskostenabrechnung prüfen">
+  <meta property="og:description" content="Umliva prüft den Rechenweg und die Struktur von Betriebskostenabrechnungen. Heizkosten, CO₂ und die rechtliche Umlagefähigkeit sind noch nicht geprüft. Dokumente bleiben auf dem eigenen Gerät.">
   <meta property="og:url" content="https://umliva.github.io/">
   <meta property="og:locale" content="de_DE">
   <meta property="og:image" content="https://umliva.github.io/assets/img/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <script type="application/ld+json">
-  {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://umliva.github.io/#website", "url": "https://umliva.github.io/", "name": "Umliva", "description": "Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Dokumente bleiben auf dem eigenen Gerät. Zu jedem Prüfergebnis siehst du die Grundlage.", "inLanguage": "de", "publisher": {"@id": "https://umliva.github.io/#organization"}}, {"@type": "Organization", "@id": "https://umliva.github.io/#organization", "name": "Umliva", "url": "https://umliva.github.io/", "logo": "https://umliva.github.io/favicon.svg", "sameAs": ["https://github.com/Umliva"]}]}
+  {"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://umliva.github.io/#website", "url": "https://umliva.github.io/", "name": "Umliva", "description": "Umliva prüft den Rechenweg und die Struktur von Betriebskostenabrechnungen. Heizkosten, CO₂ und die rechtliche Umlagefähigkeit sind noch nicht geprüft. Dokumente bleiben auf dem eigenen Gerät.", "inLanguage": "de", "publisher": {"@id": "https://umliva.github.io/#organization"}}, {"@type": "Organization", "@id": "https://umliva.github.io/#organization", "name": "Umliva", "url": "https://umliva.github.io/", "logo": "https://umliva.github.io/favicon.svg", "sameAs": ["https://github.com/Umliva"]}]}
   </script>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.esm.min.mjs';
@@ -60,7 +60,7 @@
     <p class="status-note">Stand: Umliva ist noch nicht im Google Play Store. Du kannst dir heute die Beispielprüfung ansehen und den Ratgeber nutzen.</p>
     <p class="eyebrow">Umliva – digitales Prüfwerkzeug für Nebenkosten</p>
     <h1>Nebenkostenabrechnung prüfen. Verstehen, was stimmt und was offen ist.</h1>
-    <p class="lead">Umliva prüft Nebenkosten- und Heizkostenabrechnungen. Es hilft dir, Fehler, Auffälligkeiten und fehlende Angaben zu erkennen. Deine Dokumente bleiben auf deinem eigenen Gerät.</p>
+    <p class="lead">Umliva prüft aktuell den Rechenweg und die Struktur der Betriebskostenabrechnung: bestätigte Positionen, Summen, Flächenbezug und Anteile. Heizkosten- und CO₂-Verteilung, die rechtliche Umlagefähigkeit und Fristen sind noch nicht geprüft und werden klar als offen gekennzeichnet. Deine Dokumente bleiben auf deinem eigenen Gerät.</p>
     <div class="actions">
       <a class="button" href="golden-case.html">Beispielprüfung ansehen</a>
       <a class="text-link" href="#funktioniert">So funktioniert Umliva</a>
@@ -131,6 +131,44 @@
         <p>Eine wichtige Angabe fehlt. Umliva sagt, welche Angabe und wo sie steht.</p>
       </article>
     </div>
+  </section>
+
+
+  <!-- 6b: V1-Prüfumfang und ausdrückliche Nicht-Prüfung -->
+  <section id="v1-umfang" class="section privacy" data-v1-scope="declared">
+    <div class="section-intro">
+      <p class="eyebrow">Was V1 prüft – und was nicht</p>
+      <h2>Umliva prüft einen klaren Kern. Alles andere bleibt sichtbar offen.</h2>
+      <p>V1 prüft den Rechenweg und die Struktur der Betriebskostenabrechnung anhand der von dir bestätigten Werte. Die folgenden Bereiche sind bewusst nicht geprüft. Umliva zeigt sie als offen und behauptet dazu kein Ergebnis.</p>
+    </div>
+    <div class="privacy-grid">
+      <article>
+        <h3>In V1 geprüft</h3>
+        <ul>
+          <li>bestätigte Positionen und ihre Vorzeichen</li>
+          <li>Summenabgleich zum Abrechnungsbetrag</li>
+          <li>Flächenbezug und Anteilsgrenzen</li>
+          <li>Quellen- und Rechenweg zu jedem Befund</li>
+          <li>klare Trennung von bewiesenem Fehler, Auffälligkeit und nicht prüfbar</li>
+        </ul>
+      </article>
+      <article>
+        <h3>In V1 ausdrücklich nicht geprüft</h3>
+        <ul>
+          <li>Umlagefähigkeit von Verwaltungs-, Reparatur- und Instandhaltungskosten</li>
+          <li>Erhaltungsrücklage</li>
+          <li>Versicherungsanteile</li>
+          <li>Hausmeister- und gemischte Dienstleistungen</li>
+          <li>Kabelfernsehen nach der Änderung 2024</li>
+          <li>sonstige Betriebskosten und vertragliche Vereinbarungen</li>
+          <li>Leerstands- und Gewerbeeinheiten</li>
+          <li>Heizkosten- und CO₂-Verteilung</li>
+          <li>Fristen nach § 556 BGB</li>
+          <li>Wirtschaftlichkeit, Angemessenheit und rechtliche Folgen</li>
+        </ul>
+      </article>
+    </div>
+    <p class="privacy-link">Fällt eine Position in einen nicht geprüften Bereich, sagt Umliva das. Ein vollständiges rechtliches Prüfergebnis wird nicht behauptet.</p>
   </section>
 
   <!-- 7: Datenschutz -->

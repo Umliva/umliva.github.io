@@ -44,6 +44,14 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Sichtprüfung im headed Chrome gegen die Live-Domain mit Deploy-Query: 18/18 Seite/Viewport-Kombinationen, 55/55 interne Links, kein waagerechter Überlauf, keine Konsolenfehler, keine fehlgeschlagenen Requests. Screenshots und JSON unter `docs/evidence/MISSION-2026-10-17/legal-pages/live/`.
 - Betreiberdaten fehlen weiterhin. Das Impressum markiert Name, Anschrift, Kontakt, Vertretung/Register/USt-IdNr., Verantwortliche Person nach § 18 MStV und Streitbeilegungsstatus als offen. Das ist ein irreduzibler Blocker für die rechtliche Endveröffentlichung, kein erledigter Punkt.
 
+## V1-Versprechensgrenze — 2026-10-17
+
+- Der kanonische App-Prüfumfang (`Umliva/Umliva` `docs/V1_COVERAGE_SCOPE.md`, `main` `0f4dca4452…`) ist auf die Website übertragen: Titel, Meta/OG/JSON-LD und Hero nennen jetzt ausdrücklich den geprüften Rechenweg und die nicht geprüften Bereiche.
+- Neue Sektion `#v1-umfang` (`data-v1-scope="declared"`) listet die geprüften Punkte und zehn ausdrücklich nicht geprüfte Familien. `llms.txt` trägt dieselbe Grenze.
+- `verify-site.mjs` erzwingt die Sektion und die Nicht-Abdeckungsformulierung, damit die Zusage nicht still zurück auf vollständige Abdeckung driftet.
+- Lokale Gates und headed Chrome (1366×900, 390×844, 320×844) sind bestanden; Evidence unter `docs/evidence/MISSION-2026-10-17/v1-scope/`.
+- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)

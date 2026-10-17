@@ -81,7 +81,7 @@ for (const path of structured) {
   }
 }
 const home = await readFile(join(root, 'index.html'), 'utf8');
-for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-diagram-src="diagrams/screen-flow.mmd"', 'data-diagram-src="diagrams/data-flow.mmd"']) {
+for (const marker of ['href="golden-case.html"', 'href="partner.html"', 'data-diagram-src="diagrams/screen-flow.mmd"', 'data-diagram-src="diagrams/data-flow.mmd"', 'id="v1-umfang"', 'data-v1-scope="declared"', 'In V1 ausdrücklich nicht geprüft', 'Heizkosten- und CO₂-Verteilung']) {
   if (!home.includes(marker)) throw new Error(`homepage regression: ${marker}`);
 }
 const golden = await readFile(join(root, 'golden-case.html'), 'utf8');
