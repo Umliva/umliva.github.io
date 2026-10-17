@@ -78,7 +78,7 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 
 - Die Datenschutzseite stellt klar, dass die automatische Texterkennung für Bild- und Scan-Dokumente in dieser V1-Version nicht enthalten ist und solche Dokumente nicht ausgelesen werden. Das entspricht der App-Meldung, der öffentlichen V1-Grenze und dem Release-Artefakt.
 - Sichtprüfung im headed Chrome bei 1366/390/320 px: 3/3 bestanden, kein Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-privacy/`.
-- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+- Deployment: PR #23 wurde als `23573fbf487dbf372d8c1b696d51a681fabfdea2` gemergt; Pages meldet `built`. Live `datenschutz.html` 200/9.494 Bytes mit der OCR-Abgrenzung. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-privacy/live-readback.md`.
 
 ## Ausgangslage
 
