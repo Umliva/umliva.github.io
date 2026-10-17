@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "overflow": false,
+      "ok": true,
+      "console": []
+    },
+    {
+      "viewport": "mobile",
+      "status": 200,
+      "overflow": false,
+      "ok": true,
+      "console": []
+    },
+    {
+      "viewport": "narrow",
+      "status": 200,
+      "overflow": false,
+      "ok": true,
+      "console": []
+    }
+  ],
+  "problems": []
+}
