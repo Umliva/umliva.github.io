@@ -1,0 +1,21 @@
+name: vertical-reality-qa
+version: 1.0.0
+use_when:
+  - feature_validation
+  - bug_fix_validation
+  - release_validation
+  - runtime_product_change
+required_layers:
+  - targeted_tests
+  - integration
+  - vertical_behavior
+conditional_layers:
+  - visual
+  - accessibility
+  - real_device
+  - hardware
+  - security
+  - performance
+  - failure_recovery
+  - clean_install
+selection_rule: risk_adaptive

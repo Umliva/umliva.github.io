@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": "Mueller-Systems-Lab/agent-methods",
+  "harness": "generic",
+  "methods": {
+    "tool-governance": "0.2.0",
+    "vertical-reality-qa": "1.0.0",
+    "workspace-preflight": "1.0.0"
+  },
+  "phase2_assets": {},
+  "routes": [
+    "feature",
+    "tooling_setup"
+  ]
+}

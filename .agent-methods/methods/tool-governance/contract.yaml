@@ -1,0 +1,58 @@
+name: tool-governance
+version: 0.2.0
+use_when:
+  - mcp_setup
+  - connector_setup
+  - external_tool_installation
+  - capability_gap
+required_phases:
+  - project_task_inspection
+  - capability_definition
+  - reuse_check
+  - provenance_permission_review
+  - least_privilege
+  - placement_decision
+  - agent_controllability_assessment
+  - controlled_path_selection
+  - capability_smoke_test
+  - rollback_documentation
+forbidden_shortcuts:
+  - install_everything
+  - broad_scope_by_default
+  - project_specific_global_install
+  - install_success_equals_working_capability
+  - installed_equals_agent_usable
+  - uncontrolled_required_children
+  - resource_heavy_helper_by_project_type
+  - conventional_tool_forced_despite_failed_gate
+agent_controllability:
+  invariant: an_autonomous_agent_may_depend_only_on_tools_whose_relevant_execution_path_is_agent_controllable
+  model: router/tool-capability-model.yaml
+  runtime_module: agent_methods/capability.py
+  dimensions:
+    - CAN_INVOKE
+    - CAN_OBSERVE
+    - CAN_BOUND_RESOURCES
+    - CAN_TERMINATE
+    - CAN_CLEANUP
+    - CAN_RECOVER
+    - SIDE_EFFECTS_KNOWN_AND_BOUNDED
+    - NO_UNCONTROLLED_REQUIRED_CHILDREN
+  essential_dimensions:
+    - CAN_INVOKE
+    - CAN_OBSERVE
+    - SIDE_EFFECTS_KNOWN_AND_BOUNDED
+    - NO_UNCONTROLLED_REQUIRED_CHILDREN
+  resource_heavy_dimensions:
+    - CAN_BOUND_RESOURCES
+    - CAN_TERMINATE
+    - CAN_CLEANUP
+    - CAN_RECOVER
+  usability_states: ["YES", "NO", "PARTIAL", "UNKNOWN"]
+  installation_is_not_capability_proof: true
+  smoke_test_required_for_agent_usable: true
+  unproven_capability_stays_unknown: true
+  recorded_dimension_is_authoritative: true
+  not_applicable_is_not_author_waivable: true
+  selection_records_rejected_alternatives: true
+  resource_heavy_requires_demonstrated_bound: true
