@@ -74,6 +74,12 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Sichtprüfung im headed Chrome über sechs Seiten und drei Breiten: 18/18 bestanden, alle Navigationslinks sichtbar, kein waagerechter Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/mobile-nav/`.
 - Deployment: PR #21 wurde als `912fd05d8ed1896798d2865336ccb9a1b1693d72` gemergt; Pages meldet `built`. Live-Check bei 390/320 px: 6/6 bestanden, alle Kopfzeilen-Links sichtbar. Evidence: `docs/evidence/MISSION-2026-10-17/mobile-nav/live-readback.md`.
 
+## Datenschutz und fehlende OCR — 2026-10-17
+
+- Die Datenschutzseite stellt klar, dass die automatische Texterkennung für Bild- und Scan-Dokumente in dieser V1-Version nicht enthalten ist und solche Dokumente nicht ausgelesen werden. Das entspricht der App-Meldung, der öffentlichen V1-Grenze und dem Release-Artefakt.
+- Sichtprüfung im headed Chrome bei 1366/390/320 px: 3/3 bestanden, kein Überlauf, keine Konsolenfehler. Evidence: `docs/evidence/MISSION-2026-10-17/ocr-privacy/`.
+- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
