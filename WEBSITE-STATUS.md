@@ -50,7 +50,13 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Neue Sektion `#v1-umfang` (`data-v1-scope="declared"`) listet die geprüften Punkte und zehn ausdrücklich nicht geprüfte Familien. `llms.txt` trägt dieselbe Grenze.
 - `verify-site.mjs` erzwingt die Sektion und die Nicht-Abdeckungsformulierung, damit die Zusage nicht still zurück auf vollständige Abdeckung driftet.
 - Lokale Gates und headed Chrome (1366×900, 390×844, 320×844) sind bestanden; Evidence unter `docs/evidence/MISSION-2026-10-17/v1-scope/`.
-- Deployment: ausstehend bis zum reviewten Merge; danach folgt der Live-Readback.
+- Deployment: PR #13 wurde als `243644ed3e43b4d8fe1d77b44d5ad5623ad5bdf6` auf `main` gemergt; Pages meldet `built` für exakt diesen Commit. Live enthält `/` die neue Sektion, den neuen Titel und die Nicht-Abdeckungsliste (`200`, 16.025 Bytes).
+
+## Live-Readback V1-Versprechensgrenze — 2026-10-17
+
+- Live `main` = `243644ed3e43b4d8fe1d77b44d5ad5623ad5bdf6`; Pages-Build `built`; `/` und `/sitemap.xml` antworten `200`.
+- Sichtprüfung im headed Chrome gegen die Live-Domain: 18/18 Seite/Viewport-Kombinationen, 55/55 interne Links, kein Überlauf, keine Konsolenfehler. Die neue Sektion `#v1-umfang` ist sichtbar und nennt die Heizkosten-/CO₂-Lücke.
+- Evidence: `docs/evidence/MISSION-2026-10-17/v1-scope/live/`.
 
 ## Ausgangslage
 
