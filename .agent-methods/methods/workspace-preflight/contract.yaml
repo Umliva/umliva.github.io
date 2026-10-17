@@ -1,0 +1,20 @@
+name: workspace-preflight
+version: 1.0.0
+use_when:
+  - repo_or_workspace_task
+  - project_switch
+  - before_code_change
+  - before_release_or_repair
+inputs:
+  - workspace
+outputs:
+  - canonical_root
+  - git_state
+  - instruction_state
+  - open_work_state
+  - capability_state
+  - blockers
+invariants:
+  - no_nested_project_root
+  - evidence_before_claim
+  - convergence_before_new_parallel_work

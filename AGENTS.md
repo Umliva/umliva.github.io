@@ -124,3 +124,24 @@ user's host. Evidence for the current run: `docs/evidence/U3/`.
   identity evidence.
 - **Merge First governance**: changes reach `main` only via a reviewed PR merge; GitHub Pages publishes from `main`. No direct pushes to `main`, no force-push, no unreviewed merge.
 - **Headed visual verification**: before merge, visually verify the changed pages in a real browser at desktop and mobile widths (responsive breakpoints) and record the observation.
+<!-- agent-methods:start -->
+<!-- Managed by the agent-methods runtime v0.2.0. Do not edit inside this block. -->
+<!-- agent-methods:block-version: 1 -->
+
+## Agent Methods integration
+
+This project is managed by the Agent Methods runtime. Canonical method definitions are
+installed project-locally under `.agent-methods/`; the source of truth is the
+`Mueller-Systems-Lab/agent-methods` repository. Installed method copies are derived output and must
+not be hand-edited.
+
+- Run `am doctor` before repository work and read `.agent-methods/installation-ledger.json`
+  for ownership and installed method versions.
+- Resolve a project goal to a typed intent and the canonical route with `am resolve --goal "<goal>"`,
+  then compile the bounded execution contract with `am run --goal "<goal>"`. Natural language never
+  selects methods directly.
+- Canonical methods and their gates remain authoritative over any summary; the
+  installed copies and the ledger are derived output.
+- Everything outside this managed block is project-owned and is never modified by the
+  runtime.
+<!-- agent-methods:end -->

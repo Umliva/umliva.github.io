@@ -1,0 +1,17 @@
+{
+  "routes": {
+    "feature": {
+      "compose": [
+        "workspace-preflight",
+        "vertical-reality-qa"
+      ]
+    },
+    "tooling_setup": {
+      "compose": [
+        "workspace-preflight",
+        "tool-governance"
+      ]
+    }
+  },
+  "schema_version": 1
+}
