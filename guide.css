@@ -175,8 +175,20 @@ a { color: inherit; }
 .guide-footer a { color: var(--ink); }
 
 @media (max-width: 800px) {
-  .site-header { padding: 0 20px; }
-  .site-header nav a:not(.button) { display: none; }
+  /* Keep guide navigation reachable on phones; mirror styles.css. */
+  .site-header {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding: 14px 20px 10px;
+  }
+  .site-header nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 15px;
+  }
+  .site-header nav a:not(.button) { display: inline-block; }
   .guide-main { padding: 48px 20px 72px; }
   .guide-main h1 { font-size: 32px; }
   .guide-intro { font-size: 18px; }

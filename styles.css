@@ -402,11 +402,24 @@ footer a { text-decoration: none; color: var(--ink); }
   .reference-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 800px) {
-  .site-header { padding: 0 20px; }
-  .site-header nav a:not(.button) { display: none; }
+  /* Keep the public navigation reachable on phones instead of hiding it.
+     The links wrap under the brand; no off-canvas menu or script is needed. */
+  .site-header {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    padding: 14px 20px 10px;
+  }
+  .site-header nav {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    font-size: 15px;
+  }
+  .site-header nav a:not(.button) { display: inline-block; }
   .hero, .section { padding-left: 20px; padding-right: 20px; }
   footer { padding-left: 20px; padding-right: 20px; }
-  .hero { padding-top: 64px; }
+  .hero { padding-top: 48px; }
 }
 @media (max-width: 600px) {
   body { font-size: 16px; }
