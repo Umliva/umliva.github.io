@@ -58,6 +58,11 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Sichtprüfung im headed Chrome gegen die Live-Domain: 18/18 Seite/Viewport-Kombinationen, 55/55 interne Links, kein Überlauf, keine Konsolenfehler. Die neue Sektion `#v1-umfang` ist sichtbar und nennt die Heizkosten-/CO₂-Lücke.
 - Evidence: `docs/evidence/MISSION-2026-10-17/v1-scope/live/`.
 
+## Datenschutz: Billing-Netzwerkberechtigungen — 2026-10-17
+
+- `datenschutz.html` nennt jetzt die Android-Berechtigungen `INTERNET` und `ACCESS_NETWORK_STATE`, die über Google Play Billing in das Release-Manifest gelangen. Kernprüfung, Import, lokale Speicherung und Exporte führen weiterhin keine Netzwerkanfrage aus.
+- PR #15 wurde als `8ac5b64afbc85667d9b751cc3c3ecf10a5e62430` gemergt; Pages meldet `built`. Live `200`, 9.348 Bytes, Satz vorhanden. Evidence: `docs/evidence/MISSION-2026-10-17/billing-privacy/live-readback.md`.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
