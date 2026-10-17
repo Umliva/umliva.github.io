@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "scrollWidth": 1351,
+      "innerWidth": 1366,
+      "h1": 1,
+      "has_billing_permissions": true,
+      "console": [],
+      "ok": true
+    },
+    {
+      "viewport": "mobile",
+      "status": 200,
+      "scrollWidth": 390,
+      "innerWidth": 390,
+      "h1": 1,
+      "has_billing_permissions": true,
+      "console": [],
+      "ok": true
+    },
+    {
+      "viewport": "narrow",
+      "status": 200,
+      "scrollWidth": 320,
+      "innerWidth": 320,
+      "h1": 1,
+      "has_billing_permissions": true,
+      "console": [],
+      "ok": true
+    }
+  ],
+  "problems": []
+}
