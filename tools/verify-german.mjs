@@ -22,11 +22,13 @@ import { join, relative } from "node:path";
 // Der Wurzelordner ist der Repository-Wurzelordner: liegt dieses Skript in
 // tools/, ist die Wurzel der Elternordner. Sonst der eigene Ordner.
 import { dirname } from "node:path";
+import { fileURLToPath } from "node:url";
 const here = dirname(new URL(".", import.meta.url).pathname.replace(/\/$/, ""));
 const root = (here.split("/").pop() === "tools" ? here.replace(/\/tools$/, "") : here) + "/";
 
 // Verbotene sichtbare Begriffe (Groß-/Kleinschreibung egal, Wortgrenzen beachtet).
 const FORBIDDEN = [
+  "synthetic structure", "original case data", "legal outcome claim",
   "local-first", "local first", "fail-closed", "fail closed",
   "evidence chain", "evidence package", "evidence request", "evidence",
   "finding", "findings",
@@ -81,29 +83,38 @@ function visibleAttrs(html) {
   return out.join(" ");
 }
 
-const problems = [];
-const files = (await walk(root)).filter(f => f.endsWith(".html"));
-for (const file of files) {
-  const html = await readFile(file, "utf8");
+export function findForbiddenVisibleCopy(html) {
   const text = visibleText(html) + " " + visibleAttrs(html);
+  const found = [];
   for (const term of FORBIDDEN) {
     const esc = term.replace(/[-/\\^$*+?.()|[\]{}]/g, "\\$&");
     const re = new RegExp("(^|[^A-Za-z0-9_-])" + esc + "([^A-Za-z0-9_-]|$)", "gi");
     for (const m of text.matchAll(re)) {
       const hit = m[0].trim();
       if (ALLOWED.some(a => hit.toLowerCase().includes(a.toLowerCase()))) continue;
-      const at = m.index ?? 0;
-      const context = text.slice(Math.max(0, at - 60), at + 60).replace(/\s+/g, " ");
       if (TECH_FILE.test(hit)) continue;
-      problems.push({ file: relative(root, file), term, context });
+      found.push({ term, context: text.slice(Math.max(0, (m.index ?? 0) - 60), (m.index ?? 0) + 60).replace(/\s+/g, " ") });
     }
   }
+  return found;
 }
 
-// Geometrie/Struktur: technische Dateinamen dürfen im sichtbaren Text vorkommen.
-if (problems.length) {
-  console.log(`FAIL verify-german files=${files.length} hits=${problems.length}`);
-  for (const p of problems.slice(0, 40)) console.log(`  ${p.file}: "${p.term}"  … ${p.context} …`);
-  process.exit(1);
+export async function verifyGermanSite() {
+  const problems = [];
+  const files = (await walk(root)).filter(f => f.endsWith(".html"));
+  for (const file of files) {
+    const html = await readFile(file, "utf8");
+    for (const problem of findForbiddenVisibleCopy(html)) problems.push({ file: relative(root, file), ...problem });
+  }
+  if (problems.length) {
+    console.log(`FAIL verify-german files=${files.length} hits=${problems.length}`);
+    for (const p of problems.slice(0, 40)) console.log(`  ${p.file}: "${p.term}"  … ${p.context} …`);
+    return false;
+  }
+  console.log(`PASS verify-german files=${files.length} forbidden-terms=${FORBIDDEN.length} hits=0`);
+  return true;
 }
-console.log(`PASS verify-german files=${files.length} forbidden-terms=${FORBIDDEN.length} hits=0`);
+
+if (process.argv[1] && fileURLToPath(import.meta.url) === process.argv[1]) {
+  if (!(await verifyGermanSite())) process.exit(1);
+}
