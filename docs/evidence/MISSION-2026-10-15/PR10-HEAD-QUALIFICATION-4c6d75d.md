@@ -1,9 +1,9 @@
 # PR #10 exact-head qualification — 2026-10-15
 
-Repository: `Umliva/umliva.github.io`  
-Branch: `codex/site-german-copy-20261015`  
-Exact source/evidence head: `4c6d75db44d8018011524331e0f207887920d185`  
-Site implementation commit: `2aa44fe48e8470873154fb5775ff34a4fcfccf08`  
+Repository: `Umliva/umliva.github.io`
+Branch: `codex/site-german-copy-20261015`
+Exact source/evidence head: `4c6d75db44d8018011524331e0f207887920d185`
+Site implementation commit: `2aa44fe48e8470873154fb5775ff34a4fcfccf08`
 Runtime: Node.js v22.22.0; visible Chrome 153.0.8010.36; curl 8.5.0.
 
 Checks rerun on the exact head, all exit 0:

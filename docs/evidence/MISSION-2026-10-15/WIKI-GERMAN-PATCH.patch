@@ -2,16 +2,16 @@ diff --git a/Architecture.md b/Architecture.md
 index c4e607f..81c9bd5 100644
 --- a/Architecture.md
 +++ b/Architecture.md
-@@ -1,7 +1,7 @@
+@@ -1 +1 @@
 -# Architecture
 +# Architektur
- 
+@@ -3 +3 @@
 -The public architecture is documented on the [Umliva website](https://umliva.github.io/). It includes living Screen Flow and Data Flow Mermaid diagrams.
 +Die öffentliche Architektur ist auf der [Umliva-Website](https://umliva.github.io/) dokumentiert. Dort stehen die aktuellen Ablauf- und Datenflussdiagramme.
- 
+@@ -5 +5 @@ The public architecture is documented on the [Umliva website](https://umliva.git
 -The Android app is planned as native Kotlin/Jetpack Compose with a pure-Kotlin deterministic domain core. Original documents are immutable and content-addressed; extracted, confirmed and derived values retain provenance.
 +Die Android-App ist als native Anwendung mit Kotlin und Jetpack Compose angelegt. Der deterministische Regelkern besteht aus reinem Kotlin. Originaldokumente bleiben unverändert und werden über ihren Inhalt identifiziert. Erkannte, bestätigte und abgeleitete Werte behalten ihre Herkunft.
- 
+@@ -7 +7 @@ The Android app is planned as native Kotlin/Jetpack Compose with a pure-Kotlin d
 -The device is the local trust boundary. Google Play Billing, optional sign-in, opt-in telemetry and user-selected sharing are external boundaries. Case content does not flow to Firebase.
 \ No newline at end of file
 +Das Gerät bildet die lokale Vertrauensgrenze. Google Play Billing, optionale Anmeldung, ausdrücklich aktivierte Telemetrie und das Teilen durch die nutzende Person liegen außerhalb dieser Grenze. Falddaten werden nicht an Firebase übertragen.
@@ -19,24 +19,22 @@ diff --git a/FAQ.md b/FAQ.md
 index 2dcd5cd..f1fca0c 100644
 --- a/FAQ.md
 +++ b/FAQ.md
-@@ -1,13 +1,13 @@
- # FAQ
- 
+@@ -3,2 +3,2 @@
 -## Does Umliva upload my bill?
 -No. Core checking is designed to run locally and offline.
 +## Lädt Umliva meine Abrechnung hoch?
 +Nein. Die Kernprüfung ist für die lokale Nutzung ohne Internetverbindung ausgelegt.
- 
+@@ -6,2 +6,2 @@ No. Core checking is designed to run locally and offline.
 -## Is every warning a legal error?
 -No. Umliva distinguishes proven errors, conditional review, plausibility warnings and missing evidence.
 +## Ist jeder Hinweis ein Rechtsfehler?
 +Nein. Umliva unterscheidet nachgewiesene Fehler, bedingten Prüfbedarf, Plausibilitätshinweise und fehlende Nachweise.
- 
+@@ -9,2 +9,2 @@ No. Umliva distinguishes proven errors, conditional review, plausibility warning
 -## Is this legal advice?
 -No. Umliva is a deterministic billing checker, not individualized legal advice.
 +## Ist Umliva eine Rechtsberatung?
 +Nein. Umliva prüft Abrechnungen anhand festgelegter Regeln und ist keine individuelle Rechtsberatung.
- 
+@@ -12,2 +12,2 @@ No. Umliva is a deterministic billing checker, not individualized legal advice.
 -## What happens when a value is unclear?
 -Umliva highlights the original location and asks for targeted confirmation rather than silently guessing.
 \ No newline at end of file
@@ -46,16 +44,16 @@ diff --git a/Home.md b/Home.md
 index 7415deb..1a6c868 100644
 --- a/Home.md
 +++ b/Home.md
-@@ -1,15 +1,15 @@
+@@ -1 +1 @@
 -# Umliva Wiki
 +# Umliva-Wiki
- 
+@@ -3 +3 @@
 -Umliva – Nebenkosten prüfen is a privacy-first, local-first Android utility for deterministic checking of German Betriebskosten-, Nebenkosten- and Heizkostenabrechnungen.
 +Umliva – Nebenkosten prüfen ist eine Android-Anwendung zur nachvollziehbaren Prüfung deutscher Betriebs-, Neben- und Heizkostenabrechnungen. Die Prüfung soll nach der Installation ohne Internetverbindung und ohne Konto möglich sein.
- 
+@@ -5 +5 @@ Umliva – Nebenkosten prüfen is a privacy-first, local-first Android utility f
 -Start here:
 +Hier geht es weiter:
- 
+@@ -7,7 +7,7 @@ Start here:
 -- [[Product Principles]]
 -- [[Architecture]]
 -- [[Verification Model]]
@@ -70,7 +68,7 @@ index 7415deb..1a6c868 100644
 +- [Fahrplan](https://github.com/Umliva/umliva.github.io/wiki/Roadmap)
 +- [Häufige Fragen](https://github.com/Umliva/umliva.github.io/wiki/FAQ)
 +- [Freigabegrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Release-Philosophy)
- 
+@@ -15 +15 @@ Start here:
 -Umliva is a deterministic billing checker, not individualized legal advice.
 \ No newline at end of file
 +Umliva prüft Abrechnungen anhand festgelegter Regeln und ist keine individuelle Rechtsberatung.
@@ -78,13 +76,13 @@ diff --git a/Privacy-Model.md b/Privacy-Model.md
 index 8bc2d2f..c3ce859 100644
 --- a/Privacy-Model.md
 +++ b/Privacy-Model.md
-@@ -1,5 +1,5 @@
+@@ -1 +1 @@
 -# Privacy Model
 +# Datenschutzmodell
- 
+@@ -3 +3 @@
 -Documents, OCR/PDF text, addresses, names, financial amounts, meter values, allocation values, reports and letters remain on the device. Local data uses encryption beyond basic sandboxing, and automatic cloud backup is disabled.
 +Dokumente, erkannter Text, PDF-Text, Anschriften, Namen, Geldbeträge, Zählerstände, Verteilungswerte, Berichte und Schreiben bleiben auf dem Gerät. Lokale Daten werden zusätzlich zur Android-App-Abschirmung verschlüsselt; die automatische Cloud-Sicherung ist ausgeschaltet.
- 
+@@ -5 +5 @@ Documents, OCR/PDF text, addresses, names, financial amounts, meter values, allo
 -Optional services are opt-in and technical-event-only. Feedback shows the exact proposed payload before sending. Umliva is a deterministic billing checker, not individualized legal advice.
 \ No newline at end of file
 +Optionale Dienste müssen ausdrücklich aktiviert werden und dürfen nur technische Ereignisse erfassen. Vor dem Senden zeigt eine Rückmeldung die vollständigen vorgesehenen Daten. Umliva prüft Abrechnungen anhand festgelegter Regeln und ist keine individuelle Rechtsberatung.
@@ -92,10 +90,10 @@ diff --git a/Product-Principles.md b/Product-Principles.md
 index b4f2994..ca67183 100644
 --- a/Product-Principles.md
 +++ b/Product-Principles.md
-@@ -1,7 +1,7 @@
+@@ -1 +1 @@
 -# Product Principles
 +# Produktgrundsätze
- 
+@@ -3,5 +3,5 @@
 -- Local-first: core checking works offline after installation, without an account or backend.
 -- Deterministic: supported checks use versioned rules, explicit inputs and reproducible calculations.
 -- Fail-closed: ambiguity and missing evidence remain visible and never become silent certainty.
@@ -111,13 +109,13 @@ diff --git a/Release-Philosophy.md b/Release-Philosophy.md
 index 052cb52..a8ad3ca 100644
 --- a/Release-Philosophy.md
 +++ b/Release-Philosophy.md
-@@ -1,5 +1,5 @@
+@@ -1 +1 @@
 -# Release Philosophy
 +# Freigabegrundsätze
- 
+@@ -3 +3 @@
 -A release requires reproducible rule and pack versions, dependency-license compliance, independent behavioral/visual/reality evidence, privacy/security checks, OCR quality gates and realistic user validation.
 +Eine Freigabe setzt wiederholbare Regel- und Paketversionen, passende Abhängigkeitslizenzen, unabhängige Bedien-, Sicht- und Realitätsnachweise, Datenschutz- und Sicherheitsprüfungen, OCR-Freigabekriterien sowie eine Prüfung mit realistischen Nutzungsfällen voraus.
- 
+@@ -5 +5 @@ A release requires reproducible rule and pack versions, dependency-license compl
 -The GitHub foundation uses free GitHub functionality only. Proprietary implementation and private fixtures stay in the private application repository.
 \ No newline at end of file
 +Die GitHub-Grundlage verwendet ausschließlich kostenlose GitHub-Funktionen. Geschützte Implementierung und private Testdaten bleiben im privaten App-Repository.
@@ -125,10 +123,10 @@ diff --git a/Roadmap.md b/Roadmap.md
 index a8e717d..563f28a 100644
 --- a/Roadmap.md
 +++ b/Roadmap.md
-@@ -1,13 +1,13 @@
+@@ -1 +1 @@
 -# Roadmap
 +# Fahrplan
- 
+@@ -3,9 +3,9 @@
 -- M0 Foundation & Governance
 -- M1 Secure Local Data Platform
 -- M2 Document Intake & OCR
@@ -147,7 +145,7 @@ index a8e717d..563f28a 100644
 +- M6 Prüfung, Sicherheit und Leistung
 +- M7 Veröffentlichung bei Google Play
 +- M8 Öffentliche Website, Wiki und Dokumentation
- 
+@@ -13 +13 @@
 -Milestones are release gates, not arbitrary dates.
 \ No newline at end of file
 +Meilensteine sind Freigabekriterien und keine beliebigen Termine.
@@ -155,29 +153,13 @@ diff --git a/Verification-Model.md b/Verification-Model.md
 index 90cd5ff..e815403 100644
 --- a/Verification-Model.md
 +++ b/Verification-Model.md
-@@ -1,5 +1,5 @@
+@@ -1 +1 @@
 -# Verification Model
 +# Prüfmodell
- 
+@@ -3 +3 @@
 -A green build is not enough. Umliva uses independent truth layers: deterministic code tests, API 36 behavioral journeys, visual inspection, reality checks outside the app, and User Truth with realistic German billing documents.
 +Ein erfolgreicher Build allein reicht nicht aus. Umliva verlangt voneinander unabhängige Nachweise: Tests des deterministischen Codes, Bedienabläufe auf API 36, Sichtprüfung, Abgleich mit der Realität außerhalb der App und Nutzertests mit realistischen deutschen Abrechnungen.
- 
+@@ -5 +5 @@ A green build is not enough. Umliva uses independent truth layers: deterministic
 -OCR release gates are stricter for money, dates, areas, meter values and allocation keys. Uncertain critical values cannot be automatically accepted.
 \ No newline at end of file
 +Für Geldbeträge, Daten, Flächen, Zählerstände und Verteilungsschlüssel gelten strengere Freigabekriterien für die Texterkennung. Unsichere kritische Werte dürfen nicht automatisch übernommen werden.
-diff --git a/_Sidebar.md b/_Sidebar.md
-new file mode 100644
-index 0000000..a0613d6
---- /dev/null
-+++ b/_Sidebar.md
-@@ -0,0 +1,10 @@
-+# Umliva-Wiki
-+
-+- [Übersicht](https://github.com/Umliva/umliva.github.io/wiki)
-+- [Produktgrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Product-Principles)
-+- [Architektur](https://github.com/Umliva/umliva.github.io/wiki/Architecture)
-+- [Prüfmodell](https://github.com/Umliva/umliva.github.io/wiki/Verification-Model)
-+- [Datenschutzmodell](https://github.com/Umliva/umliva.github.io/wiki/Privacy-Model)
-+- [Fahrplan](https://github.com/Umliva/umliva.github.io/wiki/Roadmap)
-+- [Häufige Fragen](https://github.com/Umliva/umliva.github.io/wiki/FAQ)
-+- [Freigabegrundsätze](https://github.com/Umliva/umliva.github.io/wiki/Release-Philosophy)

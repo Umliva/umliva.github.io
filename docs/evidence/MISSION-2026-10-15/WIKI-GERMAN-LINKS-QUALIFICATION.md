@@ -1,11 +1,11 @@
 # German Wiki navigation qualification — 2026-10-15
 
-Public repository: `Umliva/umliva.github.io`  
+Public repository: `Umliva/umliva.github.io`
 PR #10 source/evidence head when checked: `4c6d75db44d8018011524331e0f207887920d185`
 
 Wiki source head: `Umliva/umliva.github.io.wiki` master `4e4fac4a5e8c344106eb0363c317eddc0479ecf6`
 
-Translation artifact: `WIKI-GERMAN-PATCH.patch`, SHA-256 `920b753a3ea59789d4b803fb710bab993d5ba491ac29bd1f94007e793925ca45`.
+Translation artifact: `WIKI-GERMAN-PATCH.patch` (zero-context unified diff; apply with `git apply --unidiff-zero`), SHA-256 `d31c444b0de8f2df9f48c98119a8e7b58d6d3cf2fd41f8b7e9082df1e56731b4`.
 
 The patch changes all eight existing tracked Wiki Markdown pages, with 49 insertions and 49 deletions, and adds a German `_Sidebar.md` custom sidebar. It replaces all seven Home-page English navigation labels with German labels and explicit links to the existing English page slugs. The page slugs stay stable so existing Wiki URLs continue to work. The deployed Wiki has not been changed.
 
@@ -31,7 +31,7 @@ The German navigation patch is prepared for review only. Publishing it requires 
 On 2026-10-15 the Wiki remote `master` was read again and remained at
 `4e4fac4a5e8c344106eb0363c317eddc0479ecf6`, the exact base of the local
 translation worktree. `git diff --check` passed. `git diff --binary` hashes to
-`920b753a3ea59789d4b803fb710bab993d5ba491ac29bd1f94007e793925ca45`, exactly
+`d31c444b0de8f2df9f48c98119a8e7b58d6d3cf2fd41f8b7e9082df1e56731b4`, exactly
 matching the patch stored in this PR. The eight page translations plus
 `_Sidebar.md` are unchanged; no direct Wiki write occurred.
 

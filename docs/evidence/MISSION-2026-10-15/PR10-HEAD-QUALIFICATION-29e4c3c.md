@@ -1,8 +1,8 @@
 # PR #10 exact-head qualification — 2026-10-15
 
-Repository: `Umliva/umliva.github.io`  
-Branch: `codex/site-german-copy-20261015`  
-Exact source head: `29e4c3c586386ffdfb48e162e320790f0ac15188`  
+Repository: `Umliva/umliva.github.io`
+Branch: `codex/site-german-copy-20261015`
+Exact source head: `29e4c3c586386ffdfb48e162e320790f0ac15188`
 Runtime: Node.js v22.22.0; headed Chrome 153.0.8010.36 was used for the previously recorded screenshots; curl 8.5.0 for destination audit.
 
 The exact-head rerun after the Wiki destination audit passed:
