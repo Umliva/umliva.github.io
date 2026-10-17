@@ -35,7 +35,14 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Die Betreiber- und Verantwortlichenangaben fehlen weiterhin. Sie sind im Impressum als offene Pflichtfelder markiert und wurden nicht erfunden; die Datenschutzseite benennt die verantwortliche Stelle entsprechend allgemein. Das bleibt ein Release-Blocker für die rechtliche Veröffentlichung.
 - Die Datenschutzseite beschreibt den tatsächlichen Stand: GitHub-Pages-Hosting, jsDelivr für Mermaid, keine Analyse/Werbung/Formulare, lokale App-Verarbeitung, verschlüsselte Speicherung, deaktivierte Cloud-Sicherung, kein aktiver Telemetrie-Kanal und der bedingte Google-Play-Kaufpfad.
 - Lokale Gates und sichtbare Prüfung im headed Chrome (1366×900, 390×844, 320×844) sind bestanden. Evidence: `docs/evidence/MISSION-2026-10-17/legal-pages/`.
-- Deployment: ausstehend bis zum reviewten Merge auf `main`; danach folgt der Live-Readback.
+- Deployment: PR #11 wurde als `7e60bc712e80fba3289e72f62ac0a393d0fee98f` auf `main` gemergt; der Pages-Build meldet `built` für exakt diesen Commit. `/impressum.html` und `/datenschutz.html` antworten live mit `200`.
+
+## Live-Readback Legalfläche — 2026-10-17
+
+- `main` = `7e60bc712e80fba3289e72f62ac0a393d0fee98f` (Merge PR #11). Pages-Build `39047929876` Status `built`, Commit identisch.
+- HTTP: `/`, `/impressum.html`, `/datenschutz.html`, `/sitemap.xml` = `200`; beide neuen Seiten sind im Sitemap enthalten. Der frühere Rohplatzhalter `LEGAL_DISCLOSURE_OWNER_DATA_REQUIRED` kommt in keiner veröffentlichten HTML-Seite mehr vor.
+- Sichtprüfung im headed Chrome gegen die Live-Domain mit Deploy-Query: 18/18 Seite/Viewport-Kombinationen, 55/55 interne Links, kein waagerechter Überlauf, keine Konsolenfehler, keine fehlgeschlagenen Requests. Screenshots und JSON unter `docs/evidence/MISSION-2026-10-17/legal-pages/live/`.
+- Betreiberdaten fehlen weiterhin. Das Impressum markiert Name, Anschrift, Kontakt, Vertretung/Register/USt-IdNr., Verantwortliche Person nach § 18 MStV und Streitbeilegungsstatus als offen. Das ist ein irreduzibler Blocker für die rechtliche Endveröffentlichung, kein erledigter Punkt.
 
 ## Ausgangslage
 
