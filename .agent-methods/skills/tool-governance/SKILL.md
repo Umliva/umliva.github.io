@@ -1,12 +1,12 @@
 # tool-governance
 
-Harness adapter: **generic**
+Harness adapter: **codex**
 
 Use the canonical method at `methods/tool-governance/METHOD.md` and its `contract.yaml` as the source of truth.
 
 ## Adapter rule
 
-Translate canonical phases into capabilities available in generic; do not duplicate, redefine, or weaken method invariants here.
+Translate canonical phases into capabilities available in codex; do not duplicate, redefine, or weaken method invariants here.
 
 ## Execution
 
