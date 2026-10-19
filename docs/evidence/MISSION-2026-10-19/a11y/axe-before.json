@@ -1,0 +1,155 @@
+{
+  "base": "http://127.0.0.1:8767",
+  "axe": "https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.2/axe.min.js",
+  "widths": [
+    1366,
+    390
+  ],
+  "pages": {
+    "/datenschutz.html": {
+      "1366": [],
+      "390": []
+    },
+    "/golden-case.html": {
+      "1366": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "nodes": [
+            {
+              "html": "<a href=\"/\">Startseite</a>",
+              "target": [
+                "span:nth-child(2) > a[href=\"/\"]"
+              ]
+            },
+            {
+              "html": "<a href=\"partner.html\">Fachpartner</a>",
+              "target": [
+                "span:nth-child(2) > a[href$=\"partner.html\"]"
+              ]
+            }
+          ]
+        }
+      ],
+      "390": [
+        {
+          "id": "link-in-text-block",
+          "impact": "serious",
+          "help": "Links must be distinguishable without relying on color",
+          "nodes": [
+            {
+              "html": "<a href=\"/\">Startseite</a>",
+              "target": [
+                "span:nth-child(2) > a[href=\"/\"]"
+              ]
+            },
+            {
+              "html": "<a href=\"partner.html\">Fachpartner</a>",
+              "target": [
+                "span:nth-child(2) > a[href$=\"partner.html\"]"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/impressum.html": {
+      "1366": [],
+      "390": []
+    },
+    "/index.html": {
+      "1366": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "help": "Scrollable region must have keyboard access",
+          "nodes": [
+            {
+              "html": "<pre class=\"mermaid\" data-diagram-src=\"diagrams/screen-flow.mmd\" data-processed=\"true\">",
+              "target": [
+                "pre[data-diagram-src$=\"screen-flow.mmd\"]"
+              ]
+            },
+            {
+              "html": "<pre class=\"mermaid\" data-diagram-src=\"diagrams/data-flow.mmd\" data-processed=\"true\">",
+              "target": [
+                "pre[data-diagram-src$=\"data-flow.mmd\"]"
+              ]
+            }
+          ]
+        }
+      ],
+      "390": [
+        {
+          "id": "scrollable-region-focusable",
+          "impact": "serious",
+          "help": "Scrollable region must have keyboard access",
+          "nodes": [
+            {
+              "html": "<pre class=\"mermaid\" data-diagram-src=\"diagrams/screen-flow.mmd\" data-processed=\"true\">",
+              "target": [
+                "pre[data-diagram-src$=\"screen-flow.mmd\"]"
+              ]
+            },
+            {
+              "html": "<pre class=\"mermaid\" data-diagram-src=\"diagrams/data-flow.mmd\" data-processed=\"true\">",
+              "target": [
+                "pre[data-diagram-src$=\"data-flow.mmd\"]"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "/partner.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/abrechnungsfrist-nebenkosten.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/betriebskostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/co2-kosten-mieter-vermieter.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/fehler-nebenkostenabrechnung.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/heizkostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/index.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkosten-widerspruch.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkostenabrechnung-zu-hoch.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/umlagefaehige-nebenkosten.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/umlageschluessel-pruefen.html": {
+      "1366": [],
+      "390": []
+    }
+  },
+  "violations": 4
+}

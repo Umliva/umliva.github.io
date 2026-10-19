@@ -95,6 +95,13 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Deployment: PR #28 wurde als `e9ee950e8737e013691e0aa978f7c1b982140def` auf `main` gemergt; Pages-Run `39288423659` ist `success`. Live-Readback im headed Chrome: 48/48 Kombinationen ohne Überlauf, 199 interne Links mit `200`, 23/23 Fragmentziele vorhanden. Live `/impressum.html` bei 320 px: `scrollWidth=305`, `clientWidth=305`.
 - Der Live-Readback belegt die statische Seite; die fehlenden Betreiberangaben und die Rechtsprüfung bleiben offen.
 
+## Barrierefreiheit: axe WCAG A/AA — 2026-10-19
+
+- Die headed Prüfung mit axe-core `4.10.2` über 16 Seiten bei 1366×900 und 390×844 fand vier ernste Befunde: nicht unterstrichene Footer-Links in `golden-case.html` (`link-in-text-block`) und zwei scrollbare Mermaid-Bereiche ohne Tastaturfokus (`scrollable-region-focusable`).
+- Die Footer-Links sind jetzt unterstrichen; beide Mermaid-Bereiche haben `tabindex="0"`, `role="img"` und ein deutsches `aria-label`. Der bestehende Fokus-Ring gilt dadurch auch für sie; `ArrowRight` scrollt das fokussierte Diagramm.
+- Nach der Korrektur: 16 Seiten × 2 Breiten mit 0 Verstößen; 48/48 Kombinationen bei 1366/390/320 px ohne Überlauf. Evidenz: `docs/evidence/MISSION-2026-10-19/a11y/`.
+- Das ist automatisierte WCAG-A/AA-Prüfung, keine Zertifizierung und kein Screenreader-Nachweis.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
