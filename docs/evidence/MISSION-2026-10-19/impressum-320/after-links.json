@@ -1,0 +1,1340 @@
+{
+  "links": [
+    {
+      "page": "/datenschutz.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/datenschutz.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/#funktioniert",
+      "target": "http://127.0.0.1:8765/#funktioniert",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/#technik",
+      "target": "http://127.0.0.1:8765/#technik",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/golden-case.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/impressum.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/#funktioniert",
+      "target": "http://127.0.0.1:8765/#funktioniert",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/#technik",
+      "target": "http://127.0.0.1:8765/#technik",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/impressum.html",
+      "href": "impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/index.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "#funktioniert",
+      "target": "http://127.0.0.1:8765/index.html#funktioniert",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "#technik",
+      "target": "http://127.0.0.1:8765/index.html#technik",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "#funktioniert",
+      "target": "http://127.0.0.1:8765/index.html#funktioniert",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/umlagefaehige-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/nebenkosten-widerspruch.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkosten-widerspruch.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/index.html",
+      "href": "impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/partner.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "partner.html",
+      "target": "http://127.0.0.1:8765/partner.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "ratgeber/",
+      "target": "http://127.0.0.1:8765/ratgeber/",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "/",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "golden-case.html",
+      "target": "http://127.0.0.1:8765/golden-case.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/partner.html",
+      "href": "impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/abrechnungsfrist-nebenkosten.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "fehler-nebenkostenabrechnung.html",
+      "target": "http://127.0.0.1:8765/ratgeber/fehler-nebenkostenabrechnung.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/betriebskostenabrechnung-pruefen.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "umlagefaehige-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/co2-kosten-mieter-vermieter.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "heizkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/heizkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "umlageschluessel-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlageschluessel-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/fehler-nebenkostenabrechnung.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "abrechnungsfrist-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/heizkostenabrechnung-pruefen.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "co2-kosten-mieter-vermieter.html",
+      "target": "http://127.0.0.1:8765/ratgeber/co2-kosten-mieter-vermieter.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "nebenkostenabrechnung-zu-hoch.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "betriebskostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "heizkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/heizkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "nebenkostenabrechnung-zu-hoch.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "co2-kosten-mieter-vermieter.html",
+      "target": "http://127.0.0.1:8765/ratgeber/co2-kosten-mieter-vermieter.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "abrechnungsfrist-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "umlageschluessel-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlageschluessel-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "umlagefaehige-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "fehler-nebenkostenabrechnung.html",
+      "target": "http://127.0.0.1:8765/ratgeber/fehler-nebenkostenabrechnung.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkosten-widerspruch.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "fehler-nebenkostenabrechnung.html",
+      "target": "http://127.0.0.1:8765/ratgeber/fehler-nebenkostenabrechnung.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "umlagefaehige-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "umlageschluessel-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlageschluessel-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "nebenkostenabrechnung-zu-hoch.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-zu-hoch.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "nebenkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "fehler-nebenkostenabrechnung.html",
+      "target": "http://127.0.0.1:8765/ratgeber/fehler-nebenkostenabrechnung.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "betriebskostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "nebenkosten-widerspruch.html",
+      "target": "http://127.0.0.1:8765/ratgeber/nebenkosten-widerspruch.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "#main-content",
+      "target": "http://127.0.0.1:8765/ratgeber/umlageschluessel-pruefen.html#main-content",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "index.html",
+      "target": "http://127.0.0.1:8765/ratgeber/index.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "umlagefaehige-nebenkosten.html",
+      "target": "http://127.0.0.1:8765/ratgeber/umlagefaehige-nebenkosten.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "heizkostenabrechnung-pruefen.html",
+      "target": "http://127.0.0.1:8765/ratgeber/heizkostenabrechnung-pruefen.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../",
+      "target": "http://127.0.0.1:8765/",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../datenschutz.html",
+      "target": "http://127.0.0.1:8765/datenschutz.html",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../PRIVACY.md",
+      "target": "http://127.0.0.1:8765/PRIVACY.md",
+      "status": 200
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "../impressum.html",
+      "target": "http://127.0.0.1:8765/impressum.html",
+      "status": 200
+    }
+  ],
+  "bad": [],
+  "anchors": [
+    {
+      "page": "/datenschutz.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/#funktioniert",
+      "fragment": "funktioniert",
+      "found": true
+    },
+    {
+      "page": "/datenschutz.html",
+      "href": "/#technik",
+      "fragment": "technik",
+      "found": true
+    },
+    {
+      "page": "/golden-case.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/impressum.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/#funktioniert",
+      "fragment": "funktioniert",
+      "found": true
+    },
+    {
+      "page": "/impressum.html",
+      "href": "/#technik",
+      "fragment": "technik",
+      "found": true
+    },
+    {
+      "page": "/index.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/index.html",
+      "href": "#funktioniert",
+      "fragment": "funktioniert",
+      "found": true
+    },
+    {
+      "page": "/index.html",
+      "href": "#technik",
+      "fragment": "technik",
+      "found": true
+    },
+    {
+      "page": "/index.html",
+      "href": "#funktioniert",
+      "fragment": "funktioniert",
+      "found": true
+    },
+    {
+      "page": "/partner.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/abrechnungsfrist-nebenkosten.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/betriebskostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/co2-kosten-mieter-vermieter.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/fehler-nebenkostenabrechnung.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/heizkostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/index.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/nebenkosten-widerspruch.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-pruefen.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/nebenkostenabrechnung-zu-hoch.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/umlagefaehige-nebenkosten.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    },
+    {
+      "page": "/ratgeber/umlageschluessel-pruefen.html",
+      "href": "#main-content",
+      "fragment": "main-content",
+      "found": true
+    }
+  ],
+  "bad_anchors": []
+}

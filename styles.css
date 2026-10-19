@@ -121,6 +121,23 @@ a { color: inherit; }
 }
 .section-intro p { color: var(--muted); max-width: 60ch; }
 
+/* Tabellen in Rechtstexten: feste Spaltenbreite und Wortumbruch, damit lange
+   Pflichtangaben (z. B. Umsatzsteuer-Identifikationsnummer) auch bei 320 px
+   nicht aus dem Dokument ragen. */
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.section th, .section td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px 10px 0;
+  border-top: 1px solid var(--line);
+  overflow-wrap: anywhere;
+}
+.section th { width: 42%; font-weight: 700; }
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: .14em;
