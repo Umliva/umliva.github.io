@@ -86,6 +86,13 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Sichtprüfung im headed Chrome bei 1366×900 und 390×844 über sieben Seiten: 14/14 bestanden; erster Tab fokussiert den Skip-Link, Enter setzt den Fokus auf `#main-content`. Evidence: `docs/evidence/MISSION-2026-10-17/keyboard-focus/`.
 - Deployment: PR #25 wurde als `24be49ce6acda2e2355130c67d351538a2c37d01` gemergt; Pages meldet `built`. Live-Check bei 390/320 px: 6/6 bestanden, Skip-Link setzt den Fokus auf `#main-content`. Evidence: `docs/evidence/MISSION-2026-10-17/keyboard-focus/live-readback.md`.
 
+## Impressum: 320-px-Überlauf — 2026-10-19
+
+- Die sichtbare Prüfung im headed Chrome über alle 16 HTML-Seiten bei 1366×900, 390×844 und 320×844 fand genau einen Überlauf: `/impressum.html` hatte bei 320 px `scrollWidth=317` gegenüber `clientWidth=305`.
+- Ursache war die Tabelle ohne Umbruchregel; `Umsatzsteuer-Identifikationsnummer` erzwang eine Mindestbreite von 301,38 px.
+- Die minimale CSS-Änderung setzt `table-layout: fixed`, `width: 100%` und `overflow-wrap: anywhere`. Danach sind 48/48 Seite/Viewport-Kombinationen ohne Überlauf; 199 interne Links antworten mit 200, 23 Fragmentziele existieren.
+- Evidenz: `docs/evidence/MISSION-2026-10-19/impressum-320/`. Der Live-Readback folgt nach dem Merge.
+
 ## Ausgangslage
 
 - Bestehende Website oder Marke: https://umliva.github.io (statisch, GitHub Pages, veröffentlicht aus `main`)
