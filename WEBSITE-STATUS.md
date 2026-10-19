@@ -101,6 +101,7 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Die Footer-Links sind jetzt unterstrichen; beide Mermaid-Bereiche haben `tabindex="0"`, `role="img"` und ein deutsches `aria-label`. Der bestehende Fokus-Ring gilt dadurch auch für sie; `ArrowRight` scrollt das fokussierte Diagramm.
 - Nach der Korrektur: 16 Seiten × 2 Breiten mit 0 Verstößen; 48/48 Kombinationen bei 1366/390/320 px ohne Überlauf. Evidenz: `docs/evidence/MISSION-2026-10-19/a11y/`.
 - Das ist automatisierte WCAG-A/AA-Prüfung, keine Zertifizierung und kein Screenreader-Nachweis.
+- Deployment: PR #30 wurde als `18d2c484a9c8230be26284ae93b9f3c89a799829` gemergt; Pages-Run `39293842608` ist `success`. Live-Readback: 16 Seiten × 2 Breiten mit 0 Verstößen; fokussiertes Mermaid-Diagramm `PRE`, `tabIndex=0`, deutsches Label; Footer-Links unterstrichen; 320 px ohne Überlauf. Evidenz: `docs/evidence/MISSION-2026-10-19/a11y/live-readback.md`.
 
 ## Ausgangslage
 
