@@ -91,7 +91,9 @@ Hinweis: Umliva ist eine **bestehende** statische GitHub-Pages-Seite (kein Neuba
 - Die sichtbare Prüfung im headed Chrome über alle 16 HTML-Seiten bei 1366×900, 390×844 und 320×844 fand genau einen Überlauf: `/impressum.html` hatte bei 320 px `scrollWidth=317` gegenüber `clientWidth=305`.
 - Ursache war die Tabelle ohne Umbruchregel; `Umsatzsteuer-Identifikationsnummer` erzwang eine Mindestbreite von 301,38 px.
 - Die minimale CSS-Änderung setzt `table-layout: fixed`, `width: 100%` und `overflow-wrap: anywhere`. Danach sind 48/48 Seite/Viewport-Kombinationen ohne Überlauf; 199 interne Links antworten mit 200, 23 Fragmentziele existieren.
-- Evidenz: `docs/evidence/MISSION-2026-10-19/impressum-320/`. Der Live-Readback folgt nach dem Merge.
+- Evidenz: `docs/evidence/MISSION-2026-10-19/impressum-320/`.
+- Deployment: PR #28 wurde als `e9ee950e8737e013691e0aa978f7c1b982140def` auf `main` gemergt; Pages-Run `39288423659` ist `success`. Live-Readback im headed Chrome: 48/48 Kombinationen ohne Überlauf, 199 interne Links mit `200`, 23/23 Fragmentziele vorhanden. Live `/impressum.html` bei 320 px: `scrollWidth=305`, `clientWidth=305`.
+- Der Live-Readback belegt die statische Seite; die fehlenden Betreiberangaben und die Rechtsprüfung bleiben offen.
 
 ## Ausgangslage
 
