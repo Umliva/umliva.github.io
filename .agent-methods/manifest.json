@@ -1,14 +1,18 @@
 {
   "schema_version": 1,
   "source": "Mueller-Systems-Lab/agent-methods",
-  "harness": "generic",
+  "harness": "codex",
   "methods": {
+    "reality-repair": "1.1.0",
     "tool-governance": "0.2.0",
     "vertical-reality-qa": "1.0.0",
     "workspace-preflight": "1.0.0"
   },
-  "phase2_assets": {},
+  "phase2_assets": {
+    "reality-repair": "M04"
+  },
   "routes": [
+    "defect",
     "feature",
     "tooling_setup"
   ]

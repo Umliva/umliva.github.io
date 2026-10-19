@@ -1,12 +1,12 @@
 # vertical-reality-qa
 
-Harness adapter: **generic**
+Harness adapter: **codex**
 
 Use the canonical method at `methods/vertical-reality-qa/METHOD.md` and its `contract.yaml` as the source of truth.
 
 ## Adapter rule
 
-Translate the canonical phases into the capabilities available in generic; do not redefine or weaken the method invariants here.
+Translate the canonical phases into the capabilities available in codex; do not redefine or weaken the method invariants here.
 
 ## Execution
 

@@ -1,5 +1,12 @@
 {
   "routes": {
+    "defect": {
+      "compose": [
+        "workspace-preflight",
+        "reality-repair",
+        "vertical-reality-qa"
+      ]
+    },
     "feature": {
       "compose": [
         "workspace-preflight",

@@ -22,10 +22,22 @@
       "sha256": "2322b75682cafcb816be2969b4a62d90dcb3b3a63d2f8f39d8286c791ec3bcf1"
     },
     {
-      "bytes": 299,
+      "bytes": 373,
       "ownership": "full",
       "path": ".agent-methods/manifest.json",
-      "sha256": "96a383563bd2715b24b410783fd81aa1966600e81ed947469a73d811a59a2ccf"
+      "sha256": "6c6bcf7f9a3ed6cdc394e8277582737095b079786fa901e69a83ddc72d412514"
+    },
+    {
+      "bytes": 2769,
+      "ownership": "full",
+      "path": ".agent-methods/methods/reality-repair/METHOD.md",
+      "sha256": "c3197a119ac189712dc59a3cd0a5ea26773ce9f84581d9b490ff4f01cc9c0485"
+    },
+    {
+      "bytes": 554,
+      "ownership": "full",
+      "path": ".agent-methods/methods/reality-repair/contract.yaml",
+      "sha256": "1e6a914e7ebadcfb9680999941c8f2434cbc0ddb932942a781e60258b8591160"
     },
     {
       "bytes": 3990,
@@ -64,34 +76,40 @@
       "sha256": "a9f2ad9e3365e6cf16023eaa1e2f4a6c20c107a767275795101cf0fc6606c8e7"
     },
     {
-      "bytes": 270,
+      "bytes": 407,
       "ownership": "full",
       "path": ".agent-methods/router/routes.json",
-      "sha256": "2e8e26262172ee115823766f31a336d87b0cfa7f722e5b05e3781d92d5250501"
+      "sha256": "de7e79f724de7e4a803f141af334127ebe1edc6d5a50231bb463643f100b8d12"
     },
     {
-      "bytes": 953,
+      "bytes": 723,
+      "ownership": "full",
+      "path": ".agent-methods/skills/reality-repair/SKILL.md",
+      "sha256": "53bf2c88bd92ed03202cfe69d9c84ef23010d269d8837b31fb8c04d3d4dbec5d"
+    },
+    {
+      "bytes": 949,
       "ownership": "full",
       "path": ".agent-methods/skills/tool-governance/SKILL.md",
-      "sha256": "4c3feb43143725691798a987ac959b4e85f84052dc897988e6397bae2617a35f"
+      "sha256": "f8ac004bf4c3f99bee52a43e9629114a03669204938f3bc435399d8d95f6f607"
     },
     {
-      "bytes": 520,
+      "bytes": 516,
       "ownership": "full",
       "path": ".agent-methods/skills/vertical-reality-qa/SKILL.md",
-      "sha256": "4d2e2bf45f54a9f4b0397876a49fd40aa74ead7ea95b191bc1297138661e871b"
+      "sha256": "f88637a7b8471ea8ab21f0f374c3ed26b96951b9b1ba208aafafe5da61301661"
     },
     {
-      "bytes": 520,
+      "bytes": 516,
       "ownership": "full",
       "path": ".agent-methods/skills/workspace-preflight/SKILL.md",
-      "sha256": "46858acb7ac7b9b78ae25c68943f3eb66b65fe54fa206b81b5453c006fd48312"
+      "sha256": "c01d5fb111f9522353d3b81cf37a02f33700ded3b615eb0042ccd9ec8b2eb16a"
     }
   ],
   "harness": {
     "candidates": [],
-    "reason": "explicit --harness override",
-    "selected": "generic",
+    "reason": "explicit harness migration from 'generic' to 'codex'",
+    "selected": "codex",
     "signals": [],
     "source": "explicit",
     "status": "RESOLVED",
@@ -112,13 +130,15 @@
     "identity": "6c416ed6d539376334f4978b5e89271efc5685190a2408a2baa94e30ac5b2509"
   },
   "methods": {
+    "reality-repair": "1.1.0",
     "tool-governance": "0.2.0",
     "vertical-reality-qa": "1.0.0",
     "workspace-preflight": "1.0.0"
   },
   "migrations": {
     "applied": [
-      "agents_managed_section"
+      "agents_managed_section",
+      "harness_adapter_switch"
     ],
     "available": [
       "manifest_to_ledger",
@@ -128,8 +148,11 @@
     ],
     "required": []
   },
-  "phase2_assets": {},
+  "phase2_assets": {
+    "reality-repair": "M04"
+  },
   "routes": [
+    "defect",
     "feature",
     "tooling_setup"
   ],

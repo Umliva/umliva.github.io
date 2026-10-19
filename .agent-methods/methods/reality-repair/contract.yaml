@@ -1,0 +1,26 @@
+name: reality-repair
+version: 1.1.0
+phase2_asset_id: M04
+phase2_invariants: [INV01, INV02]
+repair_ledger_schema_version: 1
+audited_gate_requires: claim-reality-audit
+use_when:
+  - bug
+  - regression
+  - failed_behavior
+  - incomplete_closed_issue
+required_phases:
+  - observe
+  - reproduce
+  - root_cause
+  - dependency_radius
+  - minimal_patch
+  - targeted_regression
+  - integration
+  - vertical_behavior
+  - runtime_proof
+  - evidence_report
+forbidden_shortcuts:
+  - test_weakening_without_evidence
+  - unrelated_refactor
+  - issue_closed_equals_done
