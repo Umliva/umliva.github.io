@@ -1,0 +1,75 @@
+{
+  "base": "http://127.0.0.1:8766",
+  "axe": "https://cdnjs.cloudflare.com/ajax/libs/axe-core/4.10.2/axe.min.js",
+  "widths": [
+    1366,
+    390
+  ],
+  "pages": {
+    "/datenschutz.html": {
+      "1366": [],
+      "390": []
+    },
+    "/golden-case.html": {
+      "1366": [],
+      "390": []
+    },
+    "/impressum.html": {
+      "1366": [],
+      "390": []
+    },
+    "/index.html": {
+      "1366": [],
+      "390": []
+    },
+    "/partner.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/abrechnungsfrist-nebenkosten.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/betriebskostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/co2-kosten-mieter-vermieter.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/fehler-nebenkostenabrechnung.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/heizkostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/index.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkosten-widerspruch.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkostenabrechnung-pruefen.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/nebenkostenabrechnung-zu-hoch.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/umlagefaehige-nebenkosten.html": {
+      "1366": [],
+      "390": []
+    },
+    "/ratgeber/umlageschluessel-pruefen.html": {
+      "1366": [],
+      "390": []
+    }
+  },
+  "violations": 0
+}

@@ -408,7 +408,12 @@ footer {
   flex-wrap: wrap;
   margin-bottom: 14px;
 }
-footer a { text-decoration: none; color: var(--ink); }
+footer a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
 .footer-legal { color: var(--muted); }
 .footer-legal a { color: var(--ink); }
 
